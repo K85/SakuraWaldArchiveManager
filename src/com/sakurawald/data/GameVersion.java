@@ -27,6 +27,28 @@ public class GameVersion {
 
     private ArrayList<ArchiveExplanation> archieveExplanations = ArchiveExplanation.getDefaultArchiveExplanations();
 
+
+
+    /**
+     * 描述[智能自动备份]功能
+     */
+    private SmartAutoBackup SmartAutoBackup = new SmartAutoBackup();
+    private class SmartAutoBackup{
+        /**
+         * 若cheatEngine为null, 则[智能自动备份]无法生效
+         */
+        public CheatEngine cheatEngine = null;
+
+    }
+
+    /**
+     * 尝试获取该GameVersion的CheatEngine, 若没有则返回null
+     */
+    public CheatEngine getCheatEngine() {
+
+        return this.SmartAutoBackup.cheatEngine;
+    }
+
     /**
      * [存档]文件的路径. 若为固定路径, 则应该填写绝对路径.
      * 填写$AUTO则表示根据操作系统自动判断路径
@@ -57,6 +79,12 @@ public class GameVersion {
     public GameVersion(String version_Name, String version_Remark) {
         this.version_Name = version_Name;
         this.version_Remark = version_Remark;
+    }
+
+    public GameVersion(String version_Name, String version_Remark, CheatEngine cheatEngine) {
+        this.version_Name = version_Name;
+        this.version_Remark = version_Remark;
+        this.SmartAutoBackup.cheatEngine = cheatEngine;
     }
 
     public GameVersion(String version_Name) {
@@ -102,7 +130,7 @@ public class GameVersion {
 
         // "自动模式"
         OperationSystemVersion osv = OperationSystemVersion.getOperationSystemVersion();
-        LoggerManager.getLogger().debug("获取到的操作系统版本信息: " + osv.getOperationVersion());
+        LoggerManager.logDebug("获取到的操作系统版本信息: " + osv.getOperationVersion());
 
         if (osv == OperationSystemVersion.WINDOWS_XP) {
             return FileUtil.getJavaRunPath() + "userdata\\";
@@ -145,7 +173,7 @@ public class GameVersion {
 
         }
 
-        LoggerManager.getLogger().debug("获取到所有存档系列: GameVersion = " + this.getVersion_Name() + ", AllSeries = " + result);
+        LoggerManager.logDebug("获取到所有存档系列: GameVersion = " + this.getVersion_Name() + ", AllSeries = " + result);
 
         return result;
     }
@@ -158,7 +186,7 @@ public class GameVersion {
         MainController controller = Main.loader.getController();
         ArchiveSeries archiveSeries =  controller.combobox_backup_archive_series.getSelectionModel().getSelectedItem();
 
-        LoggerManager.getLogger().debug("当前选中的存档系列: " + archiveSeries);
+        LoggerManager.logDebug("当前选中的存档系列: " + archiveSeries);
 
         return archiveSeries.getArchiveSeries_Name();
     }
@@ -214,9 +242,6 @@ public class GameVersion {
         }
 
     }
-
-
-
 
     public void createArchiveSeries_UI() {
 

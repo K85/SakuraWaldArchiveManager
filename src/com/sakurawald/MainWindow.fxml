@@ -79,7 +79,7 @@
                                     <MenuItem fx:id="menuitem_view_archiveseries_path" mnemonicParsing="false" onAction="#menuitem_view_archiveseries_path_OnAction" text="查看当前ArchiveSeries目录" />
                                     <MenuItem fx:id="menuitem_view_gameversion_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_path_OnAction" text="查看当前GameVersion目录" />
                                     <MenuItem fx:id="menuitem_view_archivebeans_path" mnemonicParsing="false" onAction="#menuitem_view_archivebeans_path_OnAction" text="查看ArchiveBeans目录" />
-                                    <MenuItem fx:id="menuitem_view_gameversion_archive_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_archive_path_OnAction" text="查看当前GameVerison存档目录" />
+                                    <MenuItem fx:id="menuitem_view_gameversion_archive_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_archive_path_OnAction" text="查看当前GameVersion存档目录" />
                                     <MenuItem fx:id="menuitem_view_application_config_path" mnemonicParsing="false" onAction="#menuitem_view_application_config_path_OnAction" text="查看程序配置目录" />
                                     <MenuItem fx:id="menuitem_view_application_run_path" mnemonicParsing="false" onAction="#menuitem_view_application_run_path_OnAction" text="查看程序运行目录" />
                                     <SeparatorMenuItem mnemonicParsing="false" />
@@ -105,10 +105,10 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <CheckBox fx:id="checkbox_autobackup_enable" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_autobackup_enable_OnAction" prefHeight="16.0" prefWidth="157.0" text="在非游戏状态下自动备份" />
+                                    <CheckBox fx:id="checkbox_smartautobackup_enable" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_smartautobackup_enable_OnAction" prefHeight="16.0" prefWidth="157.0" text="在非游戏状态下自动备份" />
                                     <CheckBox fx:id="checkbox_autobackup_timing" layoutX="22.0" layoutY="43.0" mnemonicParsing="false" onAction="#checkbox_autobackup_timing_OnAction" text="定时备份" />
-                                    <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="41.0" onInputMethodTextChanged="#textfield_autobackup_seconds_OnInputMethodTextChanged" prefHeight="23.0" prefWidth="123.0" />
-                                    <Label layoutX="229.0" layoutY="45.0" text="秒" />
+                                    <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="41.0" onInputMethodTextChanged="#textfield_autobackup_seconds_OnInputMethodTextChanged" prefHeight="23.0" prefWidth="61.0" />
+                                    <Label layoutX="164.0" layoutY="45.0" text="秒" />
                                  </children>
                               </AnchorPane>
                           </content>

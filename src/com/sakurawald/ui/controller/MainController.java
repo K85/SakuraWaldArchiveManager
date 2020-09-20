@@ -1,13 +1,13 @@
 package com.sakurawald.ui.controller;
 
 import com.sakurawald.Main;
+import com.sakurawald.api.*;
 import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveSeries;
 import com.sakurawald.data.GameVersion;
 import com.sakurawald.data.ImageAndText;
 import com.sakurawald.data.UIStorage;
 import com.sakurawald.debug.LoggerManager;
-import com.sakurawald.file.ApplicaitonConfig_Data;
 import com.sakurawald.file.ConfigFile;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.util.*;
@@ -30,18 +30,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sun.security.krb5.Config;
 
-import javax.imageio.stream.FileImageInputStream;
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Optional;
-import java.util.Random;
 
 public class MainController implements UIStorage {
 
@@ -60,7 +56,6 @@ public class MainController implements UIStorage {
 
     @FXML
     public ComboBox<ArchiveSeries> combobox_backup_archive_series;
-
 
     @FXML
     private MenuItem menuitem_rollback_all_archivebean;
@@ -87,7 +82,7 @@ public class MainController implements UIStorage {
     private TextArea textarea_archive_bean_info;
 
     @FXML
-    private CheckBox checkbox_autobackup_enable;
+    private CheckBox checkbox_smartautobackup_enable;
 
     @FXML
     private CheckBox checkbox_autobackup_timing;
@@ -118,9 +113,9 @@ public class MainController implements UIStorage {
     }
 
     @FXML
-    void checkbox_autobackup_enable_OnAction(ActionEvent event) {
+    void checkbox_smartautobackup_enable_OnAction(ActionEvent event) {
       CheckBox src = (CheckBox) event.getSource();
-        FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.auto_backup_when_leave_game = src.isSelected();
+        FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup = src.isSelected();
 
         saveUIAndLoadSettings();
     }
@@ -171,7 +166,7 @@ public class MainController implements UIStorage {
                 // 判断选中的[ArchiveSeries]是否空. 若空则创建默认的ArchiveSeries
                 System.out.println("当前的系列：" + archiveSeries);
                 if (archiveSeries == null) {
-                    LoggerManager.getLogger().debug("该GameVersion没有任何存在的ArchiveSeries, 即将创建默认的ArchiveSeries: GameVersion = " + gv.getVersion_Name());
+                    LoggerManager.logDebug("该GameVersion没有任何存在的ArchiveSeries, 即将创建默认的ArchiveSeries: GameVersion = " + gv.getVersion_Name());
 
                     // Create Default ArchiveSeries
                     gv.createDefaultArchiveSeries();
@@ -228,7 +223,7 @@ loadGameVersions();
 
     public void loadSettings() {
             // 生效配置文件
-            checkbox_autobackup_enable.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.auto_backup_when_leave_game);
+            checkbox_smartautobackup_enable.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup);
             checkbox_autobackup_timing.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable);
 
 

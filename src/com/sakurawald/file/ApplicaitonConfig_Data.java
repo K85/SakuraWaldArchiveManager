@@ -10,7 +10,7 @@ public class ApplicaitonConfig_Data {
 
 		public AutoBackup AutoBackup = new AutoBackup();
 		public class AutoBackup {
-			public boolean auto_backup_when_leave_game = true;
+			public boolean smartAutoBackup = true;
 
 			public AutoBackupOnTime AutoBackupOnTime = new AutoBackupOnTime();
 			public class AutoBackupOnTime {
@@ -27,6 +27,7 @@ public class ApplicaitonConfig_Data {
 
 
 	}
+
 
 	public Debug Debug  = new Debug();
 	public class Debug {

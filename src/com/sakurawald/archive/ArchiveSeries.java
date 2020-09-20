@@ -58,8 +58,7 @@ public class ArchiveSeries {
 
         }
 
-        LoggerManager.getLogger().debug("获取所有的ArchiveBean: ArchiveSeries = " + this);
-
+        LoggerManager.logDebug("获取所有的ArchiveBean: ArchiveSeries = " + this);
         return result;
     }
 

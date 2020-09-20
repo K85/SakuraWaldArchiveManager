@@ -1,6 +1,7 @@
-package com.sakurawald.util;
+package com.sakurawald.api;
 
 import com.sakurawald.debug.LoggerManager;
+import com.sakurawald.util.HttpConnectionUtil;
 
 import java.io.File;
 import java.net.MalformedURLException;

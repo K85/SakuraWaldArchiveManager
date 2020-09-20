@@ -1,4 +1,4 @@
-package com.sakurawald.util;
+package com.sakurawald.api;
 
 import java.io.IOException;
 

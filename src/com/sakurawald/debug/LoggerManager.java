@@ -24,9 +24,12 @@ public class LoggerManager {
     }
 
     public static void logDebug(String type, String msg, boolean forceLog) {
+        logDebug("[" + type + "] " + msg, forceLog);
+    }
 
+    public static void logDebug(String content, boolean forceLog) {
         if (forceLog == true) {
-            local_Logger.debug("[" + type + "] " + msg);
+            local_Logger.debug(content);
             return;
         }
 
@@ -34,11 +37,14 @@ public class LoggerManager {
         if (FileManager.applicationConfig_File == null ||
                 FileManager.applicationConfig_File.isHasInit() == false ||
                 FileManager.applicationConfig_File.getSpecificDataInstance().Debug.debug == true) {
-            local_Logger.debug("[" + type + "] " + msg);
+            local_Logger.debug(content);
         }
-
     }
 
+    public static void logDebug(String content) {
+
+        logDebug(content, false);
+    }
 
 
     public static void logDebug(String type, String msg) {
@@ -53,7 +59,7 @@ public class LoggerManager {
             LoggerManager.getLogger().error(data);
 
             // Show Dialog
-        showErrorDialog(e);
+              showErrorDialog(e);
 
     }
 

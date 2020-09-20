@@ -3,6 +3,7 @@ package com.sakurawald;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.timer.AutoBackupTimer;
+import com.sakurawald.timer.SmartAutoBackupTimer;
 import com.sakurawald.util.FileUtil;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -83,6 +84,8 @@ public class Main extends Application {
         // 初始化计时器
         LoggerManager.logDebug("计时系统", "初始化Timer");
         AutoBackupTimer.getInstance().schedule();
+
+        SmartAutoBackupTimer.getInstance().schedule();
 
         // 启动JavaFX程序
         launch(args);

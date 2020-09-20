@@ -1,10 +1,11 @@
-package com.sakurawald.util;
+package com.sakurawald.api;
 
 import java.io.IOException;
 import java.util.Iterator;
 
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
+import com.sakurawald.util.NumberUtil;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
