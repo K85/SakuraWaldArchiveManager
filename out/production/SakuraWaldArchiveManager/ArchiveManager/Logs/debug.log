@@ -1,0 +1,716 @@
+2020-09-20 12:22:16  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:22:16  [ main:3 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:22:16  [ main:9 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ApplicationConfig.json
+2020-09-20 12:22:16  [ main:49 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ApplicaitonConfig_Data
+2020-09-20 12:22:16  [ main:63 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:22:16  [ main:68 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: GameVersionConfig.json
+2020-09-20 12:22:16  [ main:69 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: GameVersionConfig_Data
+2020-09-20 12:22:16  [ main:79 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:22:16  [ JavaFX Application Thread:365 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:22:16  [ JavaFX Application Thread:367 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0EnglishOriginalEdition
+2020-09-20 12:22:18  [ Thread-4:2265 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa37","content":"人生代代无穷已，江月年年只相似。","popularity":616000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:22:18.198185"},"token":"5ZdT9Nllh8Mg81b64N+h7toNccJlLL2X","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:22:18  [ Thread-4:2268 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 人生代代无穷已，江月年年只相似。
+2020-09-20 12:22:18  [ Thread-4:2268 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:22:18  [ Thread-4:2269 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:22:18  [ Thread-4:2285 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:22:19  [ Thread-4:2977 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfylhhxj31hc0u04dv.jpg
+2020-09-20 12:22:19  [ Thread-4:3079 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfylhhxj31hc0u04dv.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:22:59  [ JavaFX Application Thread:43354 ] - [ DEBUG ]  该GameVersion没有任何存在的ArchiveSeries, 即将创建默认的ArchiveSeries: GameVersion = 1.0EnglishOriginalEdition
+2020-09-20 12:22:59  [ JavaFX Application Thread:43356 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:22:59  [ JavaFX Application Thread:43357 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:22:59  [ JavaFX Application Thread:43358 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:22:59  [ JavaFX Application Thread:43359 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\
+2020-09-20 12:22:59  [ JavaFX Application Thread:43360 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\\game1_13.dat
+2020-09-20 12:22:59  [ JavaFX Application Thread:43367 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\\game1_51.dat
+2020-09-20 12:22:59  [ JavaFX Application Thread:43370 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:22:59  [ JavaFX Application Thread:43370 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:22:59  [ JavaFX Application Thread:43371 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:22:59  [ JavaFX Application Thread:43372 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:23:00  [ JavaFX Application Thread:44102 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:23:00  [ JavaFX Application Thread:44103 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\
+2020-09-20 12:23:00  [ JavaFX Application Thread:44104 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\\game1_13.dat
+2020-09-20 12:23:00  [ JavaFX Application Thread:44111 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\\game1_51.dat
+2020-09-20 12:23:00  [ JavaFX Application Thread:44114 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:23:00  [ JavaFX Application Thread:44114 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:23:00  [ JavaFX Application Thread:44115 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:00  [ JavaFX Application Thread:44116 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:23:05  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:23:05  [ main:1 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:23:05  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:23:05  [ main:46 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:23:05  [ JavaFX Application Thread:307 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:23:05  [ JavaFX Application Thread:310 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:23:05  [ JavaFX Application Thread:311 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:23:08  [ Thread-4:2671 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa36","content":"江畔何人初见月，江月何年初照人？","popularity":806000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:23:07.602838"},"token":"tVyhAeXkI2LMxaXwhabHQcw6589b6nGY","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:23:08  [ Thread-4:2674 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 江畔何人初见月，江月何年初照人？
+2020-09-20 12:23:08  [ Thread-4:2674 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:23:08  [ Thread-4:2675 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:23:08  [ Thread-4:2691 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:23:08  [ Thread-4:3369 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg
+2020-09-20 12:23:08  [ Thread-4:3470 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:23:09  [ JavaFX Application Thread:3786 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:09  [ JavaFX Application Thread:4045 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:09  [ JavaFX Application Thread:4046 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:09  [ JavaFX Application Thread:4046 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:09  [ JavaFX Application Thread:4046 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:12  [ JavaFX Application Thread:6903 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:12  [ JavaFX Application Thread:6903 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:12  [ JavaFX Application Thread:6904 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:12  [ JavaFX Application Thread:6904 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:15  [ JavaFX Application Thread:10018 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:15  [ JavaFX Application Thread:10018 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:15  [ JavaFX Application Thread:10019 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:15  [ JavaFX Application Thread:10019 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:17  [ JavaFX Application Thread:12379 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:18  [ JavaFX Application Thread:12620 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:18  [ JavaFX Application Thread:12948 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:18  [ JavaFX Application Thread:12948 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:18  [ JavaFX Application Thread:12948 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:18  [ JavaFX Application Thread:12948 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:22  [ JavaFX Application Thread:16706 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:22  [ JavaFX Application Thread:16707 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:22  [ JavaFX Application Thread:16707 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:22  [ JavaFX Application Thread:16707 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:26  [ JavaFX Application Thread:21230 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:26  [ JavaFX Application Thread:21231 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:26  [ JavaFX Application Thread:21231 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:26  [ JavaFX Application Thread:21231 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:27  [ JavaFX Application Thread:22483 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:29  [ JavaFX Application Thread:23926 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:29  [ JavaFX Application Thread:24141 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:30  [ JavaFX Application Thread:25244 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:31  [ JavaFX Application Thread:26404 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:31  [ JavaFX Application Thread:26404 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:31  [ JavaFX Application Thread:26404 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:31  [ JavaFX Application Thread:26404 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:33  [ JavaFX Application Thread:27909 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:33  [ JavaFX Application Thread:28182 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:34  [ JavaFX Application Thread:29381 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:35  [ JavaFX Application Thread:29690 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:36  [ JavaFX Application Thread:31030 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:36  [ JavaFX Application Thread:31030 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:36  [ JavaFX Application Thread:31030 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:36  [ JavaFX Application Thread:31030 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:23:38  [ JavaFX Application Thread:33318 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:23:40  [ JavaFX Application Thread:34907 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:23:40  [ JavaFX Application Thread:34907 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:23:40  [ JavaFX Application Thread:34908 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:23:40  [ JavaFX Application Thread:34908 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:28:32  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:28:32  [ main:1 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:28:32  [ main:6 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:28:32  [ main:50 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:28:32  [ main:60 ] - [ DEBUG ]  [计时系统] 初始化Timer
+2020-09-20 12:28:33  [ JavaFX Application Thread:326 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:28:33  [ JavaFX Application Thread:329 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:28:33  [ JavaFX Application Thread:330 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:28:35  [ Thread-5:2308 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fe02","content":"兰有秀兮菊有芳，怀佳人兮不能忘。","popularity":692000,"origin":{"title":"秋风辞","dynasty":"两汉","author":"刘彻","content":["秋风起兮白云飞，草木黄落兮雁南归。","兰有秀兮菊有芳，怀佳人兮不能忘。","泛楼船兮济汾河，横中流兮扬素波。","箫鼓鸣兮发棹歌，欢乐极兮哀情多。","少壮几时兮奈老何！"],"translate":["秋风刮起，白云飞。草木枯黄雁南归。","秀美的是兰花呀，芳香的是菊花。思念美人难忘怀。","乘坐着楼船行驶在汾河上，划动船桨扬起白色的波浪。","吹起箫来打起鼓，欢乐过头哀伤多。","年轻的日子早过去，渐渐衰老没奈何。"]},"matchTags":["菊花","秋"],"recommendedReason":"","cacheAt":"2020-09-20T12:28:34.601579"},"token":"jNRQV49PmLy4s1UIIdV21M6ZSPJdbNib","ipAddress":"117.28.12.175","warning":null}
+2020-09-20 12:28:35  [ Thread-5:2311 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 兰有秀兮菊有芳，怀佳人兮不能忘。
+2020-09-20 12:28:35  [ Thread-5:2311 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 没有受到warning警告!
+2020-09-20 12:28:35  [ Thread-5:2313 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:28:35  [ Thread-5:2331 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://api.mtyqx.cn/tapi/random.php
+2020-09-20 12:28:35  [ Thread-5:2558 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfcikvsj31hc0u0ar1.jpg
+2020-09-20 12:28:35  [ Thread-5:2660 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkfcikvsj31hc0u0ar1.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:33:56  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:33:56  [ main:2 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:33:56  [ main:6 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:33:56  [ main:57 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:33:56  [ main:65 ] - [ DEBUG ]  [计时系统] 初始化Timer
+2020-09-20 12:33:56  [ JavaFX Application Thread:392 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:33:56  [ JavaFX Application Thread:396 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:33:56  [ JavaFX Application Thread:397 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:33:58  [ Thread-5:2343 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e70f91","content":"西风酒旗市，细雨菊花天。","popularity":598000,"origin":{"title":"秋怀","dynasty":"宋代","author":"欧阳修","content":["节物岂不好，秋怀何黯然！","西风酒旗市，细雨菊花天。","感事悲双鬓，包羞食万钱。","鹿车何日驾，归去颍东田。"],"translate":null},"matchTags":["菊花","秋","风"],"recommendedReason":"","cacheAt":"2020-09-20T12:33:58.187611"},"token":"HYg3I+Czcg6m237SIc+O9ocgohIT2WW+","ipAddress":"117.28.12.175","warning":null}
+2020-09-20 12:33:58  [ Thread-5:2347 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 西风酒旗市，细雨菊花天。
+2020-09-20 12:33:58  [ Thread-5:2348 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 没有受到warning警告!
+2020-09-20 12:33:58  [ Thread-5:2349 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:33:58  [ Thread-5:2371 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:33:59  [ Thread-5:3045 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxlhtm9p9j31kw0w01js.jpg
+2020-09-20 12:33:59  [ Thread-5:3147 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxlhtm9p9j31kw0w01js.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:34:39  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:34:39  [ main:2 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:34:39  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:34:39  [ main:53 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:34:39  [ main:61 ] - [ DEBUG ]  [计时系统] 初始化Timer
+2020-09-20 12:34:39  [ JavaFX Application Thread:322 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:34:39  [ JavaFX Application Thread:326 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:34:40  [ JavaFX Application Thread:327 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:34:41  [ Thread-5:2160 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fdb8","content":"待到秋来九月八，我花开后百花杀。","popularity":552000,"origin":{"title":"不第后赋菊","dynasty":"唐代","author":"黄巢","content":["待到秋来九月八，我花开后百花杀。","冲天香阵透长安，满城尽带黄金甲。"],"translate":null},"matchTags":["菊花","秋"],"recommendedReason":"","cacheAt":"2020-09-20T12:34:41.304131"},"token":"E2WBR/spE7mUrQLRYEhX3MEQFMRGVLy4","ipAddress":"117.28.12.175","warning":null}
+2020-09-20 12:34:41  [ Thread-5:2164 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 待到秋来九月八，我花开后百花杀。
+2020-09-20 12:34:41  [ Thread-5:2164 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 没有受到warning警告!
+2020-09-20 12:34:41  [ Thread-5:2165 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:34:41  [ Thread-5:2181 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://api.mtyqx.cn/api/random.php
+2020-09-20 12:34:42  [ Thread-5:2418 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1fodqpbkx8xj30xc0nke81.jpg
+2020-09-20 12:34:42  [ Thread-5:2520 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1fodqpbkx8xj30xc0nke81.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:35:13  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:35:13  [ main:2 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:35:13  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:35:13  [ main:58 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:35:13  [ main:66 ] - [ DEBUG ]  [计时系统] 初始化Timer
+2020-09-20 12:35:13  [ JavaFX Application Thread:319 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:35:13  [ JavaFX Application Thread:323 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:35:13  [ JavaFX Application Thread:324 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:35:15  [ Thread-5:2259 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e7193e","content":"黄华自与西风约，白发先从远客生。","popularity":17200,"origin":{"title":"秋怀","dynasty":"金朝","author":"元好问","content":["凉叶萧萧散雨声，虚堂淅淅掩霜清。","黄华自与西风约，白发先从远客生。","吟似候虫秋更苦，梦和寒鹊夜频惊。","何时石岭关山路，一望家山眼暂明？"],"translate":null},"matchTags":["菊花","秋","风"],"recommendedReason":"","cacheAt":"2020-09-20T12:35:14.929722"},"token":"D4IFWJLEatLFOVcpuViLBVeLZB5bBDhC","ipAddress":"117.28.12.175","warning":null}
+2020-09-20 12:35:15  [ Thread-5:2262 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 黄华自与西风约，白发先从远客生。
+2020-09-20 12:35:15  [ Thread-5:2262 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 没有受到warning警告!
+2020-09-20 12:35:15  [ Thread-5:2264 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:35:15  [ Thread-5:2281 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: https://acg.toubiec.cn/random
+2020-09-20 12:35:15  [ Thread-5:2331 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.util.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:725)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-20 12:35:15  [ Thread-5:2344 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = null
+2020-09-20 12:35:19  [ Thread-7:5816 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa3a","content":"谁家今夜扁舟子，何处相思明月楼？","popularity":382000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:35:18.482919"},"token":"MMtLJ37agSWuM01LuzAGlJ+OsNBZ4P/u","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:35:19  [ Thread-7:5817 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 谁家今夜扁舟子，何处相思明月楼？
+2020-09-20 12:35:19  [ Thread-7:5817 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:35:19  [ Thread-7:5817 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:35:19  [ Thread-7:5820 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:35:19  [ Thread-7:6639 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfylhhxj31hc0u04dv.jpg
+2020-09-20 12:35:19  [ Thread-7:6741 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfylhhxj31hc0u04dv.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:35:28  [ JavaFX Application Thread:15110 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:35:28  [ JavaFX Application Thread:15111 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:35:28  [ JavaFX Application Thread:15111 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:35:28  [ JavaFX Application Thread:15111 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:36:08  [ JavaFX Application Thread:55539 ] - [ DEBUG ]  [配置文件系统] 保存<内存>中的数据到<本地存储>: ApplicationConfig.json
+2020-09-20 12:36:09  [ JavaFX Application Thread:55810 ] - [ DEBUG ]  [配置文件系统] 保存<内存>中的数据到<本地存储>: ApplicationConfig.json
+2020-09-20 12:36:11  [ JavaFX Application Thread:58564 ] - [ DEBUG ]  [配置文件系统] 保存<内存>中的数据到<本地存储>: ApplicationConfig.json
+2020-09-20 12:36:12  [ Timer-0:59098 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:36:12  [ JavaFX Application Thread:59100 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:36:12  [ JavaFX Application Thread:59101 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\
+2020-09-20 12:36:12  [ JavaFX Application Thread:59108 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\\game1_13.dat
+2020-09-20 12:36:12  [ JavaFX Application Thread:59110 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\\game1_51.dat
+2020-09-20 12:36:12  [ JavaFX Application Thread:59113 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:36:12  [ JavaFX Application Thread:59113 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:36:12  [ JavaFX Application Thread:59114 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:36:12  [ JavaFX Application Thread:59116 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:36:12  [ JavaFX Application Thread:59658 ] - [ DEBUG ]  [配置文件系统] 保存<内存>中的数据到<本地存储>: ApplicationConfig.json
+2020-09-20 12:37:12  [ Timer-0:119129 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:37:12  [ JavaFX Application Thread:119129 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:37:12  [ JavaFX Application Thread:119129 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-37-12\
+2020-09-20 12:37:12  [ JavaFX Application Thread:119131 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-37-12\\game1_13.dat
+2020-09-20 12:37:12  [ JavaFX Application Thread:119133 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-37-12\\game1_51.dat
+2020-09-20 12:37:12  [ JavaFX Application Thread:119134 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:37:12  [ JavaFX Application Thread:119135 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:37:12  [ JavaFX Application Thread:119135 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:12  [ JavaFX Application Thread:119137 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:37:15  [ JavaFX Application Thread:121941 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:15  [ JavaFX Application Thread:122162 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:15  [ JavaFX Application Thread:122351 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:16  [ JavaFX Application Thread:122978 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:16  [ JavaFX Application Thread:123180 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:16  [ JavaFX Application Thread:123382 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:16  [ JavaFX Application Thread:123554 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:16  [ JavaFX Application Thread:123736 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:17  [ JavaFX Application Thread:123920 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:17  [ JavaFX Application Thread:124162 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:17  [ JavaFX Application Thread:124414 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:20  [ JavaFX Application Thread:127202 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:20  [ JavaFX Application Thread:127411 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:21  [ JavaFX Application Thread:128780 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:22  [ JavaFX Application Thread:128993 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:22  [ JavaFX Application Thread:129162 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:22  [ JavaFX Application Thread:129366 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:23  [ JavaFX Application Thread:129833 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:23  [ JavaFX Application Thread:130102 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:23  [ JavaFX Application Thread:130314 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:23  [ JavaFX Application Thread:130531 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:23  [ JavaFX Application Thread:130733 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:24  [ JavaFX Application Thread:131064 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:24  [ JavaFX Application Thread:131358 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:24  [ JavaFX Application Thread:131674 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:25  [ JavaFX Application Thread:131829 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:26  [ JavaFX Application Thread:133347 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:26  [ JavaFX Application Thread:133659 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:27  [ JavaFX Application Thread:133856 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:32  [ JavaFX Application Thread:139036 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:32  [ JavaFX Application Thread:139036 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:32  [ JavaFX Application Thread:139036 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:32  [ JavaFX Application Thread:139036 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:34  [ JavaFX Application Thread:140884 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:34  [ JavaFX Application Thread:140884 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:34  [ JavaFX Application Thread:140884 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:34  [ JavaFX Application Thread:140885 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:35  [ JavaFX Application Thread:142370 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:36  [ JavaFX Application Thread:142922 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:36  [ JavaFX Application Thread:142923 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:36  [ JavaFX Application Thread:142923 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:36  [ JavaFX Application Thread:142923 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:45  [ JavaFX Application Thread:152320 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:45  [ JavaFX Application Thread:152597 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:45  [ JavaFX Application Thread:152597 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:45  [ JavaFX Application Thread:152597 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:45  [ JavaFX Application Thread:152597 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:48  [ JavaFX Application Thread:154839 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:48  [ JavaFX Application Thread:155162 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:48  [ JavaFX Application Thread:155420 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:48  [ JavaFX Application Thread:155420 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:48  [ JavaFX Application Thread:155420 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:48  [ JavaFX Application Thread:155420 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:52  [ JavaFX Application Thread:159239 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:52  [ JavaFX Application Thread:159582 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:52  [ JavaFX Application Thread:159582 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:52  [ JavaFX Application Thread:159582 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:52  [ JavaFX Application Thread:159582 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:55  [ JavaFX Application Thread:161865 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:55  [ JavaFX Application Thread:162194 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:55  [ JavaFX Application Thread:162517 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:55  [ JavaFX Application Thread:162518 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:55  [ JavaFX Application Thread:162518 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:55  [ JavaFX Application Thread:162518 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:37:58  [ JavaFX Application Thread:164809 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:37:58  [ JavaFX Application Thread:165210 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:37:58  [ JavaFX Application Thread:165210 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:37:58  [ JavaFX Application Thread:165211 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:37:58  [ JavaFX Application Thread:165211 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:38:02  [ JavaFX Application Thread:169327 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:38:02  [ JavaFX Application Thread:169679 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:38:02  [ JavaFX Application Thread:169679 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:38:02  [ JavaFX Application Thread:169679 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:38:02  [ JavaFX Application Thread:169680 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:38:12  [ Timer-0:179159 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:38:12  [ JavaFX Application Thread:179159 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:38:12  [ JavaFX Application Thread:179159 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-38-12\
+2020-09-20 12:38:12  [ JavaFX Application Thread:179160 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-38-12\\game1_13.dat
+2020-09-20 12:38:12  [ JavaFX Application Thread:179168 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-38-12\\game1_51.dat
+2020-09-20 12:38:12  [ JavaFX Application Thread:179170 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:38:12  [ JavaFX Application Thread:179170 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:38:12  [ JavaFX Application Thread:179171 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:38:12  [ JavaFX Application Thread:179172 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:38:15  [ JavaFX Application Thread:182675 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:38:22  [ JavaFX Application Thread:189381 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:38:22  [ JavaFX Application Thread:189382 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:38:22  [ JavaFX Application Thread:189386 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:38:25  [ JavaFX Application Thread:192226 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:38:25  [ JavaFX Application Thread:192227 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:38:25  [ JavaFX Application Thread:192230 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:39:12  [ Timer-0:239190 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:39:12  [ JavaFX Application Thread:239190 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:39:12  [ JavaFX Application Thread:239190 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-39-12\
+2020-09-20 12:39:12  [ JavaFX Application Thread:239191 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-39-12\\game1_13.dat
+2020-09-20 12:39:12  [ JavaFX Application Thread:239194 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-39-12\\game1_51.dat
+2020-09-20 12:39:12  [ JavaFX Application Thread:239196 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:39:12  [ JavaFX Application Thread:239196 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:39:12  [ JavaFX Application Thread:239197 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:39:12  [ JavaFX Application Thread:239198 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:40:12  [ Timer-0:299216 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:40:12  [ JavaFX Application Thread:299216 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:40:12  [ JavaFX Application Thread:299216 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-40-12\
+2020-09-20 12:40:12  [ JavaFX Application Thread:299217 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-40-12\\game1_13.dat
+2020-09-20 12:40:12  [ JavaFX Application Thread:299227 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-40-12\\game1_51.dat
+2020-09-20 12:40:12  [ JavaFX Application Thread:299229 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:40:12  [ JavaFX Application Thread:299229 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:40:12  [ JavaFX Application Thread:299230 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:40:12  [ JavaFX Application Thread:299231 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:41:12  [ Timer-0:359247 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:41:12  [ JavaFX Application Thread:359247 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:41:12  [ JavaFX Application Thread:359247 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-41-12\
+2020-09-20 12:41:12  [ JavaFX Application Thread:359248 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-41-12\\game1_13.dat
+2020-09-20 12:41:12  [ JavaFX Application Thread:359251 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-41-12\\game1_51.dat
+2020-09-20 12:41:12  [ JavaFX Application Thread:359252 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:41:12  [ JavaFX Application Thread:359253 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:41:12  [ JavaFX Application Thread:359253 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:41:12  [ JavaFX Application Thread:359255 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:42:12  [ Timer-0:419278 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:42:12  [ JavaFX Application Thread:419278 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:42:12  [ JavaFX Application Thread:419279 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\
+2020-09-20 12:42:12  [ JavaFX Application Thread:419280 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\\game1_13.dat
+2020-09-20 12:42:12  [ JavaFX Application Thread:419282 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\\game1_51.dat
+2020-09-20 12:42:12  [ JavaFX Application Thread:419290 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:42:12  [ JavaFX Application Thread:419290 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:42:12  [ JavaFX Application Thread:419291 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:42:12  [ JavaFX Application Thread:419292 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:43:12  [ Timer-0:479308 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:43:12  [ JavaFX Application Thread:479308 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:43:12  [ JavaFX Application Thread:479308 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\
+2020-09-20 12:43:12  [ JavaFX Application Thread:479309 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_13.dat
+2020-09-20 12:43:12  [ JavaFX Application Thread:479312 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_51.dat
+2020-09-20 12:43:12  [ JavaFX Application Thread:479320 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:43:12  [ JavaFX Application Thread:479321 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:43:12  [ JavaFX Application Thread:479321 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:43:12  [ JavaFX Application Thread:479322 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:44:12  [ Timer-0:539338 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:44:12  [ JavaFX Application Thread:539339 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:44:12  [ JavaFX Application Thread:539339 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-44-12\
+2020-09-20 12:44:12  [ JavaFX Application Thread:539341 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-44-12\\game1_13.dat
+2020-09-20 12:44:12  [ JavaFX Application Thread:539342 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-44-12\\game1_51.dat
+2020-09-20 12:44:12  [ JavaFX Application Thread:539345 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:44:12  [ JavaFX Application Thread:539345 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:44:12  [ JavaFX Application Thread:539345 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:44:12  [ JavaFX Application Thread:539346 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:45:12  [ Timer-0:599367 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:45:12  [ JavaFX Application Thread:599367 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:45:12  [ JavaFX Application Thread:599367 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-45-12\
+2020-09-20 12:45:12  [ JavaFX Application Thread:599368 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-45-12\\game1_13.dat
+2020-09-20 12:45:12  [ JavaFX Application Thread:599370 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-45-12\\game1_51.dat
+2020-09-20 12:45:12  [ JavaFX Application Thread:599372 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:45:12  [ JavaFX Application Thread:599372 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:45:12  [ JavaFX Application Thread:599373 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:45:12  [ JavaFX Application Thread:599374 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:45:36  [ Thread-8:623206 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa31","content":"春江潮水连海平，海上明月共潮生。","popularity":1140000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:45:35.875858"},"token":"gxYVrdDTd2gxr5lupLzzPe35pej9gSUh","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:45:36  [ Thread-8:623206 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 春江潮水连海平，海上明月共潮生。
+2020-09-20 12:45:36  [ Thread-8:623206 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:45:36  [ Thread-8:623206 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:45:36  [ Thread-8:623208 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://api.mtyqx.cn/api/random.php
+2020-09-20 12:45:36  [ Thread-8:623438 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva3.sinaimg.cn/large/0072Vf1pgy1foxli6nh8ij31hc0u0000.jpg
+2020-09-20 12:45:36  [ Thread-8:623540 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva3.sinaimg.cn/large/0072Vf1pgy1foxli6nh8ij31hc0u0000.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:45:37  [ JavaFX Application Thread:624276 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:45:37  [ JavaFX Application Thread:624769 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:45:38  [ JavaFX Application Thread:625073 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:45:40  [ Thread-9:627525 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa36","content":"江畔何人初见月，江月何年初照人？","popularity":806000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:45:40.193594"},"token":"e4PIgEbsFV7mkEN4b0eecuBvKQUsAcT+","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:45:40  [ Thread-9:627526 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 江畔何人初见月，江月何年初照人？
+2020-09-20 12:45:40  [ Thread-9:627526 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:45:40  [ Thread-9:627526 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:45:40  [ Thread-9:627528 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:45:42  [ Thread-9:628859 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk6omvpzj31hc0u0nhh.jpg
+2020-09-20 12:45:42  [ Thread-9:628961 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxk6omvpzj31hc0u0nhh.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:45:48  [ Thread-10:635483 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa37","content":"人生代代无穷已，江月年年只相似。","popularity":616000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:45:48.149300"},"token":"yZ1gVEH6CTexpS7RiMixSPvDhsE8OsW5","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:45:48  [ Thread-10:635484 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 人生代代无穷已，江月年年只相似。
+2020-09-20 12:45:48  [ Thread-10:635484 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:45:48  [ Thread-10:635484 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:45:48  [ Thread-10:635485 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: https://acg.toubiec.cn/random
+2020-09-20 12:45:48  [ Thread-10:635491 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.util.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:725)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-20 12:45:48  [ Thread-10:635491 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = null
+2020-09-20 12:46:04  [ Thread-11:651773 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa3a","content":"谁家今夜扁舟子，何处相思明月楼？","popularity":382000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:46:04.437348"},"token":"ZVmEXvNi+DjoP79mO0Cu9NAmn/6BSo0N","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:46:04  [ Thread-11:651773 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 谁家今夜扁舟子，何处相思明月楼？
+2020-09-20 12:46:04  [ Thread-11:651773 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:46:04  [ Thread-11:651773 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:46:04  [ Thread-11:651774 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:46:05  [ Thread-11:652687 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfrmrlgj31hc0u0wt1.jpg
+2020-09-20 12:46:05  [ Thread-11:652789 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfrmrlgj31hc0u0wt1.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:46:09  [ Thread-12:656387 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa36","content":"江畔何人初见月，江月何年初照人？","popularity":806000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:46:08.930916"},"token":"uuDSxc7J/fcyPSltytkrkwpNjc+1oAzn","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:46:09  [ Thread-12:656387 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 江畔何人初见月，江月何年初照人？
+2020-09-20 12:46:09  [ Thread-12:656387 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:46:09  [ Thread-12:656387 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:46:09  [ Thread-12:656388 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: https://acg.toubiec.cn/random
+2020-09-20 12:46:09  [ Thread-12:656509 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.util.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:725)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-20 12:46:09  [ Thread-12:656509 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = null
+2020-09-20 12:46:12  [ Timer-0:659397 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:46:12  [ JavaFX Application Thread:659397 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:12  [ JavaFX Application Thread:659397 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-46-12\
+2020-09-20 12:46:12  [ JavaFX Application Thread:659398 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-46-12\\game1_13.dat
+2020-09-20 12:46:12  [ JavaFX Application Thread:659400 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-46-12\\game1_51.dat
+2020-09-20 12:46:12  [ JavaFX Application Thread:659402 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:46:12  [ JavaFX Application Thread:659402 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:46:12  [ JavaFX Application Thread:659403 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:12  [ JavaFX Application Thread:659404 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:46:17  [ Thread-13:664049 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa40","content":"江水流春去欲尽，江潭落月复西斜。","popularity":24400,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:46:16.704844"},"token":"xtZC+Dvd3AzfN2VKbfcpflaBw2BJBWpF","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:46:17  [ Thread-13:664049 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 江水流春去欲尽，江潭落月复西斜。
+2020-09-20 12:46:17  [ Thread-13:664049 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:46:17  [ Thread-13:664049 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:46:17  [ Thread-13:664051 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://api.mtyqx.cn/api/random.php
+2020-09-20 12:46:17  [ Thread-13:664312 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlnhfbv6j31hc0u0trk.jpg
+2020-09-20 12:46:17  [ Thread-13:664415 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlnhfbv6j31hc0u0trk.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:46:20  [ Thread-14:667149 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa39","content":"白云一片去悠悠，青枫浦上不胜愁。","popularity":27500,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:46:19.812174"},"token":"EDsybtPPeB4KeY+7BLtYC1Y+IayxOhuP","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:46:20  [ Thread-14:667149 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 白云一片去悠悠，青枫浦上不胜愁。
+2020-09-20 12:46:20  [ Thread-14:667149 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:46:20  [ Thread-14:667149 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:46:20  [ Thread-14:667151 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://api.mtyqx.cn/api/random.php
+2020-09-20 12:46:20  [ Thread-14:667338 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkcwa5wxj31hc0u04hn.jpg
+2020-09-20 12:46:20  [ Thread-14:667439 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkcwa5wxj31hc0u04hn.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:46:23  [ Thread-15:669845 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa40","content":"江水流春去欲尽，江潭落月复西斜。","popularity":24400,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:46:22.502558"},"token":"DeURGqokRF56zjwUwpA3p+Ape4v+1tFK","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:46:23  [ Thread-15:669846 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 江水流春去欲尽，江潭落月复西斜。
+2020-09-20 12:46:23  [ Thread-15:669846 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:46:23  [ Thread-15:669846 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:46:23  [ Thread-15:669847 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: http://www.dmoe.cc/random.php
+2020-09-20 12:46:23  [ Thread-15:670460 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxlnmr18gj31hc0u01ar.jpg
+2020-09-20 12:46:23  [ Thread-15:670564 ] - [ DEBUG ]  [随机图片 - 下载图片] image_URL = https://tva2.sinaimg.cn/large/0072Vf1pgy1foxlnmr18gj31hc0u01ar.jpg, save_path = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\RandomImage.png
+2020-09-20 12:46:24  [ JavaFX Application Thread:671734 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:25  [ JavaFX Application Thread:672123 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:25  [ JavaFX Application Thread:672123 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:25  [ JavaFX Application Thread:672124 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:25  [ JavaFX Application Thread:672124 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:46:28  [ JavaFX Application Thread:675445 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:29  [ JavaFX Application Thread:675938 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:29  [ JavaFX Application Thread:675938 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:29  [ JavaFX Application Thread:675938 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:29  [ JavaFX Application Thread:675938 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:46:34  [ JavaFX Application Thread:681689 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:34  [ JavaFX Application Thread:681691 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:35  [ JavaFX Application Thread:682468 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:36  [ JavaFX Application Thread:682900 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:36  [ JavaFX Application Thread:683609 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:36  [ JavaFX Application Thread:683610 ] - [ INFO ]  复制文件夹: source = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\, target = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata
+2020-09-20 12:46:36  [ JavaFX Application Thread:683610 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\\ArchiveBeanConfig.json, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\ArchiveBeanConfig.json
+2020-09-20 12:46:36  [ JavaFX Application Thread:683612 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\\game1_13.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat
+2020-09-20 12:46:36  [ JavaFX Application Thread:683615 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-42-12\\game1_51.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat
+2020-09-20 12:46:36  [ JavaFX Application Thread:683617 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:37  [ JavaFX Application Thread:684750 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:39  [ JavaFX Application Thread:685808 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:39  [ JavaFX Application Thread:686479 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:39  [ JavaFX Application Thread:686479 ] - [ INFO ]  复制文件夹: source = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\, target = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata
+2020-09-20 12:46:39  [ JavaFX Application Thread:686480 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\ArchiveBeanConfig.json, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\ArchiveBeanConfig.json
+2020-09-20 12:46:39  [ JavaFX Application Thread:686482 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_13.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat
+2020-09-20 12:46:39  [ JavaFX Application Thread:686484 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_51.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat
+2020-09-20 12:46:39  [ JavaFX Application Thread:686487 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:42  [ JavaFX Application Thread:689389 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:43  [ JavaFX Application Thread:690195 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:43  [ JavaFX Application Thread:690195 ] - [ INFO ]  复制文件夹: source = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\, target = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata
+2020-09-20 12:46:43  [ JavaFX Application Thread:690196 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\ArchiveBeanConfig.json, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\ArchiveBeanConfig.json
+2020-09-20 12:46:43  [ JavaFX Application Thread:690197 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_13.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat
+2020-09-20 12:46:43  [ JavaFX Application Thread:690199 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-43-12\\game1_51.dat, to = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat
+2020-09-20 12:46:43  [ JavaFX Application Thread:690201 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:46:44  [ JavaFX Application Thread:691474 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:45  [ JavaFX Application Thread:691944 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:45  [ JavaFX Application Thread:691945 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:45  [ JavaFX Application Thread:691945 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:45  [ JavaFX Application Thread:691945 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:46:47  [ JavaFX Application Thread:693836 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:47  [ JavaFX Application Thread:693836 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:47  [ JavaFX Application Thread:693836 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:47  [ JavaFX Application Thread:693836 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:46:48  [ JavaFX Application Thread:695351 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:48  [ JavaFX Application Thread:695351 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:48  [ JavaFX Application Thread:695351 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:48  [ JavaFX Application Thread:695351 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:46:49  [ JavaFX Application Thread:696278 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:51  [ JavaFX Application Thread:698294 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:51  [ JavaFX Application Thread:698594 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:46:53  [ JavaFX Application Thread:700042 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:46:53  [ JavaFX Application Thread:700042 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:46:53  [ JavaFX Application Thread:700042 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:46:53  [ JavaFX Application Thread:700042 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:04  [ JavaFX Application Thread:711369 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:04  [ JavaFX Application Thread:711703 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:04  [ JavaFX Application Thread:711704 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:04  [ JavaFX Application Thread:711704 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:04  [ JavaFX Application Thread:711704 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:05  [ JavaFX Application Thread:712715 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:06  [ JavaFX Application Thread:712956 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:06  [ JavaFX Application Thread:713256 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:06  [ JavaFX Application Thread:713256 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:06  [ JavaFX Application Thread:713257 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:06  [ JavaFX Application Thread:713257 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:07  [ JavaFX Application Thread:714431 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:07  [ JavaFX Application Thread:714759 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:07  [ JavaFX Application Thread:714759 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:07  [ JavaFX Application Thread:714759 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:07  [ JavaFX Application Thread:714759 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:10  [ JavaFX Application Thread:717657 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:11  [ JavaFX Application Thread:717903 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:11  [ JavaFX Application Thread:718070 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:11  [ JavaFX Application Thread:718070 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:11  [ JavaFX Application Thread:718070 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:11  [ JavaFX Application Thread:718070 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:12  [ JavaFX Application Thread:719197 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:12  [ JavaFX Application Thread:719363 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:12  [ JavaFX Application Thread:719363 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:12  [ JavaFX Application Thread:719364 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:12  [ JavaFX Application Thread:719364 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:12  [ Timer-0:719431 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:47:12  [ JavaFX Application Thread:719434 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:47:12  [ JavaFX Application Thread:719435 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-47-12\
+2020-09-20 12:47:12  [ JavaFX Application Thread:719436 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-47-12\\game1_13.dat
+2020-09-20 12:47:12  [ JavaFX Application Thread:719439 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-47-12\\game1_51.dat
+2020-09-20 12:47:12  [ JavaFX Application Thread:719441 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:47:12  [ JavaFX Application Thread:719442 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:47:12  [ JavaFX Application Thread:719443 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:12  [ JavaFX Application Thread:719444 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:15  [ JavaFX Application Thread:721945 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:15  [ JavaFX Application Thread:722104 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:15  [ JavaFX Application Thread:722104 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:15  [ JavaFX Application Thread:722105 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:15  [ JavaFX Application Thread:722105 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:25  [ JavaFX Application Thread:732400 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:26  [ JavaFX Application Thread:733242 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries]
+2020-09-20 12:47:26  [ JavaFX Application Thread:733243 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:26  [ JavaFX Application Thread:733243 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
+2020-09-20 12:47:26  [ JavaFX Application Thread:733244 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
+2020-09-20 12:47:26  [ JavaFX Application Thread:733244 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
+2020-09-20 12:47:26  [ JavaFX Application Thread:733244 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
+2020-09-20 12:47:26  [ JavaFX Application Thread:733244 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
+2020-09-20 12:47:39  [ JavaFX Application Thread:746050 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries, 六炮]
+2020-09-20 12:47:39  [ JavaFX Application Thread:746051 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:40  [ JavaFX Application Thread:746878 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:41  [ JavaFX Application Thread:747952 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries, 六炮]
+2020-09-20 12:47:41  [ JavaFX Application Thread:747952 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
+2020-09-20 12:47:41  [ JavaFX Application Thread:747953 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
+2020-09-20 12:47:43  [ JavaFX Application Thread:750554 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\ArchiveBeanConfig.json, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-22-59\ArchiveBeanConfig.json
+2020-09-20 12:47:43  [ JavaFX Application Thread:750556 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-22-59\game1_13.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750558 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-22-59\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-22-59\game1_51.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750560 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\ArchiveBeanConfig.json, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-23-00\ArchiveBeanConfig.json
+2020-09-20 12:47:43  [ JavaFX Application Thread:750562 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-23-00\game1_13.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750563 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-23-00\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-23-00\game1_51.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750566 ] - [ INFO ]  正在复制文件: fileName = ArchiveBeanConfig.json, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\ArchiveBeanConfig.json, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-36-12\ArchiveBeanConfig.json
+2020-09-20 12:47:43  [ JavaFX Application Thread:750567 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-36-12\game1_13.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750568 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\DefaultArchiveSeries\Backup_2020-09-20 12-36-12\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-36-12\game1_51.dat
+2020-09-20 12:47:43  [ JavaFX Application Thread:750570 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:44  [ JavaFX Application Thread:751037 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:44  [ JavaFX Application Thread:751272 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:45  [ JavaFX Application Thread:751865 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:45  [ JavaFX Application Thread:752571 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:46  [ JavaFX Application Thread:753084 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:46  [ JavaFX Application Thread:753732 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:47  [ JavaFX Application Thread:754397 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:48  [ JavaFX Application Thread:754847 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:47:48  [ JavaFX Application Thread:755386 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:47:51  [ JavaFX Application Thread:757982 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:51  [ JavaFX Application Thread:758255 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:51  [ JavaFX Application Thread:758256 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:51  [ JavaFX Application Thread:758256 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:51  [ JavaFX Application Thread:758256 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:52  [ JavaFX Application Thread:759745 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:53  [ JavaFX Application Thread:759999 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:53  [ JavaFX Application Thread:760000 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:53  [ JavaFX Application Thread:760000 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:53  [ JavaFX Application Thread:760000 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:47:55  [ JavaFX Application Thread:762101 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:47:55  [ JavaFX Application Thread:762332 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:47:55  [ JavaFX Application Thread:762332 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:47:55  [ JavaFX Application Thread:762332 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:47:55  [ JavaFX Application Thread:762332 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:48:00  [ JavaFX Application Thread:767162 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:00  [ JavaFX Application Thread:767560 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:00  [ JavaFX Application Thread:767737 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:48:00  [ JavaFX Application Thread:767737 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:48:00  [ JavaFX Application Thread:767738 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:48:00  [ JavaFX Application Thread:767738 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:48:01  [ JavaFX Application Thread:768689 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:02  [ JavaFX Application Thread:769032 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_13.dat
+2020-09-20 12:48:02  [ JavaFX Application Thread:769032 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_13.dat equals 生存模式_无尽
+2020-09-20 12:48:02  [ JavaFX Application Thread:769032 ] - [ DEBUG ]  [回档] Start Analyse ArchiveExplanation: game1_51.dat
+2020-09-20 12:48:02  [ JavaFX Application Thread:769033 ] - [ DEBUG ]  [回档] Analyse ArchiveExplanation Result: game1_51.dat equals 解谜模式_砸罐子_破罐者
+2020-09-20 12:48:04  [ JavaFX Application Thread:771508 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:04  [ JavaFX Application Thread:771761 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:12  [ Timer-0:779456 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:48:12  [ JavaFX Application Thread:779456 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:48:12  [ JavaFX Application Thread:779456 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-48-12\
+2020-09-20 12:48:12  [ JavaFX Application Thread:779457 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-48-12\\game1_13.dat
+2020-09-20 12:48:12  [ JavaFX Application Thread:779459 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-48-12\\game1_51.dat
+2020-09-20 12:48:12  [ JavaFX Application Thread:779462 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:48:12  [ JavaFX Application Thread:779462 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:48:12  [ JavaFX Application Thread:779462 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:48:12  [ JavaFX Application Thread:779463 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:49:12  [ Timer-0:839486 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:49:12  [ JavaFX Application Thread:839486 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:49:12  [ JavaFX Application Thread:839486 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-49-12\
+2020-09-20 12:49:12  [ JavaFX Application Thread:839488 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-49-12\\game1_13.dat
+2020-09-20 12:49:12  [ JavaFX Application Thread:839490 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-49-12\\game1_51.dat
+2020-09-20 12:49:12  [ JavaFX Application Thread:839491 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:49:12  [ JavaFX Application Thread:839492 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:49:12  [ JavaFX Application Thread:839492 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:49:12  [ JavaFX Application Thread:839493 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:50:12  [ Timer-0:899516 ] - [ DEBUG ]  [计时系统] 自动备份 >> 开始自动备份
+2020-09-20 12:50:12  [ JavaFX Application Thread:899516 ] - [ DEBUG ]  获取到的操作系统版本信息: Windows10
+2020-09-20 12:50:12  [ JavaFX Application Thread:899516 ] - [ INFO ]  复制文件夹: source = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata, target = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-50-12\
+2020-09-20 12:50:12  [ JavaFX Application Thread:899517 ] - [ INFO ]  正在复制文件: fileName = game1_13.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_13.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-50-12\\game1_13.dat
+2020-09-20 12:50:12  [ JavaFX Application Thread:899519 ] - [ INFO ]  正在复制文件: fileName = game1_51.dat, from = C:\ProgramData\PopCap Games\PlantsVsZombies\userdata\game1_51.dat, to = D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\\ArchiveManager\ArchiveBeans\1.0EnglishOriginalEdition\六炮\Backup_2020-09-20 12-50-12\\game1_51.dat
+2020-09-20 12:50:12  [ JavaFX Application Thread:899521 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ArchiveBeanConfig.json
+2020-09-20 12:50:12  [ JavaFX Application Thread:899521 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ArchiveBeanConfig_Data
+2020-09-20 12:50:12  [ JavaFX Application Thread:899522 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ArchiveBeanConfig.json
+2020-09-20 12:50:12  [ JavaFX Application Thread:899523 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = 六炮
+2020-09-20 12:50:43  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-20 12:50:43  [ main:2 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-20 12:50:43  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-20 12:50:43  [ main:52 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-20 12:50:43  [ main:59 ] - [ DEBUG ]  [计时系统] 初始化Timer
+2020-09-20 12:50:43  [ JavaFX Application Thread:335 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-20 12:50:43  [ JavaFX Application Thread:338 ] - [ DEBUG ]  获取到所有存档系列: GameVersion = 1.0EnglishOriginalEdition, AllSeries = [DefaultArchiveSeries, 六炮]
+2020-09-20 12:50:43  [ JavaFX Application Thread:339 ] - [ DEBUG ]  获取所有的ArchiveBean: ArchiveSeries = DefaultArchiveSeries
+2020-09-20 12:50:45  [ Thread-5:2367 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 获取到的JSON文本: {"status":"success","data":{"id":"5b8b9572e116fb3714e6fa3e","content":"鸿雁长飞光不度，鱼龙潜跃水成文。","popularity":177000,"origin":{"title":"春江花月夜","dynasty":"唐代","author":"张若虚","content":["春江潮水连海平，海上明月共潮生。","滟滟随波千万里，何处春江无月明！","江流宛转绕芳甸，月照花林皆似霰。","空里流霜不觉飞，汀上白沙看不见。","江天一色无纤尘，皎皎空中孤月轮。","江畔何人初见月，江月何年初照人？","人生代代无穷已，江月年年只相似。","不知江月待何人，但见长江送流水。","白云一片去悠悠，青枫浦上不胜愁。","谁家今夜扁舟子，何处相思明月楼？","可怜楼上月徘徊，应照离人妆镜台。","玉户帘中卷不去，捣衣砧上拂还来。","此时相望不相闻，愿逐月华流照君。","鸿雁长飞光不度，鱼龙潜跃水成文。","昨夜闲潭梦落花，可怜春半不还家。","江水流春去欲尽，江潭落月复西斜。","斜月沉沉藏海雾，碣石潇湘无限路。","不知乘月几人归，落月摇情满江树。"],"translate":["春天的江潮水势浩荡，与大海连成一片，一轮明月从海上升起，好像与潮水一起涌出来。","月光照耀着春江，随着波浪闪耀千万里，所有地方的春江都有明亮的月光。","江水曲曲折折地绕着花草丛生的原野流淌，月光照射着开遍鲜花的树林好像细密的雪珠在闪烁。","月色如霜，所以霜飞无从觉察。洲上的白沙和月色融合在一起，看不分明。","江水、天空成一色，没有一点微小灰尘，明亮的天空中只有一轮孤月高悬空中。","江边上什么人最初看见月亮，江上的月亮哪一年最初照耀着人？","人生一代代地无穷无尽，只有江上的月亮一年年地总是相像。","不知江上的月亮等待着什么人，只见长江不断地一直运输着流水。","游子像一片白云缓缓地离去，只剩下思妇站在离别的青枫浦不胜忧愁。","哪家的游子今晚坐着小船在漂流？什么地方有人在明月照耀的楼上相思？","可怜楼上不停移动的月光，应该照耀着离人的梳妆台。","月光照进思妇的门帘，卷不走，照在她的捣衣砧上，拂不掉。","这时互相望着月亮可是互相听不到声音，我希望随着月光流去照耀着您。","鸿雁不停地飞翔，而不能飞出无边的月光；月照江面，鱼龙在水中跳跃，激起阵阵波纹。","昨天夜里梦见花落闲潭，可惜的是春天过了一半自己还不能回家。","江水带着春光将要流尽，水潭上的月亮又要西落。","斜月慢慢下沉，藏在海雾里，碣石与潇湘的离人距离无限遥远。","不知有几人能趁着月光回家，唯有那西落的月亮摇荡着离情，洒满了江边的树林。"]},"matchTags":[],"recommendedReason":"","cacheAt":"2020-09-20T12:50:44.923475"},"token":"4S9e9qQ8mwDtdXKfdv/8ii2rHiuWZtt1","ipAddress":"117.28.12.175","warning":"接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。"}
+2020-09-20 12:50:45  [ Thread-5:2370 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：keySentence = 鸿雁长飞光不度，鱼龙潜跃水成文。
+2020-09-20 12:50:45  [ Thread-5:2370 ] - [ DEBUG ]  [网络系统] 今日诗词 >> 发送请求：warning = 接口侦测到来自您 IP 的异常流量，已主动下调推荐效果，请正确配置接口，携带 Token 并正常发送请求。一小时内自动恢复。
+2020-09-20 12:50:45  [ Thread-5:2372 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 开始获取
+2020-09-20 12:50:45  [ Thread-5:2388 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 本次使用的随机图片站点: https://acg.toubiec.cn/random
+2020-09-20 12:50:45  [ Thread-5:2405 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.util.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:725)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-20 12:50:45  [ Thread-5:2405 ] - [ DEBUG ]  [随机图片(新浪图库) - API] 随机获取图片的URL - 结果: Image_URL = null

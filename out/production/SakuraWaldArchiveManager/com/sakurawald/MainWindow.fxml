@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sakurawald.ui.controller.MainController">
+   <children>
+      <TabPane prefHeight="413.0" prefWidth="522.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Welcome">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="imageview_welcome" fitHeight="346.0" fitWidth="522.0" layoutX="12.0" layoutY="49.0" onMouseClicked="#imageview_welcome_OnMouseClicked" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="label_welcome" alignment="CENTER" layoutX="12.0" prefHeight="49.0" prefWidth="499.0" text="Welcome" textAlignment="CENTER" wrapText="true">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <effect>
+                              <Glow level="0.5" />
+                           </effect>
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="14.0" />
+                           </font></Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="存档">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="73.0" prefWidth="522.0">
+                           <children>
+                              <Label layoutX="22.0" layoutY="14.0" prefHeight="15.0" prefWidth="73.0" text="游戏版本：" />
+                              <Label layoutX="22.0" layoutY="43.0" prefHeight="15.0" prefWidth="73.0" text="存档系列：" />
+                              <ComboBox fx:id="combobox_backup_game_version" layoutX="85.0" layoutY="9.0" onAction="#combobox_backup_game_version_OnAction" prefHeight="23.0" prefWidth="221.0" />
+                              <ComboBox fx:id="combobox_backup_archive_series" layoutX="85.0" layoutY="38.0" onAction="#combobox_backup_archive_series_OnAction" prefHeight="23.0" prefWidth="221.0" />
+                              <Button fx:id="button_backup" layoutX="313.0" layoutY="9.0" mnemonicParsing="false" onAction="#button_backup_OnAction" prefHeight="52.0" prefWidth="195.0" text="Backup">
+                                 <font>
+                                    <Font name="Microsoft YaHei" size="26.0" />
+                                 </font></Button>
+                           </children></Pane>
+                        <TextArea fx:id="textarea_archive_bean_info" editable="false" layoutX="336.0" layoutY="65.0" prefHeight="308.0" prefWidth="172.0" wrapText="true" />
+                        <ListView fx:id="listview_archive_beans" layoutX="10.0" layoutY="66.0" onKeyPressed="#listview_archive_beans_OnKeyPressed" onMouseClicked="#listview_archive_beans_OnMouseClicked" onMouseReleased="#listview_archive_beans_OnMouseReleased" prefHeight="311.0" prefWidth="316.0">
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <Menu mnemonicParsing="false" text="回档">
+                                       <items>
+                                          <MenuItem fx:id="menuitem_rollback_all_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_all_archive_bean_OnAction" text="回档（全部）" />
+                                          <MenuItem fx:id="menuitem_rollback_partly_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_partly_archive_bean_OnAction" text="回档（局部）" />
+                                       </items>
+                                    </Menu>
+                                    <MenuItem fx:id="menuitem_rename_archivebean" mnemonicParsing="false" onAction="#menuitem_rename_archivebean_OnAction" text="重命名" />
+                                    <MenuItem fx:id="menuitem_set_remark_archivebean" mnemonicParsing="false" onAction="#menuitem_set_remark_archivebean_OnAction" text="设置备注" />
+                                    <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false" onAction="#menuitem_view_archivebean_path_OnAction" text="查看当前目录" />
+                                    <MenuItem fx:id="menuitem_delete_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_archivebean_OnAction" text="删除" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem fx:id="menuitem_delete_all_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_OnAction" text="删除所有ArchiveBean" />
+                                    <MenuItem fx:id="menuitem_view_archiveseries_path" mnemonicParsing="false" onAction="#menuitem_view_archiveseries_path_OnAction" text="查看当前ArchiveSeries目录" />
+                                    <MenuItem fx:id="menuitem_view_gameversion_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_path_OnAction" text="查看当前GameVersion目录" />
+                                    <MenuItem fx:id="menuitem_view_archivebeans_path" mnemonicParsing="false" onAction="#menuitem_view_archivebeans_path_OnAction" text="查看ArchiveBeans目录" />
+                                    <MenuItem fx:id="menuitem_view_gameversion_archive_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_archive_path_OnAction" text="查看当前GameVerison存档目录" />
+                                    <MenuItem fx:id="menuitem_view_application_config_path" mnemonicParsing="false" onAction="#menuitem_view_application_config_path_OnAction" text="查看程序配置目录" />
+                                    <MenuItem fx:id="menuitem_view_application_run_path" mnemonicParsing="false" onAction="#menuitem_view_application_run_path_OnAction" text="查看程序运行目录" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem fx:id="menuitem_update_data" mnemonicParsing="false" onAction="#menuitem_update_data_OnAction" text="重新载入数据" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem fx:id="menuitem_create_archiveseries" mnemonicParsing="false" onAction="#menuitem_create_archiveseries_OnAction" text="新建ArchiveSeries" />
+                                    <MenuItem fx:id="menuitem_rename_archiveseries" mnemonicParsing="false" onAction="#menuitem_rename_archiveseries_OnAction" text="重命名ArchiveSeries" />
+                                    <MenuItem fx:id="menuitem_import_archiveseries" mnemonicParsing="false" onAction="#menuitem_import_archiveseries_OnAction" text="导入ArchiveSeries" />
+                                    <MenuItem fx:id="menuitem_delete_archiveseries" mnemonicParsing="false" onAction="#menuitem_delete_archiveseries_OnAction" text="删除ArchiveSeries" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </ListView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="设置">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" prefHeight="106.0" prefWidth="522.0" text="自动备份">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox fx:id="checkbox_autobackup_enable" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_autobackup_enable_OnAction" prefHeight="16.0" prefWidth="157.0" text="在非游戏状态下自动备份" />
+                                    <CheckBox fx:id="checkbox_autobackup_timing" layoutX="22.0" layoutY="43.0" mnemonicParsing="false" onAction="#checkbox_autobackup_timing_OnAction" text="定时备份" />
+                                    <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="41.0" onInputMethodTextChanged="#textfield_autobackup_seconds_OnInputMethodTextChanged" prefHeight="23.0" prefWidth="123.0" />
+                                    <Label layoutX="229.0" layoutY="45.0" text="秒" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutY="106.0" prefHeight="88.0" prefWidth="522.0" text="存储设置">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="7.0" prefWidth="520.0">
+                                 <children>
+                                    <CheckBox fx:id="checkbox_storagesettings_use_indepent_storage" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_storagesettings_use_indepent_storage_OnAction" text="使用独立的备份存储路径" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="关于">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Hyperlink layoutX="28.0" layoutY="266.0" prefHeight="21.0" prefWidth="320.0" text="Author: SakuraWald / K85" />
+                        <Hyperlink layoutX="28.0" layoutY="289.0" prefHeight="21.0" prefWidth="320.0" text="Contact: 3172906506@qq.com" />
+                        <Hyperlink layoutX="28.0" layoutY="313.0" prefHeight="21.0" prefWidth="320.0" text="百度贴吧: 植物大战僵尸吧" />
+                        <Hyperlink layoutX="28.0" layoutY="336.0" prefHeight="21.0" prefWidth="320.0" text="植物大战僵尸 - 资源下载站" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

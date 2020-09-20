@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sakurawald.ui.controller.RollBackChooseWindowController">
+   <children>
+      <Button fx:id="button_select_invert" layoutX="65.0" layoutY="517.0" mnemonicParsing="false" onAction="#button_select_invert_OnAction" text="反选" />
+      <Button fx:id="button_rollback" layoutX="320.0" layoutY="517.0" mnemonicParsing="false" onAction="#button_rollback_OnAction" text="回档" />
+      <Button fx:id="button_select_all" layoutX="14.0" layoutY="517.0" mnemonicParsing="false" onAction="#button_select_all_OnAction" text="全选" />
+      <TableView fx:id="tableview_choose" layoutX="1.0" layoutY="8.0" prefHeight="500.0" prefWidth="374.0">
+        <columns>
+            <TableColumn fx:id="tableview_choose_checkbox" prefWidth="42.5" text="勾选" />
+          <TableColumn fx:id="tableview_choose_filename" prefWidth="103.0" text="文件名称" />
+          <TableColumn fx:id="tableview_choose_archive_explanation" minWidth="5.0" prefWidth="224.0" text="注解" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
