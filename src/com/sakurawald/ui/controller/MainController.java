@@ -1,6 +1,5 @@
 package com.sakurawald.ui.controller;
 
-
 import com.sakurawald.Main;
 import com.sakurawald.api.*;
 import com.sakurawald.archive.ArchiveBean;
@@ -34,21 +33,39 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.util.converter.IntegerStringConverter;
-import sun.security.krb5.Config;
 
-import javax.swing.filechooser.FileSystemView;
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
-import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Optional;
-import java.util.function.UnaryOperator;
 
 public class MainController implements UIStorage {
 
+    @FXML
+    private Hyperlink hyperlink_about_2;
 
+    @FXML
+    private Hyperlink hyperlink_about_4;
+
+    @FXML
+    private Hyperlink hyperlink_about_7;
+
+    @FXML
+    private Hyperlink hyperlink_about_8;
+
+    @FXML
+    private Hyperlink hyperlink_about_1;
+
+    @FXML
+    private Hyperlink hyperlink_about_5;
+
+    @FXML
+    private Hyperlink hyperlink_about_3;
+
+    @FXML
+    private Hyperlink hyperlink_about_6;
+
+    @FXML
+    private Label label_version;
     @FXML
     private ImageView imageview_welcome;
 
@@ -100,9 +117,23 @@ public class MainController implements UIStorage {
     @FXML
     private CheckBox checkbox_storagesettings_use_indepent_storage;
 
+
+    public ArchiveBean getSelectedArchiveBean() {
+        return this.listview_archive_beans.getSelectionModel().getSelectedItem();
+    }
+
+    public GameVersion getSelectedGameVersion() {
+        return this.combobox_backup_game_version.getSelectionModel().getSelectedItem();
+    }
+
+    public ArchiveSeries getSelectedArchiveSeries() {
+        return this.combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+    }
+
     @FXML
     public void initialize() {
-        // Load UI
+
+        // Load UI (此处加载的UI组件是与本地配置文件有关的组件)
         loadUI();
 
         // Update GameVerison
@@ -111,14 +142,21 @@ public class MainController implements UIStorage {
         // Update ArchiveSeries
         update_combobox_backup_archive_series();
 
-        // Welcome
-        updateWelcome();
-
         // Start Timer
-        LoggerManager.logDebug("计时系统", "初始化Timer");
+        LoggerManager.logDebug("计时系统", "Init All Timers");
+        LoggerManager.logDebug("计时系统", "Init >> AutoBackupTimer");
         AutoBackupTimer.getInstance().schedule();
+        LoggerManager.logDebug("计时系统", "Init >> SmartAutoBackupTimer");
         SmartAutoBackupTimer.getInstance().schedule();
 
+        // Load About
+        loadAbout();
+
+        // Load Version
+        loadVersion();
+
+        // Update Welcome
+        updateWelcome();
     }
 
     public void saveUIAndLoadSettings() {
@@ -126,16 +164,48 @@ public class MainController implements UIStorage {
         loadSettings();
     }
 
+    /**
+     * 加载与关于界面有关的UI.
+     */
+    public void loadAbout() {
+        hyperlink_about_1.setText("关于作者： ");
+        hyperlink_about_2.setText("Author: SakuraWald / K85");
+        hyperlink_about_3.setText("Bilibili: SakuraWald （UID：5336084）");
+        hyperlink_about_3.setOnAction(event -> {
+            HttpUtil.openURL("https://space.bilibili.com/5336084");
+        });
+        hyperlink_about_4.setText("Email: 3172906506@qq.com");
+        hyperlink_about_5.setText("Baidu ID: a526026058");
+        hyperlink_about_6.setText("友情链接：");
+        hyperlink_about_7.setText("百度贴吧 - 植物大战僵尸吧");
+        hyperlink_about_7.setOnAction(event -> {
+            HttpUtil.openURL("https://tieba.baidu.com/f?kw=%D6%B2%CE%EF%B4%F3%D5%BD%BD%A9%CA%AC");
+        });
+        hyperlink_about_8.setText("植物大战僵尸 - 资源下载站");
+        hyperlink_about_8.setOnAction(event -> {
+            HttpUtil.openURL(hyperlink_about_8.getAccessibleText());
+        });
+
+    }
+
+    public void loadVersion() {
+        String version = "Sakura";
+        label_version.setText("Version：" + version + "\n" + "很高兴遇见你！");
+    }
+
+
     @FXML
     void checkbox_smartautobackup_enable_OnAction(ActionEvent event) {
-      CheckBox src = (CheckBox) event.getSource();
+        // Modify
+        CheckBox src = (CheckBox) event.getSource();
         FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup = src.isSelected();
 
+        // Save and Reload
         saveUIAndLoadSettings();
     }
 
     /**
-     * 加载存储的使用习惯, 若对应的数据不存在, 则自动选中默认项
+     * 加载存储的使用习惯, 若对应的数据不存在, 则自动选中默认项.
      */
     public void loadMemory_GameVersion() {
 
@@ -151,6 +221,9 @@ public class MainController implements UIStorage {
         combobox_backup_game_version.getSelectionModel().select(0);
     }
 
+    /**
+     * 加载存储的使用习惯, 若对应的数据不存在, 则自动选中默认项.
+     */
     public void loadMemory_ArchiveSeries() {
 
         // Load ArchiveSeries
@@ -168,19 +241,32 @@ public class MainController implements UIStorage {
 
     @FXML
     void checkbox_autobackup_timing_OnAction(ActionEvent event) {
+        // Modify
         CheckBox src = (CheckBox) event.getSource();
         FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable = src.isSelected();
 
+        // Save and Reload
         saveUIAndLoadSettings();
+    }
+
+
+    public static MainController getInstance() {
+        return Main.loader.getController();
     }
 
     @FXML
     void checkbox_storagesettings_use_indepent_storage_OnAction(ActionEvent event) {
+        // Modify
         CheckBox src = (CheckBox) event.getSource();
         FileManager.applicationConfig_File.getSpecificDataInstance().Base.StorageSettings.useIndependentStorage = src.isSelected();
 
-        // Update
+        // Save And Reload
         saveUIAndLoadSettings();
+
+        /**
+         *   Update: 修改ArchiveBeans路径, 将导致所有的GameVersion和GameSeries数据都改变, 需要重新刷新UI.
+         */
+
         update_combobox_backup_game_version();
         update_combobox_backup_archive_series();
 
@@ -190,92 +276,53 @@ public class MainController implements UIStorage {
     void button_smartautobackup_test_OnAction(ActionEvent event) {
 
         // Get GameVersion
-        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        GameVersion gv = getSelectedGameVersion();
         if (gv == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个GameVersion！", ButtonType.OK).show();;
+            JavaFxUtil.DialogTools.mustChooseGameVersion_Dialog();
             return;
         }
 
         // Test
         if (gv.getCheatEngine() == null) {
-            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString()+"）未配置引擎！").show();
+            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）未配置引擎！").show();
             return;
         }
 
         ResultBox<Integer> r = gv.getCheatEngine().getValue();
 
         if (r.getSuccessCount() > 0) {
-            new Alert(Alert.AlertType.INFORMATION, "该GameVersion（" + gv.toString()+"）的智能自动备份有效！").show();
+            new Alert(Alert.AlertType.INFORMATION, "该GameVersion（" + gv.toString() + "）的智能自动备份有效！").show();
         } else {
-            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString()+"）的智能自动备份无效！").show();
+            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）的智能自动备份无效！").show();
         }
-
 
     }
 
     @FXML
     void textfield_autobackup_seconds_OnKeyReleased(KeyEvent event) {
 
-        // 防止左右方向键频繁刷新
+        // 防止[左右方向键]移动光标时频繁刷新
         if (event.getCode().isArrowKey() == true) {
             return;
         }
 
+        // Modify
         TextField src = (TextField) event.getSource();
-
         FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second = Integer.valueOf(src.getText());
+
+        // Save And Reload
         saveUIAndLoadSettings();
     }
 
-    public void backup() {
-        // Create Thread
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-
-                String temp = button_backup.getText();
-                button_backup.setDisable(true);
-                button_backup.setText("...");
-
-                // 获取GameVersion
-                GameVersion gv = combobox_backup_game_version.getSelectionModel().selectedItemProperty().get();
-
-                // 备份该GameVersion
-                ArchiveSeries archiveSeries = combobox_backup_archive_series.getSelectionModel().selectedItemProperty().get();
-
-                // 判断选中的[ArchiveSeries]是否空. 若空则创建默认的ArchiveSeries
-                System.out.println("当前的系列：" + archiveSeries);
-                if (archiveSeries == null) {
-                    LoggerManager.logDebug("该GameVersion没有任何存在的ArchiveSeries, 即将创建默认的ArchiveSeries: GameVersion = " + gv.getVersion_Name());
-
-                    // Create Default ArchiveSeries
-                    gv.createDefaultArchiveSeries();
-
-                    // Update
-                    archiveSeries = combobox_backup_archive_series.getSelectionModel().selectedItemProperty().get();
-                }
-
-                archiveSeries.backup();
-
-                // Update
-                update_combobox_backup_archive_series();
-
-                button_backup.setDisable(false);
-                button_backup.setText(temp);
-
-            }
-        });
-
-    }
 
     @FXML
     void button_backup_OnAction(ActionEvent event) {
-        backup();
+        ArchiveSeries.backup_FromUI();
     }
 
-
     /**
-     * 读取配置文件
+     * 读取配置文件. 注意, 该方法加载的UI组件, 是与配置文件有关的组件.
+     * 与配置文件无关的组件, 不应该在该方法中加载.
      */
     public void loadUI() {
         // 加载配置文件
@@ -289,35 +336,44 @@ public class MainController implements UIStorage {
     }
 
 
-public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
-    for (GameVersion gv : FileManager.gameVersionConfig_File.getSpecificDataInstance().gameVersions) {
-        combobox_backup_game_version.getItems().add(gv);
+    /**
+     * 从[本地存储]读取并添加GameVerison. 添加完毕后, 若存在可用Memory, 则会自动选择好上次记忆的GameVersion.
+     */
+    public void loadGameVersions() {
+
+        combobox_backup_game_version.getItems().clear();
+        for (GameVersion gv : FileManager.gameVersionConfig_File.getSpecificDataInstance().gameVersions) {
+            combobox_backup_game_version.getItems().add(gv);
+        }
+
+        // Load Memory >> GameVerison
+        loadMemory_GameVersion();
+
     }
 
-    // Load Memory >> GameVerison
-    loadMemory_GameVersion();
 
-    }
-
+    /**
+     * 加载[UI界面]的[存档UI].
+     */
     public void loadArchive() {
-    loadGameVersions();
-
+        loadGameVersions();
     }
 
-
+    /**
+     * 加载[UI界面]的[设置UI].
+     */
     public void loadSettings() {
-            // 生效配置文件
-            checkbox_smartautobackup_enable.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup);
-            checkbox_autobackup_timing.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable);
-            checkbox_storagesettings_use_indepent_storage.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.StorageSettings.useIndependentStorage);
-
-            textfield_autobackup_seconds.setText(String.valueOf(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second));
+        // Load ApplicationConfig.json and Update
+        checkbox_smartautobackup_enable.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup);
+        checkbox_autobackup_timing.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable);
+        checkbox_storagesettings_use_indepent_storage.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.StorageSettings.useIndependentStorage);
+        textfield_autobackup_seconds.setText(String.valueOf(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second));
     }
 
     public void update_combobox_backup_archive_series() {
 
         // 获取ArchiveSeries
-        ArchiveSeries as = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries as = getSelectedArchiveSeries();
 
         // 获取该ArchiveSeries下的所有ArchiveBean
         listview_archive_beans.getItems().clear();
@@ -330,12 +386,13 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
             listview_archive_beans.getItems().add(ab);
         }
 
-       listview_archive_beans.getItems().sort(new Comparator<ArchiveBean>() {
+        // 设置ArchiveBean通过 时间倒序 来排序.
+        listview_archive_beans.getItems().sort(new Comparator<ArchiveBean>() {
 
             @Override
             public int compare(ArchiveBean o1, ArchiveBean o2) {
-                long a=Long.valueOf(o1.getArchiveBeanCreateTime());
-                long b=Long.valueOf(o2.getArchiveBeanCreateTime());
+                long a = Long.valueOf(o1.getArchiveBeanCreateTime());
+                long b = Long.valueOf(o2.getArchiveBeanCreateTime());
 
                 if (a > b) {
                     return -1;
@@ -351,25 +408,25 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
     public void update_combobox_backup_game_version() {
         // 获取GameVersion
-        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        GameVersion gv = getSelectedGameVersion();
 
         // Storage
-        ArchiveSeries selected = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries selectedArchiveSeries = getSelectedArchiveSeries();
 
         // 获取该GameVersion的所有ArchiveSeries
         combobox_backup_archive_series.getItems().clear();
-        for (ArchiveSeries archiveSeries :gv.getAllArchiveSeries()) {
+        for (ArchiveSeries archiveSeries : gv.getAllArchiveSeries()) {
             combobox_backup_archive_series.getItems().add(archiveSeries);
         }
 
-        if (combobox_backup_archive_series.getItems().contains(selected) == true) {
-            combobox_backup_archive_series.getSelectionModel().select(selected);
+        if (combobox_backup_archive_series.getItems().contains(selectedArchiveSeries) == true) {
+            combobox_backup_archive_series.getSelectionModel().select(selectedArchiveSeries);
         } else {
             // Load Memory >> Auto Choose GameVersion
             loadMemory_ArchiveSeries();
         }
 
-
+        // 设置ArchiveSeries组合框 的 可用性.
         if (combobox_backup_archive_series.getItems().size() == 0) {
             combobox_backup_archive_series.setDisable(true);
         } else {
@@ -382,8 +439,7 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
     void combobox_backup_archive_series_OnAction(ActionEvent event) {
         // Update
         update_combobox_backup_archive_series();
-
-   }
+    }
 
     @FXML
     void combobox_backup_game_version_OnAction(ActionEvent event) {
@@ -391,14 +447,12 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
         update_combobox_backup_game_version();
     }
 
-
     @FXML
     void listview_archive_beans_OnMouseReleased(MouseEvent event) {
 
+        /** 左键单击: 显示选中ArchiveBean的Info **/
         if (event.getButton() == MouseButton.SECONDARY) {
-
             listview_archive_beans.getContextMenu().show(listview_archive_beans, Side.BOTTOM, 0, 0);
-
         }
 
 
@@ -409,25 +463,27 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
         /** 左键单击: 刷新ArchiveBean的Info **/
         if (event.getButton() == MouseButton.PRIMARY &&
-        event.getClickCount() == 1) {
+                event.getClickCount() == 1) {
             update_textarea_archive_bean_info();
         }
 
 
-        /** 左键双击: 回档All **/
+        /** 左键双击: 回档 (所有) **/
         if (event.getButton() == MouseButton.PRIMARY &&
-        event.getClickCount() == 2) {
-            rollbackAll();
+                event.getClickCount() == 2) {
+            ArchiveBean.rollbackAll_FromUI();
         }
 
-        /** 右键双击: 回档局部 **/
+        /** 右键双击: 回档 (局部) **/
         if (event.getButton() == MouseButton.MIDDLE) {
-            rollbackPartly();
+            ArchiveBean.rollbackPartly_FromUI();
         }
     }
 
     public void update_textarea_archive_bean_info() {
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
+        ArchiveBean ab = getSelectedArchiveBean();
+
+        // Prevent NPE.
         if (ab != null) {
             textarea_archive_bean_info.setText(ab.getInfo());
         }
@@ -437,17 +493,16 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
     @FXML
     void menuitem_create_archiveseries_OnAction(ActionEvent event) {
-        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
-        gv.createArchiveSeries_UI();
-
+        GameVersion gv = getSelectedGameVersion();
+        gv.createArchiveSeries_FromUI();
     }
 
     @FXML
-    void menuitem_import_archiveseries_OnAction(ActionEvent event)  {
+    void menuitem_import_archiveseries_OnAction(ActionEvent event) {
 
-        ArchiveSeries as = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries as = getSelectedArchiveSeries();
         if (as == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveSeries", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.mustChooseArchiveSeries_Dialog();
             return;
         }
 
@@ -482,67 +537,28 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
     @FXML
     void menuitem_set_remark_archivebean_OnAction(ActionEvent event) {
         // Set
-        setRemarkArchiveBean_UI();
+        ArchiveBean.setRemarkArchiveBean_FromUI();
 
         // Update
         update_textarea_archive_bean_info();
     }
 
-    public void setRemarkArchiveBean_UI() {
-
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
-        if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();
-            return;
-        }
-
-        String originalRemark = ab.getArchiveBeanConfig().getSpecificDataInstance().Information.remark;
-
-        TextInputDialog dialog = new TextInputDialog(originalRemark);
-        dialog.setTitle("设置ArchiveBean的备注");
-        dialog.setHeaderText("为该ArchiveBean（"+ ab.getArchiveBean_Name()+ "）设置备注");
-        dialog.setContentText("备注：");
-
-        // Traditional way to get the response value.
-        Optional<String> result = dialog.showAndWait();
-
-
-        if (result.isPresent() == true){
-
-            String input = result.get();
-
-            // 文件名过滤器
-            input = FileUtil.fileNameFilter(input);
-
-
-            if (input.trim().equalsIgnoreCase("") == true) {
-                return;
-            }
-
-            ab.setRemark(input);
-
-        } else {
-            //若点击了取消, 则直接返回
-            return;
-        }
-
-    }
 
     @FXML
     void menuitem_delete_archivebean_OnAction(ActionEvent event) {
 
         // Delete
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
+        ArchiveBean ab = getSelectedArchiveBean();
         if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
             return;
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
         askAlert.setTitle("删除该ArchiveBean");
-        askAlert.setHeaderText("你确定要删除该ArchiveBean（" +ab.getArchiveBean_Name()+"）吗？");
+        askAlert.setHeaderText("确定要删除该ArchiveBean（" + ab.getArchiveBean_Name() + "）吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
             ab.delete();
         } else {
             return;
@@ -554,102 +570,61 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
     @FXML
     void menuitem_delete_archiveseries_OnAction(ActionEvent event) {
-        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
-        gv.deleteArchiveSeries_UI();
+        GameVersion gv = getSelectedGameVersion();
+        gv.deleteArchiveSeries_FromUI();
     }
 
     @FXML
     void menuitem_rename_archiveseries_OnAction(ActionEvent event) {
-        ArchiveSeries as = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries as = getSelectedArchiveSeries();
         if (as == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个GameSeries！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.mustChooseArchiveSeries_Dialog();
             return;
         }
 
-        as.renameArchiveSeries();
+        as.renameArchiveSeries_FromUI();
     }
 
     @FXML
     void listview_archive_beans_OnKeyPressed(KeyEvent event) {
 
+        /** 方向键上下键: 快速刷新ArchiveBean的Info **/
         if (event.getCode() == KeyCode.UP ||
-        event.getCode() == KeyCode.DOWN) {
+                event.getCode() == KeyCode.DOWN) {
             update_textarea_archive_bean_info();
         }
     }
 
 
-    public void rollbackAll() {
-        // 选中ArchiveBean
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
-        if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();;
-            return;
-        }
-
-        // RollBack
-        Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
-        askAlert.setTitle("回档该ArchiveBean");
-        askAlert.setHeaderText("你确定要回档该ArchiveBean（" +ab.getArchiveBean_Name()+"）吗？");
-        Optional<ButtonType> result = askAlert.showAndWait();
-        boolean ret = false;
-        if (result.get() == ButtonType.OK){
-            ret = ab.rollBackAll();
-        } else {
-            return;
-        }
-
-        if (ret == true) {
-            new Alert(Alert.AlertType.INFORMATION, "回档成功！", ButtonType.OK).show();
-        } else {
-            new Alert(Alert.AlertType.ERROR, "回档失败！（可能的原因：权限不足 或 文件被占用）", ButtonType.OK).show();
-        }
-    }
-
     @FXML
     void menuitem_rollback_all_archive_bean_OnAction(ActionEvent event) {
-        rollbackAll();
+        ArchiveBean.rollbackAll_FromUI();
     }
 
-    public void rollbackPartly() {
-        // 选中ArchiveBean
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
-        if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();;
-            return;
-        }
-
-        ab.rollbackPartly();
-    }
 
     @FXML
     void menuitem_rollback_partly_archive_bean_OnAction(ActionEvent event) {
-       rollbackPartly();
+        ArchiveBean.rollbackPartly_FromUI();
     }
 
     /**
-     * 保存配置文件
+     * 保存配置文件.
      */
     public void saveUI() {
         FileManager.applicationConfig_File.saveFile();
     }
 
-
     @FXML
     public void menuitem_view_archivebean_path_OnAction(ActionEvent actionEvent) {
 
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
+        ArchiveBean ab = getSelectedArchiveBean();
 
         if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();;
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
             return;
         }
 
-        try {
-            Desktop.getDesktop().open(new File( ab.getArchiveBeanPath()));
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
+        FileUtil.viewFolder(ab.getArchiveBeanPath());
     }
 
     @FXML
@@ -658,20 +633,20 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
         // Delete
         ObservableList<ArchiveBean> abs = listview_archive_beans.getItems();
         if (abs.isEmpty() == true) {
-            new Alert(Alert.AlertType.WARNING, "当前ArchiveSeries没有任何的ArchiveBean！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.notFountArchiveBeanInThisArchiveSeries();
             return;
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
         askAlert.setTitle("删除所有ArchiveBean");
-        askAlert.setHeaderText("你确定要删除所有ArchiveBean吗？");
+        askAlert.setHeaderText("确定要删除所有ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
 
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
 
-            ArchiveSeries as  = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
-
+            ArchiveSeries as = getSelectedArchiveSeries();
             for (ArchiveBean ab : as.getAllArchiveBeans()) {
+                // ArchiveBean >> Delete
                 ab.delete();
             }
 
@@ -685,97 +660,54 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
     @FXML
     public void menuitem_view_archiveseries_path_OnAction(ActionEvent actionEvent) {
-        ArchiveSeries as = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries as = getSelectedArchiveSeries();
 
         if (as == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveSeries！", ButtonType.OK).show();;
+            JavaFxUtil.DialogTools.mustChooseArchiveSeries_Dialog();
             return;
         }
 
-        try {
-            Desktop.getDesktop().open(new File( as.getArchiveSeriesPath()));
-        } catch (IOException e) {
-           LoggerManager.logException(e);
-        }
-
+        FileUtil.viewFolder(as.getArchiveSeries_Path());
     }
 
     @FXML
     public void menuitem_view_gameversion_path_OnAction(ActionEvent actionEvent) {
-        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        GameVersion gv = getSelectedGameVersion();
 
         if (gv == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个GameVersion！", ButtonType.OK).show();;
+            JavaFxUtil.DialogTools.mustChooseGameVersion_Dialog();
             return;
         }
 
 
-        try {
-            File target = new File( gv.getGameVersionPath());
-
-            // 创建文件夹防止报错
-            target.mkdirs();
-
-            Desktop.getDesktop().open(target);
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
+        FileUtil.viewFolder(gv.getGameVersion_Path());
     }
 
     @FXML
     public void menuitem_rename_archivebean_OnAction(ActionEvent actionEvent) {
 
-        ArchiveBean ab = listview_archive_beans.getSelectionModel().getSelectedItem();
+        ArchiveBean ab = getSelectedArchiveBean();
         if (ab == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个GameBean！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
             return;
         }
 
+        // ArchiveBean >> Rename
         ab.renameArchiveBean();
-
     }
 
     public void menuitem_view_archivebeans_path_OnAction(ActionEvent actionEvent) {
-
-        try {
-            File target = new File( ArchiveBean.getArchiveBeansPath());
-
-            // 创建文件夹防止报错
-            target.mkdirs();
-
-            Desktop.getDesktop().open(target);
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
-
+        FileUtil.viewFolder(ArchiveBean.getArchiveBeansPath());
     }
 
     @FXML
     public void menuitem_view_application_config_path_OnAction(ActionEvent actionEvent) {
-        try {
-            File target = new File(ConfigFile.getApplicationConfigPath());
-
-            // 创建文件夹防止报错
-            target.mkdirs();
-
-            Desktop.getDesktop().open(target);
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
+        FileUtil.viewFolder(ConfigFile.getApplicationConfigPath());
     }
 
     @FXML
     public void menuitem_view_application_run_path_OnAction(ActionEvent actionEvent) {
-        try {
-            File target = new File(FileUtil.getJavaRunPath());
-
-            // 创建文件夹防止报错
-            target.mkdirs();
-
-            Desktop.getDesktop().open(target);
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
+        FileUtil.viewFolder(FileUtil.getJavaRunPath());
     }
 
     /**
@@ -783,57 +715,61 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
      */
     public void updateWelcome() {
 
-        /** 结果定义 **/
+        /** Dim the Result **/
         ImageAndText result = new ImageAndText();
 
-        new Thread(new Runnable(){
+        new Thread(new Runnable() {
 
             @Override
             public void run() {
-                /** 获取随机句子 **/
-                if (FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomSentence.goToAncientTimes == true) {
-                    result.setText(JinRiShiCiAPI.getPoetry().getKeySentence());
-                } else {
-                    result.setText(HitoKotoAPI.getRandomSentence().getFormatedString());
-                }
 
-                /** 获取随机图片 **/
-                final String image_Path = ConfigFile.getApplicationConfigPath() + "RandomImage.png";
-                if (FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.goToACGN == true) {
-                    RandomImageAPI.saveImage(SinaRandomImageAPI.getInstance().getRandomImageURL(), image_Path);
-                } else {
-                    RandomImageAPI.saveImage(QihooRandomImageAPI.getInstance().getRandomImageURL(), image_Path);
-                }
-
-                /** Start JavaFx Thread **/
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        /** Update UI **/
-                        label_welcome.setText(result.getText());
-                        imageview_welcome.setImage(new Image("file:" + image_Path));
-                        JavaFxUtil.centerImage(imageview_welcome);
+                // Try-Catch
+                try {
+                    /** 获取随机句子 **/
+                    if (FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomSentence.goToAncientTimes == true) {
+                        result.setText(JinRiShiCiAPI.getPoetry().getFormatedString());
+                    } else {
+                        result.setText(HitoKotoAPI.getRandomSentence().getFormatedString());
                     }
-                });
 
+                    /** 获取随机图片 **/
+                    final String image_Path = ConfigFile.getApplicationConfigPath() + "RandomImage.png";
+                    if (FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.goToACGN == true) {
+                        RandomImageAPI.saveImage(SinaRandomImageAPI.getInstance().getRandomImageURL(), image_Path);
+                    } else {
+                        RandomImageAPI.saveImage(QihooRandomImageAPI.getInstance().getRandomImageURL(), image_Path);
+                    }
+
+                    /** Start JavaFx Thread **/
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            /** Update UI **/
+                            label_welcome.setText(result.getText());
+                            imageview_welcome.setImage(new Image("file:" + image_Path));
+                            JavaFxUtil.centerImage(imageview_welcome);
+                        }
+                    });
+
+                } catch (Exception e) {
+                    /* 注意: updateWelcome()方法产生的Exception, 不会通过错误对话框提示, 而是静默输出到本地日志文件.
+                     */
+                    LoggerManager.getLogger().error(e);
+                }
             }
         }).start();
-
-
-
-
 
     }
 
     @FXML
     void imageview_welcome_OnMouseClicked(MouseEvent event) {
 
-        // 左键双击: 刷新图文
+        /** 左键双击: 刷新图文 **/
         if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
             updateWelcome();
         }
 
-        // 右键双击: 打开图片
+        /** 右键双击: 打开图片 **/
         if (event.getButton() == MouseButton.SECONDARY && event.getClickCount() == 2) {
             // Copy RandomImage.png to ClipBoard
             FileUtil.clipImage(ConfigFile.getApplicationConfigPath() + "RandomImage.png");
@@ -843,21 +779,14 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
 
     @FXML
     public void menuitem_view_gameversion_archive_path_OnAction(ActionEvent actionEvent) {
-        try {
-
-            GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
-
-            File target = new File(gv.smartlyGetGameArchive_Path());
-
-            // 创建文件夹防止报错
-            target.mkdirs();
-
-            Desktop.getDesktop().open(target);
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        }
+        GameVersion gv = getSelectedGameVersion();
+        FileUtil.viewFolder(gv.smartlyGetGameArchive_Path());
     }
 
+    /**
+     * 重新载入数据: GameVersion 和 ArchiveSeries.
+     * 该方法在[手动修改本地文件数据]后调用.
+     */
     @FXML
     public void menuitem_update_data_OnAction(ActionEvent actionEvent) {
         update_combobox_backup_game_version();
@@ -869,30 +798,31 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
         // Delete
         ObservableList<ArchiveBean> abs = listview_archive_beans.getItems();
         if (abs.isEmpty() == true) {
-            new Alert(Alert.AlertType.WARNING, "当前ArchiveSeries没有任何的ArchiveBean！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.notFountArchiveBeanInThisArchiveSeries();
             return;
         }
 
         // 选中ArchiveBean
-        ArchiveBean selectedArchiveBean = listview_archive_beans.getSelectionModel().getSelectedItem();
+        ArchiveBean selectedArchiveBean = getSelectedArchiveBean();
         if (selectedArchiveBean == null) {
-            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
             return;
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
         askAlert.setTitle("删除除此所有ArchiveBean");
-        askAlert.setHeaderText("你确定要删除除此（" +selectedArchiveBean.getArchiveBean_Name() + "）所有ArchiveBean吗？");
+        askAlert.setHeaderText("确定要删除除此（" + selectedArchiveBean.getArchiveBean_Name() + "）所有ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
 
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK) {
 
-            ArchiveSeries as  = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+            ArchiveSeries as = getSelectedArchiveSeries();
 
             for (ArchiveBean ab : as.getAllArchiveBeans()) {
 
                 // 删除除了选中ArchiveBean的所有ArchiveBean
                 if (selectedArchiveBean.getArchiveBean_Name().equals(ab.getArchiveBean_Name()) == false) {
+                    // ArchiveBean >> Delete
                     ab.delete();
                 }
             }

@@ -1,7 +1,7 @@
 package com.sakurawald.data;
 
 /**
- * 描述诗歌
+ * 描述[诗歌]对象.
  */
 public class Poetry {
 
@@ -61,4 +61,12 @@ public class Poetry {
     public String getTranslate() {
         return translate;
     }
+
+    /**
+     * @return 格式化之后的文本, 可用于快速展示.
+     */
+    public String getFormatedString() {
+        return "『" + this.getKeySentence() + "』" + "-「" + this.getTitle() + "」";
+    }
+
 }

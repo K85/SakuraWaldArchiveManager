@@ -10,6 +10,7 @@ import com.sakurawald.file.FileManager;
 import com.sakurawald.ui.controller.MainController;
 import com.sakurawald.util.DateUtil;
 import com.sakurawald.util.FileUtil;
+import com.sakurawald.util.JavaFxUtil;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,11 +24,10 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Optional;
 
 /**
- * 与ArchiveBean有关的类
+ * 描述一个ArchiveBean, 代表一个[游戏存档]对象
  */
 public class ArchiveBean {
 
@@ -53,18 +53,17 @@ public class ArchiveBean {
     /**
      * 获取[一个ArchiveBean文件夹]的名称
      */
-    public static String getArchiveBeanFolderName() {
-        String result = "Backup_" + DateUtil.getDateDetail(Calendar.getInstance());
-
-        result = result.replace(":", "-");
-
-        return result;
+    public static String generateArchiveBean_FolderName() {
+        return "Backup " + DateUtil.getCurrentDateDetailString();
     }
 
     public String getArchiveBeanPath() {
-        return this.getOwner_ArchiveSeries().getArchiveSeriesPath() + this.getArchiveBean_Name() + "\\";
+        return this.getOwner_ArchiveSeries().getArchiveSeries_Path() + this.getArchiveBean_Name() + "\\";
     }
 
+    /**
+     * @return 该ArchiveBean所属文件夹的[创建时间]
+     */
     public long getArchiveBeanCreateTime() {
         return FileUtil.getFileCreateTime(getArchiveBeanPath());
     }
@@ -72,12 +71,12 @@ public class ArchiveBean {
     /**
      * 获取[一个具体的ArchiveBean]的[文件夹路径]
      */
-    public static String generateSpecificArchiveBeanPath(ArchiveSeries archiveSeries) {
-        return archiveSeries.getArchiveSeriesPath() + ArchiveBean.getArchiveBeanFolderName() + "\\";
+    public static String generateSpecificArchiveBean_Path(ArchiveSeries archiveSeries) {
+        return archiveSeries.getArchiveSeries_Path() + ArchiveBean.generateArchiveBean_FolderName() + "\\";
     }
 
     /**
-     * 删除这个ArchiveBean
+     * 从本次存储删除这个ArchiveBean
      */
     public void delete() {
         File f = new File(this.getArchiveBeanPath());
@@ -85,7 +84,7 @@ public class ArchiveBean {
     }
 
     /**
-     * 获取ArchiveBeans文件夹的路径
+     * @return 获取ArchiveBeans文件夹的路径, ArchiveBeans的路径受"是否使用独立存储路径"的影响.
      */
     public static String getArchiveBeansPath() {
 
@@ -99,7 +98,6 @@ public class ArchiveBean {
     }
 
 
-
     /**
      * 修改该ArchiveBean的备注信息, 并存储到本地
      */
@@ -109,7 +107,7 @@ public class ArchiveBean {
         ArchiveBeanConfig_File abcf = getArchiveBeanConfig();
 
         // Modify
-        ArchiveBeanConfig_Data  abcd = abcf.getSpecificDataInstance();
+        ArchiveBeanConfig_Data abcd = abcf.getSpecificDataInstance();
         abcd.Information.remark = newRemark;
 
         // Save
@@ -122,15 +120,13 @@ public class ArchiveBean {
     public ArchiveBeanConfig_File getArchiveBeanConfig() {
         try {
             // 创建配置文件对象
-           ArchiveBeanConfig_File  abcf =  new ArchiveBeanConfig_File(this.getArchiveBeanPath(),"ArchiveBeanConfig.json",ArchiveBeanConfig_Data.class);
+            ArchiveBeanConfig_File abcf = new ArchiveBeanConfig_File(this.getArchiveBeanPath(), "ArchiveBeanConfig.json", ArchiveBeanConfig_Data.class);
             abcf.init();
 
             // Return
             return abcf;
 
-        } catch (IllegalAccessException e) {
-            LoggerManager.logException(e);
-        } catch (IOException e) {
+        } catch (IllegalAccessException | IOException e) {
             LoggerManager.logException(e);
         }
 
@@ -142,18 +138,18 @@ public class ArchiveBean {
      */
     public String getInfo() {
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         ArchiveBeanConfig_Data abcd = getArchiveBeanConfig().getSpecificDataInstance();
+        MainController mc = MainController.getInstance();
 
-        MainController mc = Main.loader.getController();
-
+        /** Information **/
         sb.append("★备份时间：" + abcd.Information.backup_time + "\n");
         sb.append("★游戏版本：" + abcd.Information.game_version + "\n");
-        sb.append("★存档系列：" +  abcd.Information.archive_series+ "\n");
+        sb.append("★存档系列：" + abcd.Information.archive_series + "\n");
         sb.append("★存档目录：" + abcd.Information.archive_path + "\n");
         sb.append("★操作系统名称：" + abcd.Information.os_name + "\n");
         sb.append("★操作系统版本：" + abcd.Information.os_version + "\n");
-        sb.append("★用户名称：" + abcd.Information.user_name  + "\n");
+        sb.append("★用户名称：" + abcd.Information.user_name + "\n");
         sb.append("★用户目录：" + abcd.Information.user_home + "\n");
 
         sb.append("\n");
@@ -169,7 +165,7 @@ public class ArchiveBean {
 
         ArrayList<ArchiveBean> result = new ArrayList<ArchiveBean>();
 
-        MainController mc = Main.loader.getController();
+        MainController mc = MainController.getInstance();
 
         // GameVersion
         for (GameVersion gv : FileManager.gameVersionConfig_File.getSpecificDataInstance().gameVersions) {
@@ -178,10 +174,7 @@ public class ArchiveBean {
             for (ArchiveSeries as : gv.getAllArchiveSeries()) {
 
                 // ArchiveBean
-
-                for (ArchiveBean ab : as.getAllArchiveBeans()) {
-                    result.add(ab);
-                }
+                result.addAll(as.getAllArchiveBeans());
 
             }
 
@@ -191,7 +184,88 @@ public class ArchiveBean {
         return result;
     }
 
-    public String toString() {return this.archiveBean_Name;}
+    public static void rollbackAll_FromUI() {
+        MainController mc = MainController.getInstance();
+
+        // 选中ArchiveBean
+        ArchiveBean ab = mc.getSelectedArchiveBean();
+        if (ab == null) {
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
+            return;
+        }
+
+        // RollBack
+        Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        askAlert.setTitle("回档该ArchiveBean");
+        askAlert.setHeaderText("确定要回档该ArchiveBean（" + ab.getArchiveBean_Name() + "）吗？");
+        Optional<ButtonType> result = askAlert.showAndWait();
+        boolean ret = false;
+        if (result.get() == ButtonType.OK) {
+            // ArchiveBean >> Rollback All
+            ret = ab.rollBackAll();
+        } else {
+            return;
+        }
+
+        if (ret == true) {
+            new Alert(Alert.AlertType.INFORMATION, "回档成功！", ButtonType.OK).show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "回档失败！（可能的原因：权限不足 或 文件被占用）", ButtonType.OK).show();
+        }
+    }
+
+    public static void rollbackPartly_FromUI() {
+        MainController mc = MainController.getInstance();
+
+        // 选中ArchiveBean
+        ArchiveBean ab = mc.getSelectedArchiveBean();
+        if (ab == null) {
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
+            return;
+        }
+
+        // ArchiveBean >> Rollback Partyly
+        ab.rollbackPartly();
+    }
+
+    public static void setRemarkArchiveBean_FromUI() {
+
+        MainController mc = MainController.getInstance();
+
+        ArchiveBean ab = mc.getSelectedArchiveBean();
+        if (ab == null) {
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
+            return;
+        }
+
+        String originalRemark = ab.getArchiveBeanConfig().getSpecificDataInstance().Information.remark;
+
+        TextInputDialog dialog = new TextInputDialog(originalRemark);
+        dialog.setTitle("设置ArchiveBean的备注");
+        dialog.setHeaderText("为该ArchiveBean（" + ab.getArchiveBean_Name() + "）设置备注");
+        dialog.setContentText("备注：");
+
+        Optional<String> result = dialog.showAndWait();
+
+        if (result.isPresent() == true) {
+
+            String input = result.get();
+
+            // 防空字符的字符串
+            if (input.trim().equalsIgnoreCase("") == true) {
+                return;
+            }
+
+            // Set ArchiveBean Remark.
+            ab.setRemark(input);
+
+        }
+
+    }
+
+    public String toString() {
+        return this.archiveBean_Name;
+    }
 
     public boolean renameArchiveBean(String newName) {
 
@@ -202,25 +276,25 @@ public class ArchiveBean {
         ret = f.renameTo(new File(f.getParentFile() + "\\" + newName));
 
         // Update
-        ((MainController) Main.loader.getController()).update_combobox_backup_archive_series();
+        MainController.getInstance().update_combobox_backup_archive_series();
 
         return ret;
     }
 
     public void renameArchiveBean() {
 
-        TextInputDialog dialog = new TextInputDialog();
+        TextInputDialog dialog = new TextInputDialog(this.getArchiveBean_Name());
         dialog.setTitle("重命名ArchiveBean");
-        dialog.setHeaderText("每一个ArchiveBean都有一个名称，\n但请注意名称应符合Windows系统的文件命名规范！");
 
+//        dialog.setHeaderText("每一个ArchiveBean都有一个名称，\n但请注意名称应符合Windows系统的文件命名规范！");
 
-        dialog.setContentText("请输入该ArchiveBean的新名称：" + this.getArchiveBean_Name());
+        dialog.setContentText("该ArchiveBean的新名称：" + this.getArchiveBean_Name());
 
         // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
 
 
-        if (result.isPresent() == true){
+        if (result.isPresent() == true) {
 
             String input = result.get();
 
@@ -228,10 +302,8 @@ public class ArchiveBean {
                 return;
             }
 
-            if (renameArchiveBean(input) == false){
-
+            if (renameArchiveBean(input) == false) {
                 new Alert(Alert.AlertType.WARNING, "重命名失败！", ButtonType.OK).show();
-
             }
 
 
@@ -243,6 +315,7 @@ public class ArchiveBean {
 
     /**
      * 调用该方法将用该ArchiveBean的数据覆盖本地游戏数据
+     *
      * @return 是否成功
      */
     public boolean rollBackAll() {
@@ -310,7 +383,6 @@ public class ArchiveBean {
         }
 
     }
-
 
 
 }

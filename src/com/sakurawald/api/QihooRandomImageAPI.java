@@ -1,6 +1,7 @@
 package com.sakurawald.api;
 
 import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.util.Iterator;
 
 import com.sakurawald.debug.LoggerManager;
@@ -16,99 +17,114 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 
-/** 随机获取一张图片的API **/
+/**
+ * 随机获取一张图片的API
+ **/
 public class QihooRandomImageAPI extends RandomImageAPI {
 
-	/** 单例设计 **/
-	public static QihooRandomImageAPI instance = new QihooRandomImageAPI();
+    /**
+     * 单例设计
+     **/
+    public static QihooRandomImageAPI instance = new QihooRandomImageAPI();
 
-	private static String getAssessRandomImageURL() {
-		int cid = FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.cid;
-		int start = NumberUtil.getRandomNumber(
-				FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.start_min,
-				FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.start_max);
+    private QihooRandomImageAPI() {
+        // Do nothing.
+    }
 
-		String result = "http://wallpaper.apc.360.cn/index.php?%20c=WallPaper&a=getAppsByCategory&cid="
-				+ cid + "&start=" + start + "&count=1";
+    /**
+     * @return 访问的随机图片URL
+     */
+    private static String getAssessRandomImageURL() {
+        int cid = FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.cid;
+        int start = NumberUtil.getRandomNumber(
+                FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.start_min,
+                FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomQihooImage.start_max);
 
-		LoggerManager
-				.logDebug("随机图片(360壁纸) - API", "本次访问的API地址: " + result, true);
+        String result = "http://wallpaper.apc.360.cn/index.php?%20c=WallPaper&a=getAppsByCategory&cid="
+                + cid + "&start=" + start + "&count=1";
 
-		return result;
-	}
+        LoggerManager
+                .logDebug("随机图片(360壁纸) - API", "Request URL >> " + result, true);
 
-	public static QihooRandomImageAPI getInstance() {
-		return instance;
-	}
+        return result;
+    }
 
-	private static String getRandomImageURL_JSON() {
+    public static QihooRandomImageAPI getInstance() {
+        return instance;
+    }
 
-		LoggerManager.logDebug("随机图片(360壁纸) - API", "访问360壁纸资源站 - Run");
+    private static String getRandomImageURL_JSON() {
 
-		String result = null;
+        LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Run");
 
-		OkHttpClient client = new OkHttpClient();
+        String result = null;
 
-		Request request = null;
-		request = new Request.Builder().url(getAssessRandomImageURL()).get()
-				.build();
+        OkHttpClient client = new OkHttpClient();
 
-		Response response = null;
+        Request request = null;
+        request = new Request.Builder().url(getAssessRandomImageURL()).get()
+                .build();
 
-		String JSON = null;
-		try {
-			response = client.newCall(request).execute();
-			JSON = response.body().string();
-			result = JSON;
+        Response response = null;
 
-		} catch (IOException e) {
-			LoggerManager.logException(e);
-		} finally {
+        String JSON = null;
+        try {
+            response = client.newCall(request).execute();
+            JSON = response.body().string();
+            result = JSON;
 
-			LoggerManager.logDebug("随机图片(360壁纸) - API", "随机获取图片 - 结果: Code = "
-					+ response.message() + ", Response = " + JSON);
-		}
+        } catch (SocketTimeoutException e) {
+            // 如果是连接超时, 则静默处理.
+            LoggerManager.getLogger().error(e);
+        } catch (IOException e) {
+            LoggerManager.logException(e);
+        } finally {
 
-		/** 关闭Response的body **/
-		response.body().close();
+            LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Response: Code = "
+                    + response.message() + ", JSON = " + JSON);
+        }
 
-		return result;
+        /** 关闭Response的body **/
+        response.body().close();
 
-	}
+        return result;
+    }
 
-	/** 获取随机图片的URL在线地址 **/
-	@Override
-	public String getRandomImageURL() {
+    /**
+     * 获取随机图片的URL在线地址
+     *
+     * @return 随机图片的URL地址, 失败返回null.
+     **/
+    @Override
+    public String getRandomImageURL() {
 
-		LoggerManager.logDebug("随机图片(360壁纸) - API", "访问360壁纸资源站 - 开始获取");
+        LoggerManager.logDebug("随机图片(360壁纸) - API",
+                "Get Random Image URL -> run");
 
-		String result = null;
+        String result = null;
 
-		/** 获取JSON数据 **/
-		String JSON = getRandomImageURL_JSON();
+        /** 获取JSON数据 **/
+        String JSON = getRandomImageURL_JSON();
 
-		// 若未找到结果，则返回0
-		if (JSON == null) {
-			return null;
-		}
+        // 若未找到结果，则返回0
+        if (JSON == null) {
+            return null;
+        }
 
-		JsonParser jParser = new JsonParser();
-		JsonObject response_json = (JsonObject) jParser.parse(JSON);// 构造JsonObject对象
+        JsonParser jParser = new JsonParser();
+        JsonObject response_json = (JsonObject) jParser.parse(JSON);// 构造JsonObject对象
 
-		JsonArray data = response_json.get("data").getAsJsonArray();
+        JsonArray data = response_json.get("data").getAsJsonArray();
 
-		Iterator<JsonElement> it = data.iterator();
+        for (JsonElement je : data) {
+            result = je.getAsJsonObject().get("url").getAsString();
+            break;
+        }
 
-		while (it.hasNext()) {
-			JsonElement je = it.next();
-			result = je.getAsJsonObject().get("url").getAsString();
-			break;
-		}
+        LoggerManager.logDebug("随机图片(360壁纸) - API",
+                "Get Random Image URL -> Response: Image_URL = " + result);
 
-		LoggerManager.logDebug("随机图片(360壁纸) - API",
-				"随机获取图片的URL - 结果: Image_URL = " + result);
-
-		return result;
-	}
+        return result;
+    }
 
 }

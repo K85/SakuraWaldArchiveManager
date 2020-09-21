@@ -28,27 +28,32 @@ import java.util.Optional;
 
 public class Main extends Application {
 
+    /**
+     * Decompilation Easter
+     */
+    public static final String Decompilation_Easter = "Hi！当你看到这些文字时，可能你已经尝试反编译该软件了。\n" +
+            "奈何本人技术较差，代码写的粗糙，请Dalao们轻喷！\n" +
+            "哦，对了。该项目没有进行混淆处理，若有疑问可以自行查看源码。" + LoggerManager.SAD_FACIAL_EXPRESSION;
+
     public static FXMLLoader loader = null;
     public static Stage stage = null;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         stage = primaryStage;
-
         loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
 
         // Create
         Parent root = loader.load();
 
-        primaryStage.setTitle("Plants vs. Zombies Archive Manager (Sakura Wald)");
+        primaryStage.setTitle("Plants vs. Zombies Archive Manager");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
 
         // Set Icon
         primaryStage.getIcons().add(new Image(
                 Main.class.getResourceAsStream("icon.png")));
-
 
 
         // Show
@@ -58,17 +63,13 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //对话框 Alert Alert.AlertType.CONFIRMATION：反问对话框
                 Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
-                //设置对话框标题
                 askAlert.setTitle("退出");
-                //设置内容
-                askAlert.setHeaderText("你确定要退出本程序吗？");
-                //显示对话框
+                askAlert.setHeaderText("确定要退出本程序吗？");
                 Optional<ButtonType> result = askAlert.showAndWait();
-                //如果点击OK
-                if (result.get() == ButtonType.OK){
+                if (result.get() == ButtonType.OK) {
 
+                    // Call
                     beforeExit();
 
                     // 直接退出虚拟机
@@ -80,9 +81,9 @@ public class Main extends Application {
             }
         });
 
-        // Regist Shortcut Key
-        KeyCombination kc = new KeyCodeCombination(KeyCode.B,KeyCombination.ALT_DOWN);
-        Mnemonic mnemonic = new Mnemonic(((MainController)Main.loader.getController()).button_backup,kc);
+        // Register Shortcut Key
+        KeyCombination kc = new KeyCodeCombination(KeyCode.B, KeyCombination.ALT_DOWN);
+        Mnemonic mnemonic = new Mnemonic(MainController.getInstance().button_backup, kc);
         Main.stage.getScene().addMnemonic(mnemonic);
 
     }
@@ -102,13 +103,8 @@ public class Main extends Application {
             LoggerManager.logException(e);
         }
 
-
-
-
-
         // 启动JavaFX程序
         launch(args);
-
     }
 
     /**
@@ -116,17 +112,17 @@ public class Main extends Application {
      */
     public void beforeExit() {
 
-        MainController mc = Main.loader.getController();
+        MainController mc = MainController.getInstance();
 
         // Save Memory
-        GameVersion selectedGameVersion = mc.combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        GameVersion selectedGameVersion = mc.getSelectedGameVersion();
         if (selectedGameVersion != null) {
             FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedGameVersion = selectedGameVersion.getVersion_Name();
             FileManager.tempConfig_File.saveFile();
         }
 
         // Save Memory
-        ArchiveSeries selectedArchiveSeries = mc.combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        ArchiveSeries selectedArchiveSeries = mc.getSelectedArchiveSeries();
         if (selectedArchiveSeries != null) {
             FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedArchiveSeries = selectedArchiveSeries.getArchiveSeries_Name();
             FileManager.tempConfig_File.saveFile();

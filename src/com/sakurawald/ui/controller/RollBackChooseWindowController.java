@@ -4,11 +4,14 @@ import com.sakurawald.Main;
 import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveExplanation;
 import com.sakurawald.data.ArchiveFile;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -16,6 +19,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RollBackChooseWindowController {
 
@@ -44,6 +48,7 @@ public class RollBackChooseWindowController {
     public void initialize() {
 
         /** Init TableView **/
+
         //Bind Data
         tableview_choose_checkbox.setCellValueFactory(cellData -> cellData.getValue().getMyCheckBox().getCheckBox());
         tableview_choose_filename.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFile().getName()));
@@ -54,19 +59,21 @@ public class RollBackChooseWindowController {
     }
 
     /**
-     * 更新存档选择界面
+     * 更新[ArchiveFile选择界面].
      */
     public void update_treetableview_choose() {
 
         // Get Selected Archive Bean
-        MainController mc = Main.loader.getController();
-        ArchiveBean ab = mc.listview_archive_beans.getSelectionModel().getSelectedItem();
+        MainController mc = MainController.getInstance();
+        ArchiveBean ab = mc.getSelectedArchiveBean();
 
         // 获取ArchiveBean的存档文件
         ArrayList<ArchiveFile> afs = new ArrayList<ArchiveFile>();
-        for (File f : new File(ab.getArchiveBeanPath()).listFiles()) {
+        for (File f : Objects.requireNonNull(new File(ab.getArchiveBeanPath()).listFiles())) {
 
-            // File Filter
+            /**
+             * File Filter: 过滤[目录]和[ArchiveBeanConfig.json文件]
+             */
             if (f.isFile() == true && f.getName().equalsIgnoreCase("ArchiveBeanConfig.json") == false) {
                 afs.add(new ArchiveFile(ab, f));
             }
@@ -78,7 +85,6 @@ public class RollBackChooseWindowController {
         // Add To UI
         ObservableList<ArchiveFile> data = FXCollections.observableArrayList(afs);
         tableview_choose.setItems(data);
-
     }
 
 
@@ -86,18 +92,19 @@ public class RollBackChooseWindowController {
         ArrayList<ArchiveFile> result = new ArrayList<ArchiveFile>();
 
         for (ArchiveFile af : tableview_choose.getItems()) {
-            if ( af.getMyCheckBox().getCheckBox().getValue().isSelected() == true) {
-            result.add(af);
+            if (af.getMyCheckBox().getCheckBox().getValue().isSelected() == true) {
+                result.add(af);
             }
         }
 
         return result;
 
     }
+
     @FXML
     void button_rollback_OnAction(ActionEvent event) {
 
-       // Get All Selected ArchiveFile
+        // Get All Selected ArchiveFile
         ArrayList<ArchiveFile> afs = getAllSelectedArchiveFile();
 
         // RollBack
@@ -106,7 +113,7 @@ public class RollBackChooseWindowController {
         }
 
         // Close
-        ((Stage)tableview_choose.getScene().getWindow()).close();
+        ((Stage) tableview_choose.getScene().getWindow()).close();
     }
 
     @FXML
@@ -131,8 +138,7 @@ public class RollBackChooseWindowController {
 
         // 左键双击: 快速勾选
         if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
-
-           ArchiveFile af =  tableview_choose.getSelectionModel().getSelectedItem();
+            ArchiveFile af = tableview_choose.getSelectionModel().getSelectedItem();
             af.getMyCheckBox().getCheckBox().getValue().setSelected(!af.getMyCheckBox().getCheckBox().getValue().isSelected());
         }
 

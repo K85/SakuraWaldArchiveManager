@@ -8,15 +8,12 @@ import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.util.FileUtil;
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTreeCell;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.StackPane;
-import javafx.scene.shape.Arc;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -43,15 +40,14 @@ public class ImportController {
         // Create Thread
         Platform.runLater(new Runnable() {
 
-
             @Override
             public void run() {
 
-                // 获取所有选中的ArchiveBean
+                // Get All Selected ArchiveBean
                 ArrayList<ArchiveBean> abs = getSelectedArchiveBeans();
 
                 // Get Data
-                MainController mc = Main.loader.getController();
+                MainController mc = MainController.getInstance();
 
                 // Import
                 for (ArchiveBean ab : abs) {
@@ -61,7 +57,7 @@ public class ImportController {
                     source_Parent_File.mkdirs();
 
                     String source = source_File.getAbsolutePath();
-                    String target = mc.combobox_backup_archive_series.getSelectionModel().getSelectedItem().getArchiveSeriesPath() + source_File.getName();
+                    String target = mc.getSelectedArchiveSeries().getArchiveSeries_Path() + source_File.getName();
                     try {
                         FileUtil.copyFolder(source, target);
                     } catch (IOException e) {
@@ -74,7 +70,7 @@ public class ImportController {
                 mc.update_combobox_backup_archive_series();
 
                 // Close Window
-                ((Stage)treeview_all_archive_bean.getScene().getWindow()).close();
+                ((Stage) treeview_all_archive_bean.getScene().getWindow()).close();
             }
         });
 
@@ -94,16 +90,16 @@ public class ImportController {
         CheckBoxTreeItem root = (CheckBoxTreeItem) treeview_all_archive_bean.getRoot();
 
         for (CheckBoxTreeItem cbti : getAllArchiveBean()) {
-            cbti.setSelected(! cbti.isSelected());
+            cbti.setSelected(!cbti.isSelected());
         }
     }
 
     /**
-     * 从UI上获取所有的ArchiveBean的CheckBoxTreeItem
+     * @return 从UI上获取所有的ArchiveBean的CheckBoxTreeItem.
      */
     public ArrayList<CheckBoxTreeItem> getAllArchiveBean() {
 
-            ArrayList<CheckBoxTreeItem> result = new ArrayList<CheckBoxTreeItem>();
+        ArrayList<CheckBoxTreeItem> result = new ArrayList<CheckBoxTreeItem>();
 
         getChildren(result, (CheckBoxTreeItem) treeview_all_archive_bean.getRoot());
 
@@ -111,7 +107,7 @@ public class ImportController {
     }
 
     /**
-     * 从UI上获取选中的所有ArchiveBean
+     * @return 从UI上获取选中的所有ArchiveBean.
      */
     public ArrayList<ArchiveBean> getSelectedArchiveBeans() {
 
@@ -129,7 +125,10 @@ public class ImportController {
     }
 
 
-    private void getChildren(ArrayList<CheckBoxTreeItem> result,  CheckBoxTreeItem node) {
+    /**
+     * 递归方法. 用于遍历出某个节点的所有子节点.
+     */
+    private void getChildren(ArrayList<CheckBoxTreeItem> result, CheckBoxTreeItem node) {
 
         if (node.getValue() instanceof ArchiveBean) {
             result.add(node);
@@ -151,6 +150,7 @@ public class ImportController {
 
         TreeItem<String> classes = new TreeItem<>("所有的ArchiveBean");
 
+        // Set the Root of TreeView.
         treeview_all_archive_bean.setRoot(this.getTreeItem_AllArchiveBean());
         // 设置TreeView为 复选框模式
         treeview_all_archive_bean.setCellFactory(CheckBoxTreeCell.<String>forTreeView());
@@ -158,12 +158,12 @@ public class ImportController {
     }
 
     /**
-     * 获取所有的ArchiveBean, 包括不同GameVersion的.
+     * @return 获取所有的ArchiveBean, 包括不同GameVersion的.
      */
     public TreeItem getTreeItem_AllArchiveBean() {
 
         /** 获取控制器 **/
-        MainController mc = Main.loader.getController();
+        MainController mc = MainController.getInstance();
 
         /** 构造Root节点 **/
         CheckBoxTreeItem result = new CheckBoxTreeItem("所有的GameVersion");
@@ -181,13 +181,11 @@ public class ImportController {
             for (ArchiveSeries as : gv.getAllArchiveSeries()) {
 
                 CheckBoxTreeItem cbti_archiveSeries = new CheckBoxTreeItem(as);
-
                 cbti_gameVersion.getChildren().add(cbti_archiveSeries);
 
                 // ArchiveBean
                 for (ArchiveBean ab : as.getAllArchiveBeans()) {
                     CheckBoxTreeItem cbti_archiveBean = new CheckBoxTreeItem(ab);
-
                     cbti_archiveSeries.getChildren().add(cbti_archiveBean);
 
                 }
@@ -206,9 +204,9 @@ public class ImportController {
         // 双击左键: 快速勾选
         if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
 
-            TreeItem<String> o = treeview_all_archive_bean.getSelectionModel().getSelectedItem();
-            if (o instanceof CheckBoxTreeItem) {
-                CheckBoxTreeItem cbti = (CheckBoxTreeItem) o;
+            TreeItem<String> selected = treeview_all_archive_bean.getSelectionModel().getSelectedItem();
+            if (selected instanceof CheckBoxTreeItem) {
+                CheckBoxTreeItem cbti = (CheckBoxTreeItem) selected;
                 cbti.setSelected(!cbti.isSelected());
             }
 

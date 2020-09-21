@@ -20,7 +20,7 @@ public class ArchiveFile {
     /**
      * 用于UI选择的CheckBox
      */
-    private MyCheckBox checkBox = new MyCheckBox();
+    private final MyCheckBox checkBox = new MyCheckBox();
     /**
      * 描述该ArchiveFile的ArchiveExplanation
      */
@@ -33,10 +33,6 @@ public class ArchiveFile {
 
     public ArchiveBean getOwner_ArchiveBean() {
         return owner_ArchiveBean;
-    }
-
-    public void setOwner_ArchiveBean(ArchiveBean owner_ArchiveBean) {
-        this.owner_ArchiveBean = owner_ArchiveBean;
     }
 
     public ArchiveExplanation getArchiveExplanation() {
@@ -60,11 +56,11 @@ public class ArchiveFile {
     }
 
     /**
-     * 对该ArchiveFile进行回档操作
+     * 对该ArchiveFile进行[回档]操作
      */
     public void rollback() {
 
-        // Copy
+        // Copy Single File
         String from = this.getFile().getAbsolutePath();
         String to = this.getOwner_ArchiveBean().getOwner_ArchiveSeries().getOwner_GameVersion().smartlyGetGameArchive_Path() + this.getFile().getName();
         try {

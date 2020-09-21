@@ -7,16 +7,18 @@ import java.io.IOException;
  */
 public class GameVersionConfig_File extends ConfigFile {
 
-	public GameVersionConfig_File(String path, String fineName,
+    public GameVersionConfig_File(String path, String fineName,
                                   @SuppressWarnings("rawtypes") Class configDataClass)
-			throws IllegalArgumentException, IllegalAccessException,
-			IOException {
-		super(path, fineName, configDataClass);
-	}
+            throws IllegalArgumentException, IllegalAccessException,
+            IOException {
+        super(path, fineName, configDataClass);
+    }
 
-	/** 具体实例 */
-	public GameVersionConfig_Data getSpecificDataInstance() {
-		return (GameVersionConfig_Data) super.getConfigDataClassInstance();
-	}
+    /**
+     * 具体实例
+     */
+    public GameVersionConfig_Data getSpecificDataInstance() {
+        return (GameVersionConfig_Data) super.getConfigDataClassInstance();
+    }
 
 }

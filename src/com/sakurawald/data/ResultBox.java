@@ -1,9 +1,9 @@
 package com.sakurawald.data;
 
 /**
- * 描述一个返回对象
+ * 描述一个[返回值对象].
  */
-public class  ResultBox<E> {
+public class ResultBox<E> {
 
     private E value = null;
     private int failCount = 0;
@@ -18,7 +18,7 @@ public class  ResultBox<E> {
     }
 
     public void addSuccessCount() {
-        this.successCount  = this.successCount  + 1;
+        this.successCount = this.successCount + 1;
     }
 
     public ResultBox() {

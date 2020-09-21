@@ -9,61 +9,61 @@ import java.io.IOException;
 //用于管理所有的本地配置文件，包括每一个配置文件的命名
 public class FileManager {
 
-	/**
-	 * 单例模式
-	 */
-	private static FileManager instance = null;
+    /**
+     * 单例模式
+     */
+    private static FileManager instance = null;
 
-	public static FileManager getInstance() {
+    public static FileManager getInstance() {
 
-		if (instance == null) {
-			instance = new FileManager();
-		}
+        if (instance == null) {
+            instance = new FileManager();
+        }
 
-		return instance;
-	}
+        return instance;
+    }
 
-	private FileManager() {
-		// Do nothing.
-	}
+    private FileManager() {
+        // Do nothing.
+    }
 
-	/** 配置文件列表 **/
-	public static ApplicationConfig_File applicationConfig_File = null;
-	public static GameVersionConfig_File gameVersionConfig_File = null;
-	public static TempConfig_File tempConfig_File = null;
+    /**
+     * 配置文件列表
+     **/
+    public static ApplicationConfig_File applicationConfig_File = null;
+    public static GameVersionConfig_File gameVersionConfig_File = null;
+    public static TempConfig_File tempConfig_File = null;
 
-	/**
-	 * 调用本方法来<初始化>配置文件系统
-	 */
-	public void init() throws IllegalArgumentException,
-			IllegalAccessException, IOException {
+    /**
+     * 调用本方法来<初始化>配置文件系统.
+     */
+    public void init() throws IllegalArgumentException,
+            IllegalAccessException, IOException {
 
-		LoggerManager.logDebug("配置文件系统", "初始化配置文件", true);
+        LoggerManager.logDebug("配置文件系统", "Init All Configs...", true);
 
+        // Create Folder
+        LoggerManager.logDebug("配置文件系统", "Create ArchiveBeans Folder", true);
+        new File(ConfigFile.getApplicationConfigPath() + "\\ArchiveBeans").mkdirs();
 
+        // ApplicationConfig.json
+        LoggerManager.logDebug("配置文件系统", "Init >> Application.json", true);
+        applicationConfig_File = new ApplicationConfig_File(ConfigFile.getApplicationConfigPath(),
+                "ApplicationConfig.json", ApplicaitonConfig_Data.class);
+        applicationConfig_File.init();
 
-		// Create Folder
-		LoggerManager.logDebug("配置文件系统", "创建ArchiveBeans文件夹", true);
-		new File(ConfigFile.getApplicationConfigPath() + "\\ArchiveBeans").mkdirs();
+        // GameVersionConfig.json
+        LoggerManager.logDebug("配置文件系统", "Init >> GameVersionConfig.json", true);
+        gameVersionConfig_File = new GameVersionConfig_File(ConfigFile.getApplicationConfigPath(),
+                "GameVersionConfig.json", GameVersionConfig_Data.class);
+        gameVersionConfig_File.init();
 
-		// ApplicationConfig.json
-		LoggerManager.logDebug("配置文件系统", "初始化Application.json", true);
-		applicationConfig_File = new ApplicationConfig_File(ConfigFile.getApplicationConfigPath(),
-				"ApplicationConfig.json", ApplicaitonConfig_Data.class);
-		applicationConfig_File.init();
+        // TempConfig.json
+        LoggerManager.logDebug("配置文件系统", "Init >> TempConfig.json", true);
+        tempConfig_File = new TempConfig_File(ConfigFile.getApplicationConfigPath(),
+                "TempConfig.json", TempConfig_Data.class);
+        tempConfig_File.init();
 
-		// GameVersionConfig.json
-		LoggerManager.logDebug("配置文件系统", "初始化GameVersionConfig.json", true);
-		gameVersionConfig_File = new GameVersionConfig_File(ConfigFile.getApplicationConfigPath(),
-				"GameVersionConfig.json", GameVersionConfig_Data.class);
-		gameVersionConfig_File.init();
-
-		// TempConfig.json
-		LoggerManager.logDebug("配置文件系统", "初始化TempConfig.json", true);
-		tempConfig_File = new TempConfig_File(ConfigFile.getApplicationConfigPath(),
-				"TempConfig.json", TempConfig_Data.class);
-		tempConfig_File.init();
-
-	}
+    }
 
 }

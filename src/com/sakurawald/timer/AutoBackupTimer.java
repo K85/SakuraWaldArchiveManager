@@ -1,6 +1,7 @@
 package com.sakurawald.timer;
 
-import com.sakurawald.Main;
+import com.sakurawald.archive.ArchiveBean;
+import com.sakurawald.archive.ArchiveSeries;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.ui.controller.MainController;
@@ -11,7 +12,7 @@ import java.util.TimerTask;
 public class AutoBackupTimer extends TimerTask {
 
     /**
-     * 存储已经运行的时间
+     * 存储已经运行的时间.
      */
     private int passedTimeMs = 0;
 
@@ -49,7 +50,7 @@ public class AutoBackupTimer extends TimerTask {
 
                 passedTimeMs = 0;
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             LoggerManager.logException(e);
         }
 
@@ -59,9 +60,12 @@ public class AutoBackupTimer extends TimerTask {
      * 满足时间条件后执行的方法
      */
     public void doTask() {
-        LoggerManager.logDebug("计时系统", "自动备份 >> 开始自动备份");
-        MainController mc = Main.loader.getController();
-         mc.backup();
+
+
+        LoggerManager.logDebug("AutoBackup", "Start");
+        MainController mc = MainController.getInstance();
+
+        ArchiveSeries.backup_FromUI();
     }
 
 

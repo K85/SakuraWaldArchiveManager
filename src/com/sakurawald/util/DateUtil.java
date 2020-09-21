@@ -11,172 +11,182 @@ import java.util.Date;
 
 public class DateUtil {
 
-	/**
-	 * 将<某个时间>与<当前时间>比较
-	 * 
-	 * @return 输入的日期在现在之后，则返回1. 输入的日期在现在之前，则返回-1. 若输入日期与现在一样，则返回0.
-	 */
-	public static int compareDate(Calendar date) {
-		return DateUtil.compareDate(date, Calendar.getInstance());
-	}
+    /**
+     * @return 返回本地当前时间的详细文本, 并且该文本是符合Windows文件命名规则的.
+     */
+    public static String getCurrentDateDetailString() {
+        String result = DateUtil.getDateDetail(Calendar.getInstance());
 
-	public static int compareDate(Calendar date1, Calendar date2) {
+        result = result.replace(":", "-");
+        return result;
+    }
 
-		Calendar date_clone = (Calendar) date1.clone();
-		Calendar date2_clone = (Calendar) date2.clone();
 
-		DateUtil.setZero(date_clone);
-		DateUtil.setZero(date2_clone);
+    /**
+     * 将<某个时间>与<当前时间>比较
+     *
+     * @return 输入的日期在现在之后，则返回1. 输入的日期在现在之前，则返回-1. 若输入日期与现在一样，则返回0.
+     */
+    public static int compareDate(Calendar date) {
+        return DateUtil.compareDate(date, Calendar.getInstance());
+    }
 
-		return date_clone.compareTo(date2_clone);
-	}
+    public static int compareDate(Calendar date1, Calendar date2) {
 
-	/**
-	 * 获取两个Date的时间差
-	 * 
-	 * @param date1
-	 *            小时间
-	 * @param date2
-	 *            大时间
-	 * @return
-	 */
-	public static int differentDaysByMillisecond(Date date1, Date date2) {
+        Calendar date_clone = (Calendar) date1.clone();
+        Calendar date2_clone = (Calendar) date2.clone();
 
-		int days = (int) ((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
+        DateUtil.setZero(date_clone);
+        DateUtil.setZero(date2_clone);
 
-		return days;
+        return date_clone.compareTo(date2_clone);
+    }
 
-	}
+    /**
+     * 获取两个Date的时间差.
+     *
+     * @param date1 小时间
+     * @param date2 大时间
+     * @return 时间差
+     */
+    public static int differentDaysByMillisecond(Date date1, Date date2) {
 
-	/**
-	 * 计算<两个日期>相差多少分钟
-	 */
-	public static long diffMinutes(Calendar big, Calendar small) {
+        int days = (int) ((date2.getTime() - date1.getTime()) / (1000 * 3600 * 24));
 
-		long nm = 1000 * 60;// 每分钟毫秒数
+        return days;
 
-		long diff = big.getTime().getTime() - small.getTime().getTime(); // 获得两个时间的毫秒时间差异
+    }
 
-		long result = diff / nm;
+    /**
+     * @return 计算<两个日期>相差多少分钟.
+     */
+    public static long diffMinutes(Calendar big, Calendar small) {
 
-		return result;
-	}
+        long nm = 1000 * 60;// 每分钟毫秒数
 
-	/**
-	 * 计算两个日期相差多少秒
-	 */
-	public static long diffSeconds(Calendar big, Calendar small) {
+        long diff = big.getTime().getTime() - small.getTime().getTime(); // 获得两个时间的毫秒时间差异
 
-		long nm = 1000;
+        long result = diff / nm;
 
-		long diff = big.getTime().getTime() - small.getTime().getTime(); // 获得两个时间的毫秒时间差异
+        return result;
+    }
 
-		long result = diff / nm;
+    /**
+     * @return 计算两个日期相差多少秒.
+     */
+    public static long diffSeconds(Calendar big, Calendar small) {
 
-		return result;
-	}
+        long nm = 1000;
 
-	public static Calendar getDataDetail(String date) {
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date d = null;
-		try {
-			d = format.parse(date);
-		} catch (ParseException e) {
-			LoggerManager.logException(e);
-		}
+        long diff = big.getTime().getTime() - small.getTime().getTime(); // 获得两个时间的毫秒时间差异
 
-		Calendar c = Calendar.getInstance();
-		c.setTime(d);
+        long result = diff / nm;
 
-		return c;
-	}
+        return result;
+    }
 
-	public static Calendar getDataSimple(String date) {
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = null;
-		try {
-			d = format.parse(date);
-		} catch (ParseException e) {
-			LoggerManager.logException(e);
-		}
 
-		Calendar c = Calendar.getInstance();
-		c.setTime(d);
+    public static Calendar getDataDetail(String date) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date d = null;
+        try {
+            d = format.parse(date);
+        } catch (ParseException e) {
+            LoggerManager.logException(e);
+        }
 
-		return c;
-	}
+        Calendar c = Calendar.getInstance();
+        c.setTime(d);
 
-	public static String getDateDetail(Calendar c) {
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		return format.format(c.getTime());
-	}
+        return c;
+    }
 
-	public static String getDateSimple(Calendar c) {
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		return format.format(c.getTime());
-	}
+    public static Calendar getDataSimple(String date) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date d = null;
+        try {
+            d = format.parse(date);
+        } catch (ParseException e) {
+            LoggerManager.logException(e);
+        }
 
-	public static Date getNowDate() {
-		return Calendar.getInstance().getTime();
-	}
+        Calendar c = Calendar.getInstance();
+        c.setTime(d);
 
-	public static int getNowDay() {
-		return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
-	}
+        return c;
+    }
 
-	public static int getNowDayOfWeek() {
-		return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) - 1;
-	}
+    public static String getDateDetail(Calendar c) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(c.getTime());
+    }
 
-	public static int getNowHour() {
-		return Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-	}
+    public static String getDateSimple(Calendar c) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(c.getTime());
+    }
 
-	public static int getNowMinute() {
-		return Calendar.getInstance().get(Calendar.MINUTE);
-	}
+    public static Date getNowDate() {
+        return Calendar.getInstance().getTime();
+    }
 
-	public static int getNowMonth() {
-		return (Calendar.getInstance().get(Calendar.MONTH) + 1);
-	}
+    public static int getNowDay() {
+        return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+    }
 
-	public static int getNowSecond() {
-		return Calendar.getInstance().get(Calendar.SECOND);
-	}
+    public static int getNowDayOfWeek() {
+        return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) - 1;
+    }
 
-	public static int getNowYear() {
-		return Calendar.getInstance().get(Calendar.YEAR);
-	}
+    public static int getNowHour() {
+        return Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+    }
 
-	public static long getUnixTime_Ms() {
-		return System.currentTimeMillis();
-	}
+    public static int getNowMinute() {
+        return Calendar.getInstance().get(Calendar.MINUTE);
+    }
 
-	public static long getUnixTime_S() {
-		return System.currentTimeMillis() / 1000;
-	}
+    public static int getNowMonth() {
+        return (Calendar.getInstance().get(Calendar.MONTH) + 1);
+    }
 
-	/**
-	 * 将传入的Calendar的<小时>和<分钟>设定为0
-	 */
-	public static Calendar setZero(Calendar c) {
-		c.set(Calendar.HOUR_OF_DAY, 0);
-		c.set(Calendar.MINUTE, 0);
-		return c;
-	}
+    public static int getNowSecond() {
+        return Calendar.getInstance().get(Calendar.SECOND);
+    }
 
-	public static Calendar translate_Date_To_Calendar(Date date) {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(date);
-		return cal;
-	}
+    public static int getNowYear() {
+        return Calendar.getInstance().get(Calendar.YEAR);
+    }
 
-	public static Calendar translate_TimeStamp_Ms_To_Calendar(long timestamp_Ms) {
-		return translate_Date_To_Calendar(translate_TimeStamp_Ms_To_Date(timestamp_Ms));
-	}
+    public static long getUnixTime_Ms() {
+        return System.currentTimeMillis();
+    }
 
-	public static Date translate_TimeStamp_Ms_To_Date(long timestamp_Ms) {
-		return new Date(timestamp_Ms);
-	}
+    public static long getUnixTime_S() {
+        return System.currentTimeMillis() / 1000;
+    }
+
+    /**
+     * 将传入的Calendar的<小时>和<分钟>设定为0.
+     */
+    public static Calendar setZero(Calendar c) {
+        c.set(Calendar.HOUR_OF_DAY, 0);
+        c.set(Calendar.MINUTE, 0);
+        return c;
+    }
+
+    public static Calendar translate_Date_To_Calendar(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal;
+    }
+
+    public static Calendar translate_TimeStamp_Ms_To_Calendar(long timestamp_Ms) {
+        return translate_Date_To_Calendar(translate_TimeStamp_Ms_To_Date(timestamp_Ms));
+    }
+
+    public static Date translate_TimeStamp_Ms_To_Date(long timestamp_Ms) {
+        return new Date(timestamp_Ms);
+    }
 
 }

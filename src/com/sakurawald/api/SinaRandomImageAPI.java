@@ -1,7 +1,9 @@
 package com.sakurawald.api;
 
 import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 import com.sakurawald.debug.LoggerManager;
@@ -11,80 +13,93 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 
-/** 随机获取一张图片的API **/
+/**
+ * 随机获取一张图片的API
+ **/
 public class SinaRandomImageAPI extends RandomImageAPI {
 
-	/** 单例设计 **/
-	public static SinaRandomImageAPI instance = new SinaRandomImageAPI();
+    /**
+     * 单例设计
+     **/
+    public static SinaRandomImageAPI instance = new SinaRandomImageAPI();
 
-	/** 存储随机图片API站点 **/
-	private static ArrayList<String> random_Image_Website_URLs = new ArrayList<String>();
+    private SinaRandomImageAPI() {
+        // Do nothing.
+    }
 
-	static {
+    /**
+     * 存储随机图片API站点
+     **/
+    private static final ArrayList<String> random_Image_Website_URLs = new ArrayList<String>();
 
-		init();
+    static {
 
-	}
+        init();
 
-	public static SinaRandomImageAPI getInstance() {
-		return instance;
-	}
+    }
 
-	private static String getRandomImageWebsiteURL() {
-		Random random = new Random();
-		int n = random.nextInt(random_Image_Website_URLs.size());
+    public static SinaRandomImageAPI getInstance() {
+        return instance;
+    }
 
-		LoggerManager.logDebug("随机图片(新浪图库) - API", "本次使用的随机图片站点: "
-				+ random_Image_Website_URLs.get(n), true);
+    private static String getRandomImageWebsiteURL() {
+        Random random = new Random();
+        int n = random.nextInt(random_Image_Website_URLs.size());
 
-		return random_Image_Website_URLs.get(n);
-	}
+        LoggerManager.logDebug("随机图片(新浪图库) - API", "Use Random Website URL >> "
+                + random_Image_Website_URLs.get(n), true);
 
-	public static void init() {
+        return random_Image_Website_URLs.get(n);
+    }
 
-		random_Image_Website_URLs.clear();
+    public static void init() {
 
-		String[] random_Image_Websites = FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomSinaImage.random_Image_URLs
-				.split("\\|");
+        random_Image_Website_URLs.clear();
 
-		for (String website_URL : random_Image_Websites) {
-			random_Image_Website_URLs.add(website_URL);
-		}
-	}
+        String[] random_Image_Websites = FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.RandomSinaImage.random_Image_URLs
+                .split("\\|");
 
-	/** 获取随机图片的URL在线地址 **/
-	@Override
-	public String getRandomImageURL() {
+        Collections.addAll(random_Image_Website_URLs, random_Image_Websites);
+    }
 
-		LoggerManager.logDebug("随机图片(新浪图库) - API", "随机获取图片的URL - 开始获取");
+    /**
+     * 获取随机图片的URL在线地址
+     **/
+    @Override
+    public String getRandomImageURL() {
 
-		String result = null;
+        LoggerManager.logDebug("随机图片(新浪图库) - API", "Get Random Image URL -> Run");
 
-		OkHttpClient client = new OkHttpClient();
+        String result = null;
 
-		Request request = null;
-		request = new Request.Builder().url(getRandomImageWebsiteURL()).get()
-				.build();
+        OkHttpClient client = new OkHttpClient();
 
-		Response response = null;
+        Request request = null;
+        request = new Request.Builder().url(getRandomImageWebsiteURL()).get()
+                .build();
 
-		try {
-			response = client.newCall(request).execute();
+        Response response = null;
 
-			/** 此处获取该Random Page返回的随机图片URL **/
-			result = response.request().url().toString();
-		} catch (IOException e) {
-			LoggerManager.logException(e);
-		} finally {
-			LoggerManager.logDebug("随机图片(新浪图库) - API",
-					"随机获取图片的URL - 结果: Image_URL = " + result);
-		}
+        try {
+            response = client.newCall(request).execute();
 
-		/** 关闭Response的body **/
-		response.body().close();
+            /** 此处获取该Random Page返回的随机图片URL **/
+            result = response.request().url().toString();
+        } catch (SocketTimeoutException e) {
+            // 如果是连接超时, 则静默处理.
+            LoggerManager.getLogger().error(e);
+        } catch (IOException e) {
+            LoggerManager.logException(e);
+        } finally {
+            LoggerManager.logDebug("随机图片(新浪图库) - API",
+                    "Get Random Image URL -> Response: Image_URL = " + result);
+        }
 
-		return result;
+        /** 关闭Response的body **/
+        response.body().close();
 
-	}
+        return result;
+
+    }
 
 }
