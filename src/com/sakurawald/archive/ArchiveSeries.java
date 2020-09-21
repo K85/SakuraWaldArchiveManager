@@ -104,6 +104,10 @@ public class ArchiveSeries {
 
             }
 
+            // 自动选中刚创建的系列
+            ((MainController) Main.loader.getController()).combobox_backup_archive_series.getSelectionModel().select(new ArchiveSeries(this.getOwner_GameVersion(), input));
+
+
 
         } else {
             //若点击了取消, 则直接返回

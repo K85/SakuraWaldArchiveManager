@@ -16,9 +16,4 @@ public class ArchiveBeanConfig_File extends ConfigFile {
 		return (ArchiveBeanConfig_Data) super.getConfigDataClassInstance();
 	}
 
-
-	public void saveToLocal() {
-		this.saveFile();
-	}
-
 }

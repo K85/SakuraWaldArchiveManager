@@ -105,36 +105,30 @@
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <CheckBox fx:id="checkbox_smartautobackup_enable" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_smartautobackup_enable_OnAction" prefHeight="16.0" prefWidth="157.0" text="在非游戏状态下自动备份" />
+                                    <CheckBox fx:id="checkbox_smartautobackup_enable" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_smartautobackup_enable_OnAction" prefHeight="16.0" prefWidth="230.0" text="智能自动备份（SmartAutoBackup）" />
                                     <CheckBox fx:id="checkbox_autobackup_timing" layoutX="22.0" layoutY="43.0" mnemonicParsing="false" onAction="#checkbox_autobackup_timing_OnAction" text="定时备份" />
-                                    <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="41.0" onInputMethodTextChanged="#textfield_autobackup_seconds_OnInputMethodTextChanged" prefHeight="23.0" prefWidth="61.0" />
+                                    <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="41.0" onKeyReleased="#textfield_autobackup_seconds_OnKeyReleased" prefHeight="23.0" prefWidth="61.0" />
                                     <Label layoutX="164.0" layoutY="45.0" text="秒" />
+                                    <Button fx:id="button_smartautobackup_test" layoutX="252.0" layoutY="11.0" mnemonicParsing="false" onAction="#button_smartautobackup_test_OnAction" text="检验有效性" />
                                  </children>
                               </AnchorPane>
                           </content>
                         </TitledPane>
                         <TitledPane animated="false" collapsible="false" layoutY="106.0" prefHeight="88.0" prefWidth="522.0" text="存储设置">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="7.0" prefWidth="520.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="18.0" prefWidth="520.0">
                                  <children>
                                     <CheckBox fx:id="checkbox_storagesettings_use_indepent_storage" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkbox_storagesettings_use_indepent_storage_OnAction" text="使用独立的备份存储路径" />
                                  </children>
                               </AnchorPane>
                           </content>
                         </TitledPane>
+                        <Hyperlink layoutX="14.0" layoutY="205.0" prefHeight="21.0" prefWidth="320.0" text="Author: SakuraWald / K85" />
+                        <Hyperlink layoutX="14.0" layoutY="306.0" prefHeight="21.0" prefWidth="320.0" text="Contact: 3172906506@qq.com" />
+                        <Hyperlink layoutX="14.0" layoutY="277.0" prefHeight="21.0" prefWidth="320.0" text="百度贴吧: 植物大战僵尸吧" />
+                        <Hyperlink layoutX="14.0" layoutY="238.0" prefHeight="21.0" prefWidth="320.0" text="植物大战僵尸 - 资源下载站" />
                      </children>
                   </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="关于">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Hyperlink layoutX="28.0" layoutY="266.0" prefHeight="21.0" prefWidth="320.0" text="Author: SakuraWald / K85" />
-                        <Hyperlink layoutX="28.0" layoutY="289.0" prefHeight="21.0" prefWidth="320.0" text="Contact: 3172906506@qq.com" />
-                        <Hyperlink layoutX="28.0" layoutY="313.0" prefHeight="21.0" prefWidth="320.0" text="百度贴吧: 植物大战僵尸吧" />
-                        <Hyperlink layoutX="28.0" layoutY="336.0" prefHeight="21.0" prefWidth="320.0" text="植物大战僵尸 - 资源下载站" />
-                     </children></AnchorPane>
               </content>
             </Tab>
         </tabs>

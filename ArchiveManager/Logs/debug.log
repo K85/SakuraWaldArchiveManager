@@ -1,0 +1,33 @@
+2020-09-21 09:13:32  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-21 09:13:32  [ main:3 ] - [ DEBUG ]  [配置文件系统] 创建ArchiveBeans文件夹
+2020-09-21 09:13:32  [ main:4 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-21 09:13:32  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: ApplicationConfig.json
+2020-09-21 09:13:32  [ main:37 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: ApplicaitonConfig_Data
+2020-09-21 09:13:32  [ main:48 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-21 09:13:32  [ main:51 ] - [ DEBUG ]  [配置文件系统] 初始化GameVersionConfig.json
+2020-09-21 09:13:32  [ main:59 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: GameVersionConfig.json
+2020-09-21 09:13:32  [ main:59 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: GameVersionConfig_Data
+2020-09-21 09:13:32  [ main:71 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-21 09:13:32  [ main:77 ] - [ DEBUG ]  [配置文件系统] 初始化TempConfig.json
+2020-09-21 09:13:32  [ main:78 ] - [ DEBUG ]  [配置文件系统] 开始写出<默认配置文件>: TempConfig.json
+2020-09-21 09:13:32  [ main:79 ] - [ DEBUG ]  [配置文件系统] 利用反射创建Data类的实例对象: TempConfig_Data
+2020-09-21 09:13:32  [ main:80 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: TempConfig.json
+2020-09-21 09:13:32  [ JavaFX Application Thread:338 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-21 09:13:59  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-21 09:13:59  [ main:3 ] - [ DEBUG ]  [配置文件系统] 创建ArchiveBeans文件夹
+2020-09-21 09:13:59  [ main:4 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-21 09:13:59  [ main:4 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-21 09:13:59  [ main:47 ] - [ DEBUG ]  [配置文件系统] 初始化GameVersionConfig.json
+2020-09-21 09:13:59  [ main:48 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-21 09:13:59  [ main:61 ] - [ DEBUG ]  [配置文件系统] 初始化TempConfig.json
+2020-09-21 09:13:59  [ main:63 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: TempConfig.json
+2020-09-21 09:14:00  [ JavaFX Application Thread:331 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json
+2020-09-21 09:14:23  [ main:0 ] - [ DEBUG ]  [配置文件系统] 初始化配置文件
+2020-09-21 09:14:23  [ main:3 ] - [ DEBUG ]  [配置文件系统] 创建ArchiveBeans文件夹
+2020-09-21 09:14:23  [ main:4 ] - [ DEBUG ]  [配置文件系统] 初始化Application.json
+2020-09-21 09:14:23  [ main:5 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: ApplicationConfig.json
+2020-09-21 09:14:23  [ main:44 ] - [ DEBUG ]  [配置文件系统] 初始化GameVersionConfig.json
+2020-09-21 09:14:23  [ main:45 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: GameVersionConfig.json
+2020-09-21 09:14:23  [ main:57 ] - [ DEBUG ]  [配置文件系统] 初始化TempConfig.json
+2020-09-21 09:14:23  [ main:59 ] - [ DEBUG ]  [配置文件系统] 开始加载<本地配置文件>到<内存>: TempConfig.json
+2020-09-21 09:14:23  [ JavaFX Application Thread:310 ] - [ DEBUG ]  [配置文件系统] 开始<重载>配置文件: ApplicationConfig.json

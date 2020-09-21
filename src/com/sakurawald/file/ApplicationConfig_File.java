@@ -16,11 +16,4 @@ public class ApplicationConfig_File extends ConfigFile {
 		return (ApplicaitonConfig_Data) super.getConfigDataClassInstance();
 	}
 
-	/**
-	 * 保存[内存中的ApplicationConfig_Data]到本地存储
-	 */
-	public void saveToLocal() {
-		this.saveFile();
-	}
-
 }

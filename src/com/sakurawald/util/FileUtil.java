@@ -1,7 +1,15 @@
 package com.sakurawald.util;
 
+import com.sakurawald.Main;
 import com.sakurawald.debug.LoggerManager;
+import com.sun.glass.ui.Size;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
@@ -9,20 +17,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class FileUtil {
 
 	/**
 	 * 输出结果: D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\
+	 *
 	 * @return
 	 */
 	public static String getJavaRunPath() {
 
-	 String result = Class.class.getClass().getResource("/").getPath();;
+//		String result = Class.class.getClass().getResource("/").getPath();
 
-	 result = result.replaceFirst("/", "");
+		String result = new File("").getAbsolutePath() + "/";
 
-	 result = result.replace("/", "\\");
+		result = result.replaceFirst("/", "");
+
+		result = result.replace("/", "\\");
 
 		return result;
 //		String[] paths = System.getProperty("java.class.path").split(";");
@@ -52,11 +65,12 @@ public class FileUtil {
 
 	/**
 	 * 复制目录
+	 *
 	 * @param fromDir
 	 * @param toDir
 	 * @throws IOException
 	 */
-	public static void copyFolder(String fromDir, String toDir) throws IOException{
+	public static void copyFolder(String fromDir, String toDir) throws IOException {
 		//创建目录的File对象
 		File dirSouce = new File(fromDir);
 		//判断源目录是不是一个目录
@@ -68,12 +82,12 @@ public class FileUtil {
 		File destDir = new File(toDir);
 
 		//如果目的目录不存在
-		if(!destDir.exists()){
+		if (!destDir.exists()) {
 			//创建目的目录
 			destDir.mkdirs();
 		}
 		//获取源目录下的File对象列表
-		File[]files = dirSouce.listFiles();
+		File[] files = dirSouce.listFiles();
 		for (File file : files) {
 			//拼接新的fromDir(fromFile)和toDir(toFile)的路径
 			String strFrom = fromDir + "\\" + file.getName();
@@ -84,23 +98,25 @@ public class FileUtil {
 			//判断是否是目录
 			if (file.isDirectory()) {
 				//递归调用复制目录的方法
-				copyFolder(strFrom,strTo);
+				copyFolder(strFrom, strTo);
 			}
 			//判断是否是文件
 			if (file.isFile()) {
-				LoggerManager.getLogger().info("正在复制文件: fileName = "+file.getName() + ", from = " + strFrom + ", to = " + strTo);
+				LoggerManager.getLogger().info("正在复制文件: fileName = " + file.getName() + ", from = " + strFrom + ", to = " + strTo);
 				//递归调用复制文件的方法
-				copyFile(strFrom,strTo);
+				copyFile(strFrom, strTo);
 			}
 		}
 	}
+
 	/**
 	 * 复制文件
+	 *
 	 * @param fromFile
 	 * @param toFile
 	 * @throws IOException
 	 */
-	public static void copyFile(String fromFile,String toFile) throws IOException{
+	public static void copyFile(String fromFile, String toFile) throws IOException {
 		//字节输入流——读取文件
 		FileInputStream in = new FileInputStream(fromFile);
 
@@ -108,10 +124,10 @@ public class FileUtil {
 		FileOutputStream out = new FileOutputStream(toFile);
 		//把读取到的内容写入新文件
 		//把字节数组设置大一些   1*1024*1024=1M
-		byte[] bs = new byte[1*1024*1024];
+		byte[] bs = new byte[1 * 1024 * 1024];
 		int count = 0;
-		while((count = in.read(bs))!=-1){
-			out.write(bs,0,count);
+		while ((count = in.read(bs)) != -1) {
+			out.write(bs, 0, count);
 		}
 		//关闭流
 		in.close();
@@ -119,11 +135,11 @@ public class FileUtil {
 		out.close();
 	}
 
-	public static long getFileCreateTime(String filePath){
+	public static long getFileCreateTime(String filePath) {
 		File file = new File(filePath);
 		try {
-			Path path= Paths.get(filePath);
-			BasicFileAttributeView basicview= Files.getFileAttributeView(path, BasicFileAttributeView.class, LinkOption.NOFOLLOW_LINKS );
+			Path path = Paths.get(filePath);
+			BasicFileAttributeView basicview = Files.getFileAttributeView(path, BasicFileAttributeView.class, LinkOption.NOFOLLOW_LINKS);
 			BasicFileAttributes attr = basicview.readAttributes();
 			return attr.creationTime().toMillis();
 		} catch (Exception e) {
@@ -132,23 +148,23 @@ public class FileUtil {
 		}
 	}
 
-	public static boolean deleteFolder(String path){
+	public static boolean deleteFolder(String path) {
 		File file = new File(path);
-		if(!file.exists()){
+		if (!file.exists()) {
 			return false;
 		}
-		if(file.isFile()){
+		if (file.isFile()) {
 			return file.delete();
 		}
 		File[] files = file.listFiles();
 		for (File f : files) {
-			if(f.isFile()){
-				if(!f.delete()){
-					LoggerManager.getLogger().error("删除文件时发生错误: " + f.getAbsolutePath()+ " Delete Error!");
+			if (f.isFile()) {
+				if (!f.delete()) {
+					LoggerManager.getLogger().error("删除文件时发生错误: " + f.getAbsolutePath() + " Delete Error!");
 					return false;
 				}
-			}else{
-				if(!deleteFolder(f.getAbsolutePath())){
+			} else {
+				if (!deleteFolder(f.getAbsolutePath())) {
 					return false;
 				}
 			}
@@ -161,7 +177,51 @@ public class FileUtil {
 	 */
 	public static String fileNameFilter(String fileName) {
 		return fileName.replace("/", "").replace("\\", "").replace(":", "")
-				.replace("*","").replace("?", "").replace("\"", "")
-				.replace("<", "").replace(">", "").replace("|","");
+				.replace("*", "").replace("?", "").replace("\"", "")
+				.replace("<", "").replace(">", "").replace("|", "");
 	}
+
+	/**
+	 * 将本地图片读取到[系统剪切板]上
+	 */
+	public static void clipImage(String imagePath) {
+
+
+		Image image = null;
+		try {
+			image = ImageIO.read(new File(imagePath));
+		} catch (IOException e) {
+			LoggerManager.logException(e);
+		}
+
+		Images imgSel = new Images(image);
+		//设置
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(imgSel, null);
+	}
+
+	public static class Images implements Transferable {
+		private Image image; //得到图片或者图片流
+
+		public Images(Image image) {
+			this.image = image;
+		}
+
+		public DataFlavor[] getTransferDataFlavors() {
+			return new DataFlavor[]{DataFlavor.imageFlavor};
+		}
+
+		public boolean isDataFlavorSupported(DataFlavor flavor) {
+			return DataFlavor.imageFlavor.equals(flavor);
+		}
+
+		public Object getTransferData(DataFlavor flavor) throws UnsupportedFlavorException, IOException {
+			if (!DataFlavor.imageFlavor.equals(flavor)) {
+				throw new UnsupportedFlavorException(flavor);
+			}
+			return image;
+		}
+
+	}
+
+
 }

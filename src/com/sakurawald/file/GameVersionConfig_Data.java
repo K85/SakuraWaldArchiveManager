@@ -44,6 +44,9 @@ public class GameVersionConfig_Data {
 			add(new GameVersion("95Edition", "95版"));
 			add(new GameVersion("BetaEdition", "Beta版"));
 			add(new GameVersion("3.1FinalEdition", "3.1最终版"));
+
+			add(new GameVersion("RelativeUserdata", "同路径下的userdata","$CD\\userdata\\"));
+
 		}
 
 	};

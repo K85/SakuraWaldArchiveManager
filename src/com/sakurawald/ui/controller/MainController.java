@@ -6,10 +6,13 @@ import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveSeries;
 import com.sakurawald.data.GameVersion;
 import com.sakurawald.data.ImageAndText;
+import com.sakurawald.data.ResultBox;
 import com.sakurawald.data.UIStorage;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.ConfigFile;
 import com.sakurawald.file.FileManager;
+import com.sakurawald.timer.AutoBackupTimer;
+import com.sakurawald.timer.SmartAutoBackupTimer;
 import com.sakurawald.util.*;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -30,6 +33,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.converter.IntegerStringConverter;
+import sun.security.krb5.Config;
 
 import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
@@ -38,6 +43,7 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Optional;
+import java.util.function.UnaryOperator;
 
 public class MainController implements UIStorage {
 
@@ -98,13 +104,19 @@ public class MainController implements UIStorage {
         // Load UI
         loadUI();
 
-        // Update UI
+        // Update GameVerison
         update_combobox_backup_game_version();
-        update_combobox_backup_archive_series();
 
+        // Update ArchiveSeries
+        update_combobox_backup_archive_series();
 
         // Welcome
         updateWelcome();
+
+        // Start Timer
+        LoggerManager.logDebug("计时系统", "初始化Timer");
+        AutoBackupTimer.getInstance().schedule();
+        SmartAutoBackupTimer.getInstance().schedule();
     }
 
     public void saveUIAndLoadSettings() {
@@ -119,6 +131,40 @@ public class MainController implements UIStorage {
 
         saveUIAndLoadSettings();
     }
+
+    /**
+     * 加载存储的使用习惯, 若对应的数据不存在, 则自动选中默认项
+     */
+    public void loadMemory_GameVersion() {
+
+        // Load GameVersion
+        for (GameVersion gv : combobox_backup_game_version.getItems()) {
+
+            if (gv.getVersion_Name().equals(FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedGameVersion)) {
+                combobox_backup_game_version.getSelectionModel().select(gv);
+                return;
+            }
+        }
+
+        combobox_backup_archive_series.getSelectionModel().select(0);
+    }
+
+    public void loadMemory_ArchiveSeries() {
+
+        System.out.println( "A");
+
+        // Load ArchiveSeries
+        for (ArchiveSeries as : combobox_backup_archive_series.getItems()) {
+
+            if (as.getArchiveSeries_Name().equals(FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedArchiveSeries)) {
+                combobox_backup_archive_series.getSelectionModel().select(as);
+                return;
+            }
+        }
+
+        combobox_backup_archive_series.getSelectionModel().select(0);
+    }
+
 
     @FXML
     void checkbox_autobackup_timing_OnAction(ActionEvent event) {
@@ -141,10 +187,44 @@ public class MainController implements UIStorage {
     }
 
     @FXML
-    void textfield_autobackup_seconds_OnInputMethodTextChanged(InputMethodEvent event) {
+    void button_smartautobackup_test_OnAction(ActionEvent event) {
+
+        // Get GameVersion
+        GameVersion gv = combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        if (gv == null) {
+            new Alert(Alert.AlertType.WARNING, "请先选中一个GameVersion！", ButtonType.OK).show();;
+            return;
+        }
+
+        // Test
+        if (gv.getCheatEngine() == null) {
+            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString()+"）未配置引擎！").show();
+            return;
+        }
+
+        ResultBox<Integer> r = gv.getCheatEngine().getValue();
+
+        if (r.getSuccessCount() > 0) {
+            new Alert(Alert.AlertType.INFORMATION, "该GameVersion（" + gv.toString()+"）的智能自动备份有效！").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString()+"）的智能自动备份无效！").show();
+        }
+
+
+    }
+
+    @FXML
+    void textfield_autobackup_seconds_OnKeyReleased(KeyEvent event) {
+
+        // 防止左右方向键频繁刷新
+        if (event.getCode().isArrowKey() == true) {
+            return;
+        }
+
         TextField src = (TextField) event.getSource();
+
         FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second = Integer.valueOf(src.getText());
-        saveAndReloadUI();
+        saveUIAndLoadSettings();
     }
 
     public void backup() {
@@ -213,10 +293,14 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
     for (GameVersion gv : FileManager.gameVersionConfig_File.getSpecificDataInstance().gameVersions) {
         combobox_backup_game_version.getItems().add(gv);
     }
-    combobox_backup_game_version.getSelectionModel().select(0);}
+
+    // Load Memory >> GameVerison
+    loadMemory_GameVersion();
+
+    }
 
     public void loadArchive() {
-loadGameVersions();
+    loadGameVersions();
 
     }
 
@@ -225,9 +309,8 @@ loadGameVersions();
             // 生效配置文件
             checkbox_smartautobackup_enable.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup);
             checkbox_autobackup_timing.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable);
-
-
             checkbox_storagesettings_use_indepent_storage.setSelected(FileManager.applicationConfig_File.getSpecificDataInstance().Base.StorageSettings.useIndependentStorage);
+
             textfield_autobackup_seconds.setText(String.valueOf(FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second));
     }
 
@@ -263,7 +346,6 @@ loadGameVersions();
         });
 
 
-
     }
 
 
@@ -283,7 +365,8 @@ loadGameVersions();
         if (combobox_backup_archive_series.getItems().contains(selected) == true) {
             combobox_backup_archive_series.getSelectionModel().select(selected);
         } else {
-            combobox_backup_archive_series.getSelectionModel().select(0);
+            // Load Memory >> Auto Choose GameVersion
+            loadMemory_ArchiveSeries();
         }
 
 
@@ -297,14 +380,14 @@ loadGameVersions();
 
     @FXML
     void combobox_backup_archive_series_OnAction(ActionEvent event) {
+        // Update
         update_combobox_backup_archive_series();
 
-
-    }
+   }
 
     @FXML
     void combobox_backup_game_version_OnAction(ActionEvent event) {
-
+        // Update
         update_combobox_backup_game_version();
     }
 
@@ -729,6 +812,7 @@ loadGameVersions();
                         /** Update UI **/
                         label_welcome.setText(result.getText());
                         imageview_welcome.setImage(new Image("file:" + image_Path));
+                        JavaFxUtil.centerImage(imageview_welcome);
                     }
                 });
 
@@ -751,17 +835,8 @@ loadGameVersions();
 
         // 右键双击: 打开图片
         if (event.getButton() == MouseButton.SECONDARY && event.getClickCount() == 2) {
-            File src = new File(FileUtil.getJavaRunPath() + "RandomImage.png");
-
-            File desktopDir = FileSystemView.getFileSystemView() .getHomeDirectory();
-            String desktopPath = desktopDir.getAbsolutePath();
-            String imageName = "Img_" + DateUtil.getDateDetail(Calendar.getInstance()).replace(":", "-");
-
-            try {
-                FileUtil.copyFile(src.getAbsolutePath(),desktopPath + imageName);
-            } catch (IOException e) {
-                LoggerManager.logException(e);
-            }
+            // Copy RandomImage.png to ClipBoard
+            FileUtil.clipImage(ConfigFile.getApplicationConfigPath() + "RandomImage.png");
         }
 
     }

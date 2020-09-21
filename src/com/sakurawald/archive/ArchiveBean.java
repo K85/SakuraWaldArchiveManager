@@ -113,7 +113,7 @@ public class ArchiveBean {
         abcd.Information.remark = newRemark;
 
         // Save
-        abcf.saveToLocal();
+        abcf.saveFile();
     }
 
     /**

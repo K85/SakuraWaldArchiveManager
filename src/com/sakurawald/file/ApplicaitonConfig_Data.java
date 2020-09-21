@@ -14,8 +14,8 @@ public class ApplicaitonConfig_Data {
 
 			public AutoBackupOnTime AutoBackupOnTime = new AutoBackupOnTime();
 			public class AutoBackupOnTime {
-				public boolean enable = true;
-				public int time_second = 60;
+				public boolean enable = false;
+				public int time_second = 300;
 			}
 
 		}

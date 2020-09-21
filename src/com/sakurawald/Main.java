@@ -4,6 +4,7 @@ import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.timer.AutoBackupTimer;
 import com.sakurawald.timer.SmartAutoBackupTimer;
+import com.sakurawald.ui.controller.MainController;
 import com.sakurawald.util.FileUtil;
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -57,7 +58,12 @@ public class Main extends Application {
                 Optional<ButtonType> result = askAlert.showAndWait();
                 //如果点击OK
                 if (result.get() == ButtonType.OK){
-                    primaryStage.close();
+
+                    beforeExit();
+
+                    // 直接退出虚拟机
+                    System.exit(0);
+
                 } else {
                     event.consume();
                 }
@@ -81,16 +87,29 @@ public class Main extends Application {
             LoggerManager.logException(e);
         }
 
-        // 初始化计时器
-        LoggerManager.logDebug("计时系统", "初始化Timer");
-        AutoBackupTimer.getInstance().schedule();
 
-        SmartAutoBackupTimer.getInstance().schedule();
+
+
 
         // 启动JavaFX程序
         launch(args);
 
     }
 
+    /**
+     * 在JVM退出之前执行
+     */
+    public void beforeExit() {
+
+        MainController mc = Main.loader.getController();
+
+        // Save Memory
+        FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedArchiveSeries = mc.combobox_backup_archive_series.getSelectionModel().getSelectedItem().getArchiveSeries_Name();
+        FileManager.tempConfig_File.saveFile();
+
+        // Save Memory
+        FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedGameVersion = mc.combobox_backup_game_version.getSelectionModel().getSelectedItem().getVersion_Name();
+        FileManager.tempConfig_File.saveFile();
+    }
 
 }

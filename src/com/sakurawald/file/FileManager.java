@@ -26,6 +26,7 @@ public class FileManager {
 	/** 配置文件列表 **/
 	public static ApplicationConfig_File applicationConfig_File = null;
 	public static GameVersionConfig_File gameVersionConfig_File = null;
+	public static TempConfig_File tempConfig_File = null;
 
 	/**
 	 * 调用本方法来<初始化>配置文件系统
@@ -34,20 +35,30 @@ public class FileManager {
 			IllegalAccessException, IOException {
 
 		LoggerManager.logDebug("配置文件系统", "初始化配置文件", true);
-		LoggerManager.logDebug("配置文件系统", "初始化Application.json", true);
+
+
 
 		// Create Folder
+		LoggerManager.logDebug("配置文件系统", "创建ArchiveBeans文件夹", true);
 		new File(ConfigFile.getApplicationConfigPath() + "\\ArchiveBeans").mkdirs();
 
 		// ApplicationConfig.json
+		LoggerManager.logDebug("配置文件系统", "初始化Application.json", true);
 		applicationConfig_File = new ApplicationConfig_File(ConfigFile.getApplicationConfigPath(),
 				"ApplicationConfig.json", ApplicaitonConfig_Data.class);
 		applicationConfig_File.init();
 
 		// GameVersionConfig.json
+		LoggerManager.logDebug("配置文件系统", "初始化GameVersionConfig.json", true);
 		gameVersionConfig_File = new GameVersionConfig_File(ConfigFile.getApplicationConfigPath(),
 				"GameVersionConfig.json", GameVersionConfig_Data.class);
 		gameVersionConfig_File.init();
+
+		// TempConfig.json
+		LoggerManager.logDebug("配置文件系统", "初始化TempConfig.json", true);
+		tempConfig_File = new TempConfig_File(ConfigFile.getApplicationConfigPath(),
+				"TempConfig.json", TempConfig_Data.class);
+		tempConfig_File.init();
 
 	}
 

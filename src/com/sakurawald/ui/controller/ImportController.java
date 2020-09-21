@@ -8,13 +8,13 @@ import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.util.FileUtil;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBoxTreeItem;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.CheckBoxTreeCell;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Arc;
 import javafx.stage.Stage;
@@ -197,5 +197,22 @@ public class ImportController {
         }
 
         return result;
+    }
+
+
+    @FXML
+    void treeview_all_archive_bean_OnMouseClicked(MouseEvent event) {
+
+        // 双击左键: 快速勾选
+        if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+
+            TreeItem<String> o = treeview_all_archive_bean.getSelectionModel().getSelectedItem();
+            if (o instanceof CheckBoxTreeItem) {
+                CheckBoxTreeItem cbti = (CheckBoxTreeItem) o;
+                cbti.setSelected(!cbti.isSelected());
+            }
+
+        }
+
     }
 }

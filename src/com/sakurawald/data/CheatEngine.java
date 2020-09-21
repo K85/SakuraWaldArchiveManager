@@ -9,6 +9,7 @@ import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinNT;
 import com.sun.jna.ptr.IntByReference;
 
+import javax.naming.spi.DirStateFactory;
 import java.util.ArrayList;
 
 /**
@@ -17,6 +18,7 @@ import java.util.ArrayList;
  * 注意: 使用Windows自带的计算机时, 应该由HEX转DEC, 不能转为OCT.
  */
 public class CheatEngine {
+
 
     /**
      * 权限
@@ -31,9 +33,11 @@ public class CheatEngine {
     /**
      *  从内存中读取数据
      */
-    public int getValue() {
+    public ResultBox<Integer> getValue() {
 
         /** 获取游戏信息 **/
+        ResultBox<Integer> result = new ResultBox<Integer>();
+
         //获得窗口句柄
         WinDef.HWND hwnd = User32.INSTANCE.FindWindow(this.windowClassName, this.windowTitle);
         LoggerManager.logDebug("作弊引擎", "获取到窗口句柄: " + hwnd);
@@ -51,6 +55,7 @@ public class CheatEngine {
         /** 读取游戏内存 **/
         // 定义变量
         boolean ret = false;
+        boolean success = true;
 
         // 首次读取内存
         LoggerManager.logDebug("作弊引擎", "读取入口内存地址: 即将读取" + this.getFirstAddress);
@@ -59,6 +64,12 @@ public class CheatEngine {
 
         ret = Kernel32.INSTANCE.ReadProcessMemory(processHandle, nowPointer, nowMemory, this.readMemorySize , null);
         LoggerManager.logDebug("作弊引擎", "读取入口内存地址: 是否成功 = " + ret + ",读取结果 = " + this.getFirstAddress + ", 返回地址 = " + nowMemory.getInt(0));
+
+        if (ret == false) {
+            result.addFailCount();
+        } else {
+            result.addSuccessCount();
+        }
 
         // 偏移读取
         int offset_count = 0;
@@ -74,10 +85,18 @@ public class CheatEngine {
             // Read
             ret = Kernel32.INSTANCE.ReadProcessMemory(processHandle, nowPointer, nowMemory, this.readMemorySize , null);
 
+            if (ret == false) {
+                result.addFailCount();
+            } else {
+                result.addSuccessCount();
+            }
+
             LoggerManager.logDebug("作弊引擎", "读取" + offset_count + "级内存地址: 是否成功 = "+ ret + ", 读取内存地址 = " + offsetAddress + ", 返回地址 = " + nowMemory.getInt(0));
         }
 
-        return nowMemory.getInt(0);
+        result.setValue(nowMemory.getInt(0));
+
+        return result;
     }
 
 

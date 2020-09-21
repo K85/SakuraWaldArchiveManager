@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Applications\javaw.exe\shell\open\command]
+@="\"C:\\Program Files (x86)\\Java\\jre1.8.0_144\\bin\\javaw.exe\" -jar \"%1\""

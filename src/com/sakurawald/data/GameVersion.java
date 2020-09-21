@@ -243,6 +243,40 @@ public class GameVersion {
 
     }
 
+    public GameVersion(String version_Name, String version_Remark, String archive_Path) {
+        this.version_Name = version_Name;
+        this.version_Remark = version_Remark;
+        this.archive_Path = archive_Path;
+    }
+
+    public void setVersion_Name(String version_Name) {
+        this.version_Name = version_Name;
+    }
+
+    public void setVersion_Number(String version_Number) {
+        this.version_Number = version_Number;
+    }
+
+    public void setVersion_Remark(String version_Remark) {
+        this.version_Remark = version_Remark;
+    }
+
+    public void setArchieveExplanations(ArrayList<ArchiveExplanation> archieveExplanations) {
+        this.archieveExplanations = archieveExplanations;
+    }
+
+    public GameVersion.SmartAutoBackup getSmartAutoBackup() {
+        return SmartAutoBackup;
+    }
+
+    public void setSmartAutoBackup(GameVersion.SmartAutoBackup smartAutoBackup) {
+        SmartAutoBackup = smartAutoBackup;
+    }
+
+    public void setArchive_Path(String archive_Path) {
+        this.archive_Path = archive_Path;
+    }
+
     public void createArchiveSeries_UI() {
 
         TextInputDialog dialog = new TextInputDialog();
@@ -266,8 +300,11 @@ public class GameVersion {
                 return;
             }
 
+            // Ceeate
             createArchiveSeries(archiveSeriesName);
 
+            // 自动选中刚创建的系列
+            ((MainController) Main.loader.getController()).combobox_backup_archive_series.getSelectionModel().select(new ArchiveSeries(this, archiveSeriesName));
 
         } else {
             //若点击了取消, 则直接返回

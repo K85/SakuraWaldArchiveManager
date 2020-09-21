@@ -10,6 +10,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -124,4 +126,16 @@ public class RollBackChooseWindowController {
         }
     }
 
+    @FXML
+    void tableview_choose_OnMouseClicked(MouseEvent event) {
+
+        // 左键双击: 快速勾选
+        if (event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2) {
+
+           ArchiveFile af =  tableview_choose.getSelectionModel().getSelectedItem();
+            af.getMyCheckBox().getCheckBox().getValue().setSelected(!af.getMyCheckBox().getCheckBox().getValue().isSelected());
+        }
+
+
+    }
 }
