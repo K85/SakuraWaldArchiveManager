@@ -22,7 +22,22 @@ public class SmartAutoBackupTimer extends TimerTask {
     /**
      * 记录上次的僵尸数量
      */
-    private ResultBox<Integer> lastZombiesCount = new ResultBox<Integer>(new Integer(-1));
+    private ResultBox<Integer> lastZombiesCount = new ResultBox<Integer>(new Integer(-1)) {
+
+        {
+            /**
+             * 此处设置1次, 防止SmartAutoBackupTimer在首次初始化时, 误判条件.
+             * 合理的条件判断应该是: 初始化时[失败], 然后游戏中为[成功], 脱离游戏状态后再变为[失败]
+              */
+            this.setFailCount(1);
+        }
+
+    };
+
+    private SmartAutoBackupTimer() {
+        // Do nothing.
+    }
+
 
     public static SmartAutoBackupTimer getInstance() {
 
@@ -33,11 +48,7 @@ public class SmartAutoBackupTimer extends TimerTask {
         return instance;
     }
 
-
-    @Override
-    public void run() {
-
-
+    public void doTask() {
         // Is Enable
         if (FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.smartAutoBackup == false) {
             return;
@@ -66,6 +77,19 @@ public class SmartAutoBackupTimer extends TimerTask {
         }
 
         lastZombiesCount = nowZombiesCount_ResultBox;
+    }
+
+
+    @Override
+    public void run() {
+
+        // Try-Catch >> Protect
+        try {
+            doTask();
+        } catch( Exception e) {
+            LoggerManager.logException(e);
+        }
+
     }
 
     public void schedule() {

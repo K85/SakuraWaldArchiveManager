@@ -150,15 +150,13 @@ public class ArchiveBean {
         sb.append("★备份时间：" + abcd.Information.backup_time + "\n");
         sb.append("★游戏版本：" + abcd.Information.game_version + "\n");
         sb.append("★存档系列：" +  abcd.Information.archive_series+ "\n");
-
+        sb.append("★存档目录：" + abcd.Information.archive_path + "\n");
         sb.append("★操作系统名称：" + abcd.Information.os_name + "\n");
         sb.append("★操作系统版本：" + abcd.Information.os_version + "\n");
-        sb.append("★操作系统架构：" + abcd.Information.os_arch  + "\n");
         sb.append("★用户名称：" + abcd.Information.user_name  + "\n");
         sb.append("★用户目录：" + abcd.Information.user_home + "\n");
-        sb.append("★程序目录：" + abcd.Information.user_dir   );
 
-        sb.append("\n\n");
+        sb.append("\n");
         sb.append("★备注：" + abcd.Information.remark);
 
         return sb.toString();
@@ -272,7 +270,7 @@ public class ArchiveBean {
      * 调用本方式进行局部回档
      */
     public void rollbackPartly() {
-// Load FXML
+        // Load FXML
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("RollBackChooseWindow.fxml"));
 
         // Create

@@ -19,6 +19,10 @@ public class AutoBackupTimer extends TimerTask {
 
     private static AutoBackupTimer instance = null;
 
+    private AutoBackupTimer() {
+        // Do nothing.
+    }
+
     public static AutoBackupTimer getInstance() {
 
         if (instance == null) {
@@ -30,17 +34,23 @@ public class AutoBackupTimer extends TimerTask {
 
     @Override
     public void run() {
-        // Add Time
-        passedTimeMs = passedTimeMs + period;
 
-        // If
-        if (passedTimeMs >= FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second * 1000) {
+        // Try-Catch >> Protect
+        try {
+            // Add Time
+            passedTimeMs = passedTimeMs + period;
 
-            if (FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable == true) {
-                doTask();
+            // If
+            if (passedTimeMs >= FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second * 1000) {
+
+                if (FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable == true) {
+                    doTask();
+                }
+
+                passedTimeMs = 0;
             }
-
-            passedTimeMs = 0;
+        } catch(Exception e) {
+            LoggerManager.logException(e);
         }
 
     }

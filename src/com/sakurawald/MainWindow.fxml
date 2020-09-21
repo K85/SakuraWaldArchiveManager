@@ -22,6 +22,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.input.KeyCodeCombination?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sakurawald.ui.controller.MainController">
    <children>
       <TabPane prefHeight="413.0" prefWidth="522.0" tabClosingPolicy="UNAVAILABLE">
@@ -46,7 +47,7 @@
           </Tab>
           <Tab text="存档">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="522.0">
                      <children>
                         <Pane prefHeight="73.0" prefWidth="522.0">
                            <children>
@@ -59,23 +60,48 @@
                                     <Font name="Microsoft YaHei" size="26.0" />
                                  </font></Button>
                            </children></Pane>
-                        <TextArea fx:id="textarea_archive_bean_info" editable="false" layoutX="336.0" layoutY="65.0" prefHeight="308.0" prefWidth="172.0" wrapText="true" />
-                        <ListView fx:id="listview_archive_beans" layoutX="10.0" layoutY="66.0" onKeyPressed="#listview_archive_beans_OnKeyPressed" onMouseClicked="#listview_archive_beans_OnMouseClicked" onMouseReleased="#listview_archive_beans_OnMouseReleased" prefHeight="311.0" prefWidth="316.0">
+                        <TextArea fx:id="textarea_archive_bean_info" editable="false" layoutX="336.0" layoutY="66.0" prefHeight="317.0" prefWidth="185.0" wrapText="true" />
+                        <ListView fx:id="listview_archive_beans" layoutX="11.0" layoutY="67.0" onKeyPressed="#listview_archive_beans_OnKeyPressed" onMouseClicked="#listview_archive_beans_OnMouseClicked" onMouseReleased="#listview_archive_beans_OnMouseReleased" prefHeight="316.0" prefWidth="322.0">
                            <contextMenu>
                               <ContextMenu>
                                 <items>
                                     <Menu mnemonicParsing="false" text="回档">
                                        <items>
-                                          <MenuItem fx:id="menuitem_rollback_all_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_all_archive_bean_OnAction" text="回档（全部）" />
-                                          <MenuItem fx:id="menuitem_rollback_partly_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_partly_archive_bean_OnAction" text="回档（局部）" />
+                                          <MenuItem fx:id="menuitem_rollback_all_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_all_archive_bean_OnAction" text="回档（全部）" >
+                                           <accelerator>
+                                               <KeyCodeCombination alt="DOWN" code="DIGIT1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                           </accelerator>
+                                          </MenuItem>
+                                          <MenuItem fx:id="menuitem_rollback_partly_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_partly_archive_bean_OnAction" text="回档（局部）" >
+                                           <accelerator>
+                                               <KeyCodeCombination alt="DOWN" code="DIGIT2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                           </accelerator>
+                                          </MenuItem>
                                        </items>
                                     </Menu>
-                                    <MenuItem fx:id="menuitem_rename_archivebean" mnemonicParsing="false" onAction="#menuitem_rename_archivebean_OnAction" text="重命名" />
-                                    <MenuItem fx:id="menuitem_set_remark_archivebean" mnemonicParsing="false" onAction="#menuitem_set_remark_archivebean_OnAction" text="设置备注" />
-                                    <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false" onAction="#menuitem_view_archivebean_path_OnAction" text="查看当前目录" />
-                                    <MenuItem fx:id="menuitem_delete_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_archivebean_OnAction" text="删除" />
+                                    <MenuItem fx:id="menuitem_rename_archivebean" mnemonicParsing="false" onAction="#menuitem_rename_archivebean_OnAction" text="重命名" >
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    </MenuItem>
+                                    <MenuItem fx:id="menuitem_set_remark_archivebean" mnemonicParsing="false" onAction="#menuitem_set_remark_archivebean_OnAction" text="设置备注" >
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    </MenuItem>
+                                    <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false" onAction="#menuitem_view_archivebean_path_OnAction" text="查看当前目录" >
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="V" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    </MenuItem>
+                                    <MenuItem fx:id="menuitem_delete_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_archivebean_OnAction" text="删除" >
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                    </accelerator>
+                                    </MenuItem>
                                     <SeparatorMenuItem mnemonicParsing="false" />
-                                    <MenuItem fx:id="menuitem_delete_all_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_OnAction" text="删除所有ArchiveBean" />
+                                    <MenuItem fx:id="menuitem_delete_all_archivebean_except" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_except_OnAction" text="删除除此所有ArchiveBean" />
+                                    <MenuItem fx:id="menuitem_delete_all_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_OnAction" text="删除当前所有ArchiveBean" />
                                     <MenuItem fx:id="menuitem_view_archiveseries_path" mnemonicParsing="false" onAction="#menuitem_view_archiveseries_path_OnAction" text="查看当前ArchiveSeries目录" />
                                     <MenuItem fx:id="menuitem_view_gameversion_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_path_OnAction" text="查看当前GameVersion目录" />
                                     <MenuItem fx:id="menuitem_view_archivebeans_path" mnemonicParsing="false" onAction="#menuitem_view_archivebeans_path_OnAction" text="查看ArchiveBeans目录" />

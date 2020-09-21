@@ -111,23 +111,29 @@ public class ArchiveExplanation {
         /**
          * 生存模式
          */
+        //有尽模式
         result.add(new ArchiveExplanation("生存模式_白天", "SURVIVAL_DAY","game1_1.dat" ));
-        result.add(new ArchiveExplanation("生存模式_夜晚","SURVIVAL_NIGHT" ,"game1_2.dat"));
+        result.add(new ArchiveExplanation("生存模式_黑夜","SURVIVAL_NIGHT" ,"game1_2.dat"));
         result.add(new ArchiveExplanation("生存模式_浓雾", "SURVIVAL_FOG","game1_4.dat"));
         result.add(new ArchiveExplanation("生存模式_屋顶","SURVIVAL_ROOF" ,"game1_5.dat"));
         result.add(new ArchiveExplanation("生存模式_白天_困难","SURVIVAL_DAY_HARD","game1_6.dat" ));
-        result.add(new ArchiveExplanation("生存模式_夜晚_困难", "SURVIVAL_NIGHT_HARD","game1_7.dat"));
+        result.add(new ArchiveExplanation("生存模式_黑夜_困难", "SURVIVAL_NIGHT_HARD","game1_7.dat"));
         result.add(new ArchiveExplanation("生存模式_泳池_困难","SURVIVAL_POOL_HARD","game1_8.dat"));
         result.add(new ArchiveExplanation("生存模式_浓雾_困难","SURVIVAL_FOG_HARD" ,"game1_9.dat"));
         result.add(new ArchiveExplanation("生存模式_屋顶_困难", "SURVIVAL_ROOF_HARD","game1_10.dat"));
-        result.add(new ArchiveExplanation("生存模式_无尽","SURVIVAL_ENDLESS","game1_13.dat"));
+        // 无尽模式
+        result.add(new ArchiveExplanation("生存模式_白天：(无尽版)","SURVIVAL_DAY_ENDLESS","game1_11.dat"));
+        result.add(new ArchiveExplanation("生存模式_黑夜：(无尽版)","SURVIVAL_NIGHT_ENDLESS","game1_12.dat"));
+        result.add(new ArchiveExplanation("生存模式_浓雾：(无尽版)","SURVIVAL_FOG_ENDLESS","game1_14.dat"));
+        result.add(new ArchiveExplanation("生存模式_泳池：(无尽版)","SURVIVAL_POOL_ENDLESS","game1_13.dat"));
+        result.add(new ArchiveExplanation("生存模式_屋顶：(无尽版)","SURVIVAL_ROOF_ENDLESS","game1_15.dat"));
 
         /**
          * 迷你游戏模式
          */
         
         result.add( new ArchiveExplanation("迷你游戏_坚果保龄球","MINI_GAMES_WALL_NUT_BOWLING" ,"game1_17.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_锤僵尸", "MINI_GAMES_WHACK_A_ZOMBIE","game1_29.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_僵尸快跑", "MINI_GAMES_ZOMBIE_NIMBLE_ZOMBIE_QUICK","game1_29.dat"));
         result.add(new ArchiveExplanation("迷你游戏_小僵尸大麻烦","MINI_GAMES_BIG_TROUBLE_LITTLE_ZOMBIE" ,"game1_24.dat"));
         result.add(new ArchiveExplanation("迷你游戏_植物僵尸","MINI_GAMES_ZOM_BOTANY" ,"game1_16.dat"));
         result.add(new ArchiveExplanation("迷你游戏_老虎机","MINI_GAMES_SLOT_MACHINE" ,"game1_18.dat"));
@@ -137,15 +143,36 @@ public class ArchiveExplanation {
         result.add(new ArchiveExplanation("迷你游戏_看星星", "MINI_GAMES_SEEING_STARS","game1_22.dat"));
         result.add(new ArchiveExplanation("迷你游戏_僵尸水族馆", "MINI_GAMES_ZOMBIQUARIUM","game1_23.dat"));
         result.add(new ArchiveExplanation("迷你游戏_宝石迷阵2", "MINI_GAMES_BEGHOULED_TWIST","game1_24.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_传送门", "MINI_GAMES_PORTAL_COMBAT","game1_25.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_你看他们像柱子一样", "MINI_GAMES_COLUMN_LIKE_YOU_SEE_EM","game1_26.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_雪橇区", "MINI_GAMES_BOBSLED_BONANZA","game1_27.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_僵尸快跑","MINI_GAMES_ZOMBIE_NIMBLE_ZOMBIE_QUICK" ,"game1_28.dat"));
-        result.add(new ArchiveExplanation("迷你游戏_谁笑到之后", "MINI_GAMES_LAST_STAND","game1_30.dat"));
+//        result.add(new ArchiveExplanation("迷你游戏_传送门", "MINI_GAMES_PORTAL_COMBAT","game1_25.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_保护传送门", "MINI_GAMES_PORTAL_COMBAT","game1_26.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_你看，他们像柱子一样", "MINI_GAMES_COLUMN_LIKE_YOU_SEE_EM","game1_27.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_雪橇区","MINI_GAMES_BOBSLED_BONANZA" ,"game1_28.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_锤僵尸", "MINI_GAMES_WHACK_A_ZOMBIE","game1_30.dat"));
         result.add(new ArchiveExplanation("迷你游戏_植物僵尸2", "MINI_GAMES_ZOM_BOTANY_2","game1_32.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_谁笑到最后", "MINI_GAMES_LAST_STAND","game1_31.dat"));
         result.add(new ArchiveExplanation("迷你游戏_坚果保龄球2", "MINI_GAMES_WALL_NUT_BOWLING_2","game1_33.dat"));
         result.add(new ArchiveExplanation("迷你游戏_跳跳舞会", "MINI_GAMES_POGO_PARTY","game1_34.dat"));
         result.add(new ArchiveExplanation("迷你游戏_僵王博士的复仇", "MINI_GAMES_DR_ZOMBOSS_REVENGE","game1_35.dat"));
+
+        /**
+         * 迷你游戏模式 >> 隐藏游戏
+         */
+        result.add(new ArchiveExplanation("迷你游戏_坚果保龄球艺术锦标赛", "ART_CHALLENGE_WALL_NUT","game1_36.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_晴天", "MINI_GAMES_SUNNY_DAY","game1_37.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_无草皮之地", "MINI_GAMES_UNSODDED","game1_38.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_重要时间", "MINI_GAMES_BIG_TIME","game1_39.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_挑战种太阳花的艺术", "MINI_GAMES_ART_CHALLENGE_SUNFLOWER","game1_40.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_空袭", "MINI_GAMES_AIR_RAID","game1_41.dat"));
+        // 注意: 隐藏关_冰冻关卡 没有存档机制
+        result.add(new ArchiveExplanation("迷你游戏_超乎寻常的压力", "MINI_GAMES_HIGH_GRAVITY ","game1_44.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_坟墓模式", "MINI_GAMES_GRAVE_DANGER","game1_45.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_你能把它挖出来吗？", "MINI_GAMES_CAN_U_DIG_IT?","game1_46.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_黑暗的暴风雨夜", "MINI_GAMES_DARK_STORMY_NIGHT","game1_47.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_蹦极闪电战", "MINI_GAMES_BUNGEE_BLITZ","game1_48.dat"));
+        result.add(new ArchiveExplanation("迷你游戏_Squirrel", "MINI_GAMES_SQUIRRE","game1_49.dat"));
+
+
+
 
         /**
          * 解谜模式

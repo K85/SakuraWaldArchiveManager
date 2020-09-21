@@ -1,5 +1,6 @@
 package com.sakurawald.ui.controller;
 
+
 import com.sakurawald.Main;
 import com.sakurawald.api.*;
 import com.sakurawald.archive.ArchiveBean;
@@ -82,7 +83,7 @@ public class MainController implements UIStorage {
     private MenuItem menuitem_delete_archiveseries;
 
     @FXML
-    private Button button_backup;
+    public Button button_backup;
 
     @FXML
     private TextArea textarea_archive_bean_info;
@@ -117,6 +118,7 @@ public class MainController implements UIStorage {
         LoggerManager.logDebug("计时系统", "初始化Timer");
         AutoBackupTimer.getInstance().schedule();
         SmartAutoBackupTimer.getInstance().schedule();
+
     }
 
     public void saveUIAndLoadSettings() {
@@ -146,12 +148,10 @@ public class MainController implements UIStorage {
             }
         }
 
-        combobox_backup_archive_series.getSelectionModel().select(0);
+        combobox_backup_game_version.getSelectionModel().select(0);
     }
 
     public void loadMemory_ArchiveSeries() {
-
-        System.out.println( "A");
 
         // Load ArchiveSeries
         for (ArchiveSeries as : combobox_backup_archive_series.getItems()) {
@@ -862,5 +862,47 @@ public void loadGameVersions() {combobox_backup_game_version.getItems().clear();
     public void menuitem_update_data_OnAction(ActionEvent actionEvent) {
         update_combobox_backup_game_version();
         update_combobox_backup_archive_series();
+    }
+
+    public void menuitem_delete_all_archivebean_except_OnAction(ActionEvent actionEvent) {
+
+        // Delete
+        ObservableList<ArchiveBean> abs = listview_archive_beans.getItems();
+        if (abs.isEmpty() == true) {
+            new Alert(Alert.AlertType.WARNING, "当前ArchiveSeries没有任何的ArchiveBean！", ButtonType.OK).show();
+            return;
+        }
+
+        // 选中ArchiveBean
+        ArchiveBean selectedArchiveBean = listview_archive_beans.getSelectionModel().getSelectedItem();
+        if (selectedArchiveBean == null) {
+            new Alert(Alert.AlertType.WARNING, "请先选中一个ArchiveBean！", ButtonType.OK).show();
+            return;
+        }
+
+        Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        askAlert.setTitle("删除除此所有ArchiveBean");
+        askAlert.setHeaderText("你确定要删除除此（" +selectedArchiveBean.getArchiveBean_Name() + "）所有ArchiveBean吗？");
+        Optional<ButtonType> result = askAlert.showAndWait();
+
+        if (result.get() == ButtonType.OK){
+
+            ArchiveSeries as  = combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+
+            for (ArchiveBean ab : as.getAllArchiveBeans()) {
+
+                // 删除除了选中ArchiveBean的所有ArchiveBean
+                if (selectedArchiveBean.getArchiveBean_Name().equals(ab.getArchiveBean_Name()) == false) {
+                    ab.delete();
+                }
+            }
+
+        } else {
+            return;
+        }
+
+        // Update
+        update_combobox_backup_archive_series();
+
     }
 }

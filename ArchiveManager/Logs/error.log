@@ -1,0 +1,174 @@
+2020-09-21 11:21:05  [ JavaFX Application Thread:314 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0EnglishOriginalEdition
+2020-09-21 11:21:08  [ JavaFX Application Thread:2886 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
+2020-09-21 11:21:08  [ JavaFX Application Thread:3343 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0EnglishOriginalEdition
+2020-09-21 11:21:48  [ JavaFX Application Thread:42787 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
+2020-09-21 11:21:48  [ JavaFX Application Thread:42787 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
+2020-09-21 11:21:48  [ JavaFX Application Thread:42787 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
+2020-09-21 11:21:48  [ JavaFX Application Thread:42787 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
+2020-09-21 11:21:48  [ JavaFX Application Thread:42788 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
+2020-09-21 11:21:48  [ JavaFX Application Thread:42788 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
+2020-09-21 11:21:48  [ JavaFX Application Thread:42788 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
+2020-09-21 11:21:50  [ JavaFX Application Thread:44751 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
+2020-09-21 11:21:50  [ JavaFX Application Thread:44752 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
+2020-09-21 11:26:48  [ Thread-4:1515 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:27:38  [ Thread-4:2702 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:28:28  [ Thread-4:1618 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:29:58  [ Thread-4:1631 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:30:43  [ Thread-4:2895 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:41:36  [ Thread-4:1545 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: acg.toubiec.cn
+栈追踪: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
+	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:804)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-21 11:42:19  [ JavaFX Application Thread:45053 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2

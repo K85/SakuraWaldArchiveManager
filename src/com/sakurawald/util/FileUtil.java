@@ -30,6 +30,7 @@ public class FileUtil {
 	public static String getJavaRunPath() {
 
 //		String result = Class.class.getClass().getResource("/").getPath();
+//      String result = System.getProperty("user.dir");
 
 		String result = new File("").getAbsolutePath() + "/";
 
@@ -38,8 +39,6 @@ public class FileUtil {
 		result = result.replace("/", "\\");
 
 		return result;
-//		String[] paths = System.getProperty("java.class.path").split(";");
-//		return paths[0];
 	}
 
 	public static void writeTxtFile(String path, String content) {

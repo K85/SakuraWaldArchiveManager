@@ -21,7 +21,7 @@ public class Test {
 
     public static void main(String[] args) throws Exception{
 
-    new FileManager().init();
+        FileManager.getInstance().init();
 
         FileUtil.clipImage("D:\\LocalWorkSpace\\Java\\workspace\\SakuraWaldArchiveManager\\out\\production\\SakuraWaldArchiveManager\\ArchiveManager\\RandomImage.png");
 

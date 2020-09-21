@@ -1,5 +1,7 @@
 package com.sakurawald;
 
+import com.sakurawald.archive.ArchiveSeries;
+import com.sakurawald.data.GameVersion;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.timer.AutoBackupTimer;
@@ -14,6 +16,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.Mnemonic;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -23,9 +29,12 @@ import java.util.Optional;
 public class Main extends Application {
 
     public static FXMLLoader loader = null;
+    public static Stage stage = null;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        stage = primaryStage;
 
         loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
 
@@ -34,12 +43,13 @@ public class Main extends Application {
 
         primaryStage.setTitle("Plants vs. Zombies Archive Manager (Sakura Wald)");
         primaryStage.setScene(new Scene(root));
-
         primaryStage.setResizable(false);
 
         // Set Icon
         primaryStage.getIcons().add(new Image(
                 Main.class.getResourceAsStream("icon.png")));
+
+
 
         // Show
         primaryStage.show();
@@ -69,6 +79,11 @@ public class Main extends Application {
                 }
             }
         });
+
+        // Regist Shortcut Key
+        KeyCombination kc = new KeyCodeCombination(KeyCode.B,KeyCombination.ALT_DOWN);
+        Mnemonic mnemonic = new Mnemonic(((MainController)Main.loader.getController()).button_backup,kc);
+        Main.stage.getScene().addMnemonic(mnemonic);
 
     }
 
@@ -104,12 +119,19 @@ public class Main extends Application {
         MainController mc = Main.loader.getController();
 
         // Save Memory
-        FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedArchiveSeries = mc.combobox_backup_archive_series.getSelectionModel().getSelectedItem().getArchiveSeries_Name();
-        FileManager.tempConfig_File.saveFile();
+        GameVersion selectedGameVersion = mc.combobox_backup_game_version.getSelectionModel().getSelectedItem();
+        if (selectedGameVersion != null) {
+            FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedGameVersion = selectedGameVersion.getVersion_Name();
+            FileManager.tempConfig_File.saveFile();
+        }
 
         // Save Memory
-        FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedGameVersion = mc.combobox_backup_game_version.getSelectionModel().getSelectedItem().getVersion_Name();
-        FileManager.tempConfig_File.saveFile();
+        ArchiveSeries selectedArchiveSeries = mc.combobox_backup_archive_series.getSelectionModel().getSelectedItem();
+        if (selectedArchiveSeries != null) {
+            FileManager.tempConfig_File.getSpecificDataInstance().ArchiveMemory.selectedArchiveSeries = selectedArchiveSeries.getArchiveSeries_Name();
+            FileManager.tempConfig_File.saveFile();
+        }
+
     }
 
 }

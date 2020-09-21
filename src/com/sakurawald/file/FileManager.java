@@ -23,6 +23,10 @@ public class FileManager {
 		return instance;
 	}
 
+	private FileManager() {
+		// Do nothing.
+	}
+
 	/** 配置文件列表 **/
 	public static ApplicationConfig_File applicationConfig_File = null;
 	public static GameVersionConfig_File gameVersionConfig_File = null;
