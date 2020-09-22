@@ -31,6 +31,7 @@ public class LoggerManager {
     }
 
     public static void logDebug(String content, boolean forceLog) {
+
         if (forceLog == true) {
             local_Logger.debug(content);
             return;

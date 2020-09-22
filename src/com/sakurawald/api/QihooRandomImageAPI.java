@@ -42,7 +42,7 @@ public class QihooRandomImageAPI extends RandomImageAPI {
                 + cid + "&start=" + start + "&count=1";
 
         LoggerManager
-                .logDebug("随机图片(360壁纸) - API", "Request URL >> " + result, true);
+                .logDebug("随机图片(360壁纸) - API", "Request URL >> " + result);
 
         return result;
     }

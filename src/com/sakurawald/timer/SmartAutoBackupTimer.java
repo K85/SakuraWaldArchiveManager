@@ -21,9 +21,9 @@ public class SmartAutoBackupTimer extends TimerTask {
     private static SmartAutoBackupTimer instance = null;
 
     /**
-     * 记录上次的僵尸数量
+     * 记录上次的僵尸数量.
      */
-    private ResultBox<Integer> lastZombiesCount = new ResultBox<Integer>(new Integer(-1)) {
+    private ResultBox<Integer> lastZombiesCount = new ResultBox<Integer>() {
 
         {
             /**
@@ -31,6 +31,12 @@ public class SmartAutoBackupTimer extends TimerTask {
              * 合理的条件判断应该是: 初始化时[失败], 然后游戏中为[成功], 脱离游戏状态后再变为[失败]
              */
             this.setFailCount(1);
+
+            /**
+             * 此处设置0次, 防止SmartAutoBackupTimer在首次初始化时, 误判条件.
+             * 合理的条件判断应该是: 初始化时[失败], 然后游戏中为[成功], 脱离游戏状态后再变为[失败]
+             */
+            this.setValue(0);
         }
 
     };
@@ -64,18 +70,48 @@ public class SmartAutoBackupTimer extends TimerTask {
         /** Smart Auto Backup **/
         ResultBox<Integer> nowZombiesCount_ResultBox = gv.getCheatEngine().getValue();
 
-        if (nowZombiesCount_ResultBox.getFailCount() > 0) {
+        // Flag: 表明是否已符合某个"智能自动备份"条件
+        boolean flag = false;
+
+        // 判断 >> 是否符合CheatEngine的直接读取
+        if (flag == false && nowZombiesCount_ResultBox.getFailCount() > 0) {
 
             if (lastZombiesCount.getFailCount() == 0) {
                 // Start Backup
-                LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> Start");
-
+                LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> State >> Backup >> Start");
                 ArchiveSeries.backup_FromUI();
+
+                // Update Data
+                flag = true;
+            }
+        }
+
+        // 判断 >> 是否符合CheatEngine的TriggerWhenValueChangeTo触发器
+        com.sakurawald.data.CheatEngine.TriggerWhenValueChangeTo triggerValueTo = gv.getCheatEngine().getTriggerWhenValueChangeTo();
+        if (flag == false && triggerValueTo != null) {
+
+            // 防止持续触发
+            if (nowZombiesCount_ResultBox.getValue().equals(lastZombiesCount.getValue()) == false) {
+                if (nowZombiesCount_ResultBox.getValue() == triggerValueTo.value) {
+
+                    // 判断触发条件
+                    if (nowZombiesCount_ResultBox.getSuccessCount() >= triggerValueTo.successCountCondition) {
+                        LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> Trigger >> Backup >> Start");
+                        ArchiveSeries.backup_FromUI();
+
+                        // Update Data
+                        flag = true;
+                    }
+
+                }
+
             }
 
         }
 
+        // Update Data
         lastZombiesCount = nowZombiesCount_ResultBox;
+
     }
 
 

@@ -716,6 +716,7 @@ public class MainController implements UIStorage {
 
                     /** 获取随机图片 **/
                     final String image_Path = ConfigFile.getApplicationConfigPath() + "RandomImage.png";
+                    result.setImage("file:" + image_Path);
                     if (FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomImage.goToACGN == true) {
                         RandomImageAPI.saveImage(SinaRandomImageAPI.getInstance().getRandomImageURL(), image_Path);
                     } else {
@@ -732,7 +733,7 @@ public class MainController implements UIStorage {
                             }
 
                             if (result.getImage() != null) {
-                                imageview_welcome.setImage(new Image("file:" + image_Path));
+                                imageview_welcome.setImage(new Image(result.getImage()));
                                 JavaFxUtil.centerImage(imageview_welcome);
                             }
                         }

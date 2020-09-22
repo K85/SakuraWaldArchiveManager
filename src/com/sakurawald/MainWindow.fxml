@@ -56,7 +56,7 @@
                                                 mnemonicParsing="false" onAction="#button_backup_OnAction"
                                                 prefHeight="54.0" prefWidth="209.0" text="Backup">
                                             <font>
-                                                <Font name="Microsoft YaHei" size="26.0"/>
+                                                <Font name="Microsoft YaHei Bold" size="26.0"/>
                                             </font>
                                         </Button>
                                     </children>

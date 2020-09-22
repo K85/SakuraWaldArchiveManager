@@ -2,7 +2,7 @@ package com.sakurawald.archive;
 
 
 import com.sakurawald.data.CheatEngine;
-import com.sakurawald.data.OperationSystemVersion;
+import com.sakurawald.data.OperatingSystemVersion;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.ui.controller.MainController;
 import com.sakurawald.util.FileUtil;
@@ -128,17 +128,19 @@ public class GameVersion {
         }
 
         // "自动模式"
-        OperationSystemVersion osv = OperationSystemVersion.getOperationSystemVersion();
-        LoggerManager.logDebug("获取到的操作系统版本信息: " + osv.getOperationVersion());
+        OperatingSystemVersion osv = OperatingSystemVersion.getOperatingSystemVersion();
+        LoggerManager.logDebug("Get Operating Version >> " + osv.getVersion());
 
-        if (osv == OperationSystemVersion.WINDOWS_XP) {
+        if (osv == OperatingSystemVersion.WINDOWS_XP || osv == OperatingSystemVersion.WINDOWS_2000 ||
+                osv == OperatingSystemVersion.WINDOWS_SERVER_2003) {
             return FileUtil.getJavaRunPath() + "userdata\\";
         }
 
-        if (osv == OperationSystemVersion.WINDOWS_VISTA
-                || osv == OperationSystemVersion.WINDOWS_7
-                || osv == OperationSystemVersion.WINDOWS_8
-                || osv == OperationSystemVersion.WINDOWS_10) {
+        if (osv == OperatingSystemVersion.WINDOWS_VISTA
+                || osv == OperatingSystemVersion.WINDOWS_7
+                || osv == OperatingSystemVersion.WINDOWS_8
+                || osv == OperatingSystemVersion.WINDOWS_8_1
+                || osv == OperatingSystemVersion.WINDOWS_10) {
             return "C:\\ProgramData\\PopCap Games\\PlantsVsZombies\\userdata\\";
         }
 

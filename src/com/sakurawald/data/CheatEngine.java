@@ -30,6 +30,58 @@ public class CheatEngine {
     private ArrayList<Long> offsets = new ArrayList<Long>();
 
     /**
+     * 该CheatEngine监听的某个数据变为某个值时, 是否触发该CheatEngine.
+     * 若关闭该功能, 则triggerWhenValueChangeTo应该设置为null.
+     */
+    private TriggerWhenValueChangeTo TriggerWhenValueChangeTo = null;
+
+    public TriggerWhenValueChangeTo getTriggerWhenValueChangeTo() {
+        return this.TriggerWhenValueChangeTo;
+    }
+
+    /**
+     * 定义TriggerWhenValueChangeTo类
+     */
+    public static class TriggerWhenValueChangeTo {
+
+        /**
+         * 触发值
+         */
+        public int value = 0;
+
+        /**
+         * 只有当 CheatEngine的ResultBox的SuccessCount大于等于该值时, 才能触发.
+         */
+        public int successCountCondition = 0;
+
+        public TriggerWhenValueChangeTo(int value, int successCountCondition) {
+            this.value = value;
+            this.successCountCondition = successCountCondition;
+        }
+    }
+
+
+    public String getWindowClassName() {
+        return windowClassName;
+    }
+
+    public String getWindowTitle() {
+        return windowTitle;
+    }
+
+    public long getGetFirstAddress() {
+        return getFirstAddress;
+    }
+
+    public int getReadMemorySize() {
+        return readMemorySize;
+    }
+
+    public ArrayList<Long> getOffsets() {
+        return offsets;
+    }
+
+    /**
      * 根据配置, 从[内存]中读取[数据]
      */
     public ResultBox<Integer> getValue() {
@@ -110,5 +162,15 @@ public class CheatEngine {
         this.readMemorySize = readMemorySize;
         this.offsets = offsets;
     }
+
+    public CheatEngine(String windowClassName, String windowTitle, long getFirstAddress, int readMemorySize, ArrayList<Long> offsets, CheatEngine.TriggerWhenValueChangeTo triggerWhenValueChangeTo) {
+        this.windowClassName = windowClassName;
+        this.windowTitle = windowTitle;
+        this.getFirstAddress = getFirstAddress;
+        this.readMemorySize = readMemorySize;
+        this.offsets = offsets;
+        this.TriggerWhenValueChangeTo = triggerWhenValueChangeTo;
+    }
+
 
 }

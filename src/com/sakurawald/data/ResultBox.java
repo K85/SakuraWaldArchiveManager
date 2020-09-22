@@ -91,6 +91,6 @@ public class ResultBox<E> {
      * @return 该ResultBox的报告信息.
      */
     public String getReport() {
-        return "Report: getWindowHandle = " + getWindowHandle + ", getWindowProcessID = " + getWindowProcessID + ", getWindowProcessHandle = " + getWindowProcessHandle + ", successCount = " + successCount + ", failCount = " + failCount + ".";
+        return "Report: getWindowHandle = " + getWindowHandle + ", getWindowProcessID = " + getWindowProcessID + ", getWindowProcessHandle = " + getWindowProcessHandle + ", successCount = " + successCount + ", failCount = " + failCount + ", value = " + getValue() + ".";
     }
 }

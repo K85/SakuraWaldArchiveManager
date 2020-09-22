@@ -140,7 +140,7 @@ public class ConfigFile {
         }
 
         LoggerManager.logDebug("配置文件系统",
-                "Load Local File to Memory >> " + this.getFileName());
+                "Load Local File to Memory >> " + this.getFileName(), true);
 
         // 从本地存储加载相应的配置文件
         loadFile();

@@ -56,7 +56,7 @@ public class AutoBackupTimer extends TimerTask {
     }
 
     /**
-     * 满足时间条件后执行的方法
+     * 满足时间条件后执行的方法.
      */
     public void doTask() {
 

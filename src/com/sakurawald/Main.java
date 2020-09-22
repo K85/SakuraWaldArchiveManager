@@ -70,7 +70,11 @@ public class Main extends Application {
                 if (result.get() == ButtonType.OK) {
 
                     // Call
+                    LoggerManager.logDebug("Shutdown >> End", true);
                     beforeExit();
+                    LoggerManager.logDebug("Shutdown >> End", true);
+
+                    LoggerManager.logDebug("End Application...", true);
 
                     // 直接退出虚拟机
                     System.exit(0);
@@ -94,6 +98,9 @@ public class Main extends Application {
         String rootPath = FileUtil.getJavaRunPath();
         System.setProperty("local_logger.base_path", rootPath);
 
+        LoggerManager.logDebug("Start Application...", true);
+        LoggerManager.logDebug("Init >> Start", true);
+
         // 初始化配置文件系统
         try {
             FileManager.getInstance().init();
@@ -103,8 +110,11 @@ public class Main extends Application {
             LoggerManager.reportException(e);
         }
 
+        LoggerManager.logDebug("Init >> End", true);
+
         // 启动JavaFX程序
         launch(args);
+
     }
 
     /**

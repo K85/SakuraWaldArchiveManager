@@ -47,7 +47,7 @@ public class SinaRandomImageAPI extends RandomImageAPI {
         int n = random.nextInt(random_Image_Website_URLs.size());
 
         LoggerManager.logDebug("随机图片(新浪图库) - API", "Use Random Website URL >> "
-                + random_Image_Website_URLs.get(n), true);
+                + random_Image_Website_URLs.get(n));
 
         return random_Image_Website_URLs.get(n);
     }
