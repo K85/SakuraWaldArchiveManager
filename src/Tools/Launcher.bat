@@ -1,1 +1,1 @@
-start javaw -jar SakuraWaldArchiveManager.jar
+start javaw -jar ArchiveManager.jar
