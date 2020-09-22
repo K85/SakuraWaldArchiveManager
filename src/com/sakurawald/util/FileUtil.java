@@ -1,15 +1,12 @@
 package com.sakurawald.util;
 
-import com.sakurawald.Main;
 import com.sakurawald.debug.LoggerManager;
-import com.sun.glass.ui.Size;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
@@ -17,8 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 public class FileUtil {
 
@@ -65,7 +60,7 @@ public class FileUtil {
             }
 
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
     }
 
@@ -104,7 +99,7 @@ public class FileUtil {
             }
             //判断是否是文件
             if (file.isFile()) {
-                LoggerManager.getLogger().info("Copy File >> fileName = " + file.getName() + ", from = " + strFrom + ", to = " + strTo);
+                LoggerManager.logDebug("Copy File >> fileName = " + file.getName() + ", from = " + strFrom + ", to = " + strTo);
                 //递归调用复制文件的方法
                 copyFile(strFrom, strTo);
             }
@@ -198,7 +193,7 @@ public class FileUtil {
         try {
             image = ImageIO.read(new File(imagePath));
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         Images imgSel = new Images(image);
@@ -218,7 +213,7 @@ public class FileUtil {
 
             Desktop.getDesktop().open(file);
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
     }
 

@@ -1,9 +1,9 @@
 package com.sakurawald.api;
 
-import java.io.IOException;
-import java.net.SocketTimeoutException;
-import java.util.Iterator;
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.util.NumberUtil;
@@ -11,10 +11,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 
 
 /**
@@ -75,17 +73,17 @@ public class QihooRandomImageAPI extends RandomImageAPI {
 
         } catch (SocketTimeoutException e) {
             // 如果是连接超时, 则静默处理.
-            LoggerManager.getLogger().error(e);
+            LoggerManager.logError(e);
         } catch (IOException e) {
-            LoggerManager.logException(e);
-        } finally {
-
-            LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Response: Code = "
-                    + response.message() + ", JSON = " + JSON);
+            LoggerManager.logError(e);
         }
 
-        /** 关闭Response的body **/
-        response.body().close();
+        LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Response: JSON = " + JSON);
+
+        if (response != null) {
+            /** 关闭Response的body **/
+            response.body().close();
+        }
 
         return result;
     }

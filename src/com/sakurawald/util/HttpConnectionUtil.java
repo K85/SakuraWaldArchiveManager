@@ -1,20 +1,11 @@
 package com.sakurawald.util;
 
 import com.sakurawald.debug.LoggerManager;
-import sun.rmi.runtime.Log;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.logging.Logger;
 
 
 /**
@@ -90,7 +81,7 @@ public class HttpConnectionUtil {
             bin.close();
             out.close();
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         return null;
@@ -117,7 +108,7 @@ public class HttpConnectionUtil {
             dataInputStream.close();
             fileOutputStream.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            LoggerManager.logError(e);
         }
     }
 

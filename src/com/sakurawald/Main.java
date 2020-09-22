@@ -1,13 +1,12 @@
 package com.sakurawald;
 
 import com.sakurawald.archive.ArchiveSeries;
-import com.sakurawald.data.GameVersion;
+import com.sakurawald.archive.GameVersion;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
-import com.sakurawald.timer.AutoBackupTimer;
-import com.sakurawald.timer.SmartAutoBackupTimer;
 import com.sakurawald.ui.controller.MainController;
 import com.sakurawald.util.FileUtil;
+import com.sakurawald.util.JavaFxUtil;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -64,6 +63,7 @@ public class Main extends Application {
             @Override
             public void handle(WindowEvent event) {
                 Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                JavaFxUtil.DialogTools.setIcon(askAlert);
                 askAlert.setTitle("退出");
                 askAlert.setHeaderText("确定要退出本程序吗？");
                 Optional<ButtonType> result = askAlert.showAndWait();
@@ -98,9 +98,9 @@ public class Main extends Application {
         try {
             FileManager.getInstance().init();
         } catch (IllegalAccessException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         // 启动JavaFX程序

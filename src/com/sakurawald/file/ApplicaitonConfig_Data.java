@@ -1,7 +1,5 @@
 package com.sakurawald.file;
 
-import java.util.ArrayList;
-
 @SuppressWarnings("unused")
 public class ApplicaitonConfig_Data {
 
@@ -37,13 +35,12 @@ public class ApplicaitonConfig_Data {
 
     public class Debug {
         // Debug Mode
-        public boolean debug = true;
+        public boolean debug = false;
     }
 
     public Welcome Welcome = new Welcome();
 
     public class Welcome {
-
         public RandomSentence RandomSentence = new RandomSentence();
 
         public class RandomSentence {

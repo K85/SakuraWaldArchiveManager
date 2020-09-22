@@ -1,7 +1,6 @@
 package com.sakurawald.archive;
 
 import com.sakurawald.Main;
-import com.sakurawald.data.GameVersion;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.ArchiveBeanConfig_Data;
 import com.sakurawald.file.ArchiveBeanConfig_File;
@@ -24,6 +23,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -127,7 +127,7 @@ public class ArchiveBean {
             return abcf;
 
         } catch (IllegalAccessException | IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         return null;
@@ -196,8 +196,10 @@ public class ArchiveBean {
 
         // RollBack
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        JavaFxUtil.DialogTools.setIcon(askAlert);
         askAlert.setTitle("回档该ArchiveBean");
-        askAlert.setHeaderText("确定要回档该ArchiveBean（" + ab.getArchiveBean_Name() + "）吗？");
+        askAlert.setHeaderText("ArchiveBean：" + ab.getArchiveBean_Name());
+        askAlert.setContentText("确定要回档该ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
         boolean ret = false;
         if (result.get() == ButtonType.OK) {
@@ -208,9 +210,9 @@ public class ArchiveBean {
         }
 
         if (ret == true) {
-            new Alert(Alert.AlertType.INFORMATION, "回档成功！", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.INFORMATION, "回档成功！", ButtonType.OK).show();
         } else {
-            new Alert(Alert.AlertType.ERROR, "回档失败！（可能的原因：权限不足 或 文件被占用）", ButtonType.OK).show();
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.ERROR, "回档失败！（可能的原因：权限不足 或 文件被占用）", ButtonType.OK).show();
         }
     }
 
@@ -241,9 +243,17 @@ public class ArchiveBean {
         String originalRemark = ab.getArchiveBeanConfig().getSpecificDataInstance().Information.remark;
 
         TextInputDialog dialog = new TextInputDialog(originalRemark);
+        JavaFxUtil.DialogTools.setIcon(dialog);
         dialog.setTitle("设置ArchiveBean的备注");
-        dialog.setHeaderText("为该ArchiveBean（" + ab.getArchiveBean_Name() + "）设置备注");
-        dialog.setContentText("备注：");
+
+
+        String text = "ArchiveBean：" + ab.getArchiveBean_Name();
+        if (originalRemark != null) {
+            text = text + "\n\n原备注：" + originalRemark + "\n\n";
+        }
+        dialog.setHeaderText(text);
+
+        dialog.setContentText("该ArchiveBean的新备注：");
 
         Optional<String> result = dialog.showAndWait();
 
@@ -284,11 +294,12 @@ public class ArchiveBean {
     public void renameArchiveBean() {
 
         TextInputDialog dialog = new TextInputDialog(this.getArchiveBean_Name());
+        JavaFxUtil.DialogTools.setIcon(dialog);
         dialog.setTitle("重命名ArchiveBean");
 
-//        dialog.setHeaderText("每一个ArchiveBean都有一个名称，\n但请注意名称应符合Windows系统的文件命名规范！");
+        dialog.setHeaderText("ArchiveBean：" + this.getArchiveBean_Name());
 
-        dialog.setContentText("该ArchiveBean的新名称：" + this.getArchiveBean_Name());
+        dialog.setContentText("该ArchiveBean的新名称：");
 
         // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
@@ -303,7 +314,7 @@ public class ArchiveBean {
             }
 
             if (renameArchiveBean(input) == false) {
-                new Alert(Alert.AlertType.WARNING, "重命名失败！", ButtonType.OK).show();
+                JavaFxUtil.DialogTools.alert(Alert.AlertType.ERROR, "重命名失败！", ButtonType.OK).show();
             }
 
 
@@ -323,20 +334,42 @@ public class ArchiveBean {
         // Copy GameArchive
         File file = new File(this.getOwner_ArchiveSeries().getOwner_GameVersion().smartlyGetGameArchive_Path());
 
-        String src = this.getArchiveBeanPath();
-        String tar = file.getAbsolutePath();
+        ArrayList<ArchiveFile> afs = getAllArchiveFile();
 
-        LoggerManager.getLogger().info("复制文件夹: source = " + src + ", target = " + tar);
-        try {
-            FileUtil.copyFolder(src, tar);
-            return true;
-        } catch (IOException e) {
-            LoggerManager.logException(e);
-        } finally {
-            deleteGameArchive_ArchiveBeanConfig();
+        /**
+         *   只要回档过程中有一个ArchiveFile回档失败, 则认为本次回档操作是失败的.
+         *   但失败的ArchiveFile会被及时捕捉, 不会影响其他正常的ArchiveFile.
+         */
+        boolean allSuccess = true;
+
+        for (ArchiveFile af : afs) {
+            // ArchiveFile >> Rollback
+            if (af.rollback() == false) {
+                allSuccess = false;
+            }
         }
 
-        return false;
+        return allSuccess;
+    }
+
+    /**
+     * @return 将该ArchiveBean所拥有的的所有文件都封装为ArchievFile, 并自动过滤一些无效的ArchiveFile
+     */
+    public ArrayList<ArchiveFile> getAllArchiveFile() {
+
+        // 获取ArchiveBean的存档文件
+        ArrayList<ArchiveFile> result = new ArrayList<ArchiveFile>();
+        for (File f : Objects.requireNonNull(new File(this.getArchiveBeanPath()).listFiles())) {
+
+            /**
+             * File Filter: 过滤[目录]和[ArchiveBeanConfig.json文件]
+             */
+            if (f.isFile() == true && f.getName().equalsIgnoreCase("ArchiveBeanConfig.json") == false) {
+                result.add(new ArchiveFile(this, f));
+            }
+        }
+
+        return result;
     }
 
     /**
@@ -351,7 +384,7 @@ public class ArchiveBean {
         try {
             root = loader.load();
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         Stage stage = new Stage();
@@ -368,19 +401,6 @@ public class ArchiveBean {
 
         // Show
         stage.show();
-
-    }
-
-
-    /**
-     * 删除本地游戏存档路径中的ArchiveBeanConfig.json文件.
-     * 该方法一般在[回档方法]之后调用.
-     */
-    public void deleteGameArchive_ArchiveBeanConfig() {
-        File f = new File(this.getOwner_ArchiveSeries().getOwner_GameVersion().smartlyGetGameArchive_Path() + "ArchiveBeanConfig.json");
-        if (f.delete() == false) {
-            LoggerManager.getLogger().error("删除[本地游戏存档路径]中的[ArchiveBeanConfig.json]失败！");
-        }
 
     }
 

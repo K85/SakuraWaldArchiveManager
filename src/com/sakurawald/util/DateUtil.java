@@ -92,7 +92,7 @@ public class DateUtil {
         try {
             d = format.parse(date);
         } catch (ParseException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         Calendar c = Calendar.getInstance();
@@ -107,7 +107,7 @@ public class DateUtil {
         try {
             d = format.parse(date);
         } catch (ParseException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         Calendar c = Calendar.getInstance();

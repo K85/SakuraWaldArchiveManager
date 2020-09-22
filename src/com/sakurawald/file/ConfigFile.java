@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.util.FileUtil;
 
-
 import java.io.*;
 
 /**
@@ -71,7 +70,7 @@ public class ConfigFile {
         try {
             this.configDataClassInstance = this.configDataClass.newInstance();
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
     }
@@ -87,7 +86,7 @@ public class ConfigFile {
         try {
             file.createNewFile();
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
     }
 
@@ -172,14 +171,14 @@ public class ConfigFile {
             this.configDataClassInstance = new Gson().fromJson(reader,
                     this.configDataClass);
         } catch (FileNotFoundException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         } finally {
 
             // Load完毕立即close掉本地文件流, 以免资源占用.
             try {
                 reader.close();
             } catch (IOException e) {
-                LoggerManager.logException(e);
+                LoggerManager.reportException(e);
             }
         }
     }
@@ -192,7 +191,7 @@ public class ConfigFile {
         try {
             loadFile();
         } catch (IllegalArgumentException | IllegalAccessException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
     }
 
@@ -217,7 +216,7 @@ public class ConfigFile {
             fos.close();
 
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
     }

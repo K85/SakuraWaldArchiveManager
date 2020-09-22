@@ -4,7 +4,7 @@ import com.sakurawald.Main;
 import com.sakurawald.api.*;
 import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveSeries;
-import com.sakurawald.data.GameVersion;
+import com.sakurawald.archive.GameVersion;
 import com.sakurawald.data.ImageAndText;
 import com.sakurawald.data.ResultBox;
 import com.sakurawald.data.UIStorage;
@@ -13,7 +13,9 @@ import com.sakurawald.file.ConfigFile;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.timer.AutoBackupTimer;
 import com.sakurawald.timer.SmartAutoBackupTimer;
-import com.sakurawald.util.*;
+import com.sakurawald.util.FileUtil;
+import com.sakurawald.util.HttpUtil;
+import com.sakurawald.util.JavaFxUtil;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,14 +25,12 @@ import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -41,67 +41,47 @@ import java.util.Optional;
 public class MainController implements UIStorage {
 
     @FXML
+    public ListView<ArchiveBean> listview_archive_beans;
+    @FXML
+    public ComboBox<GameVersion> combobox_backup_game_version;
+    @FXML
+    public ComboBox<ArchiveSeries> combobox_backup_archive_series;
+    @FXML
+    public Button button_backup;
+    @FXML
     private Hyperlink hyperlink_about_2;
-
     @FXML
     private Hyperlink hyperlink_about_4;
-
     @FXML
     private Hyperlink hyperlink_about_7;
-
     @FXML
     private Hyperlink hyperlink_about_8;
-
     @FXML
     private Hyperlink hyperlink_about_1;
-
     @FXML
     private Hyperlink hyperlink_about_5;
-
     @FXML
     private Hyperlink hyperlink_about_3;
-
     @FXML
     private Hyperlink hyperlink_about_6;
-
     @FXML
     private Label label_version;
     @FXML
     private ImageView imageview_welcome;
-
     @FXML
     private Label label_welcome;
-
-    @FXML
-    public ListView<ArchiveBean> listview_archive_beans;
-
-    @FXML
-    public ComboBox<GameVersion> combobox_backup_game_version;
-
-    @FXML
-    public ComboBox<ArchiveSeries> combobox_backup_archive_series;
-
     @FXML
     private MenuItem menuitem_rollback_all_archivebean;
-
     @FXML
     private MenuItem menuitem_rollback_partly_archivebean;
-
     @FXML
     private MenuItem menuitem_delete_archivebean;
-
     @FXML
     private MenuItem menuitem_create_archiveseries;
-
     @FXML
     private MenuItem menuitem_rename_archiveseries;
-
     @FXML
     private MenuItem menuitem_delete_archiveseries;
-
-    @FXML
-    public Button button_backup;
-
     @FXML
     private TextArea textarea_archive_bean_info;
 
@@ -117,6 +97,9 @@ public class MainController implements UIStorage {
     @FXML
     private CheckBox checkbox_storagesettings_use_indepent_storage;
 
+    public static MainController getInstance() {
+        return Main.loader.getController();
+    }
 
     public ArchiveBean getSelectedArchiveBean() {
         return this.listview_archive_beans.getSelectionModel().getSelectedItem();
@@ -193,7 +176,6 @@ public class MainController implements UIStorage {
         label_version.setText("Version：" + version + "\n" + "很高兴遇见你！");
     }
 
-
     @FXML
     void checkbox_smartautobackup_enable_OnAction(ActionEvent event) {
         // Modify
@@ -238,7 +220,6 @@ public class MainController implements UIStorage {
         combobox_backup_archive_series.getSelectionModel().select(0);
     }
 
-
     @FXML
     void checkbox_autobackup_timing_OnAction(ActionEvent event) {
         // Modify
@@ -247,11 +228,6 @@ public class MainController implements UIStorage {
 
         // Save and Reload
         saveUIAndLoadSettings();
-    }
-
-
-    public static MainController getInstance() {
-        return Main.loader.getController();
     }
 
     @FXML
@@ -284,16 +260,18 @@ public class MainController implements UIStorage {
 
         // Test
         if (gv.getCheatEngine() == null) {
-            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）未配置引擎！").show();
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）未配置引擎！").show();
             return;
         }
 
         ResultBox<Integer> r = gv.getCheatEngine().getValue();
 
-        if (r.getSuccessCount() > 0) {
-            new Alert(Alert.AlertType.INFORMATION, "该GameVersion（" + gv.toString() + "）的智能自动备份有效！").show();
+        String report = r.getReport();
+
+        if (r.getSuccessCount() > 0 && r.getFailCount() == 0) {
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.INFORMATION, "该GameVersion（" + gv.toString() + "）的智能自动备份有效！" + "\n\n" + report).show();
         } else {
-            new Alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）的智能自动备份无效！").show();
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.ERROR, "该GameVersion（" + gv.toString() + "）的智能自动备份无效！" + "\n\n" + report).show();
         }
 
     }
@@ -514,7 +492,7 @@ public class MainController implements UIStorage {
         try {
             root = loader.load();
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         Stage stage = new Stage();
@@ -555,8 +533,10 @@ public class MainController implements UIStorage {
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        JavaFxUtil.DialogTools.setIcon(askAlert);
         askAlert.setTitle("删除该ArchiveBean");
-        askAlert.setHeaderText("确定要删除该ArchiveBean（" + ab.getArchiveBean_Name() + "）吗？");
+        askAlert.setHeaderText("ArchiveBean：" + ab.getArchiveBean_Name());
+        askAlert.setContentText("确定要删除该ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
         if (result.get() == ButtonType.OK) {
             ab.delete();
@@ -638,8 +618,10 @@ public class MainController implements UIStorage {
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        JavaFxUtil.DialogTools.setIcon(askAlert);
         askAlert.setTitle("删除所有ArchiveBean");
-        askAlert.setHeaderText("确定要删除所有ArchiveBean吗？");
+        askAlert.setHeaderText("ArchiveSeries：" + getSelectedArchiveSeries().getArchiveSeries_Name());
+        askAlert.setContentText("确定要删除所有ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
 
         if (result.get() == ButtonType.OK) {
@@ -745,16 +727,21 @@ public class MainController implements UIStorage {
                         @Override
                         public void run() {
                             /** Update UI **/
-                            label_welcome.setText(result.getText());
-                            imageview_welcome.setImage(new Image("file:" + image_Path));
-                            JavaFxUtil.centerImage(imageview_welcome);
+                            if (result.getText() != null) {
+                                label_welcome.setText(result.getText());
+                            }
+
+                            if (result.getImage() != null) {
+                                imageview_welcome.setImage(new Image("file:" + image_Path));
+                                JavaFxUtil.centerImage(imageview_welcome);
+                            }
                         }
                     });
 
                 } catch (Exception e) {
                     /* 注意: updateWelcome()方法产生的Exception, 不会通过错误对话框提示, 而是静默输出到本地日志文件.
                      */
-                    LoggerManager.getLogger().error(e);
+                    LoggerManager.logError(e);
                 }
             }
         }).start();
@@ -810,8 +797,10 @@ public class MainController implements UIStorage {
         }
 
         Alert askAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        JavaFxUtil.DialogTools.setIcon(askAlert);
         askAlert.setTitle("删除除此所有ArchiveBean");
-        askAlert.setHeaderText("确定要删除除此（" + selectedArchiveBean.getArchiveBean_Name() + "）所有ArchiveBean吗？");
+        askAlert.setHeaderText("ArchiveSeries：" + getSelectedArchiveSeries().getArchiveSeries_Name() + "\n除此ArchiveBean：" + selectedArchiveBean.getArchiveBean_Name());
+        askAlert.setContentText("确定要删除除此ArchiveBean外的所有ArchiveBean吗？");
         Optional<ButtonType> result = askAlert.showAndWait();
 
         if (result.get() == ButtonType.OK) {

@@ -1,8 +1,7 @@
 package com.sakurawald.api;
 
-import java.io.IOException;
-import java.net.SocketTimeoutException;
-
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.sakurawald.data.Sentence;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
@@ -10,8 +9,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import java.io.IOException;
 
 
 /**
@@ -30,7 +28,7 @@ public class HitoKotoAPI {
     /**
      * 返回随机的一句一言
      *
-     * @return 获取到的句子, 失败返回null.
+     * @return 获取到的句子, 失败返回[空数据的Sentence].
      **/
     public static Sentence getRandomSentence() {
 
@@ -39,7 +37,7 @@ public class HitoKotoAPI {
 
         // 若未找到结果，则返回null
         if (JSON == null) {
-            return null;
+            return Sentence.getNullSentence();
         }
 
         /** 解析JSON数据 **/
@@ -85,20 +83,18 @@ public class HitoKotoAPI {
             JSON = response.body().string();
             result = JSON;
 
-        } catch (SocketTimeoutException e) {
-            // 如果是连接超时, 则静默处理.
-            LoggerManager.getLogger().error(e);
         } catch (IOException e) {
-            LoggerManager.logException(e);
-        } finally {
-
-            LoggerManager.logDebug("一言 - API",
-                    "Get Random Sentence >> Response: Code = " + response.message()
-                            + ", JSON = " + JSON);
+            LoggerManager.logError(e);
         }
 
+        LoggerManager.logDebug("一言 - API",
+                "Get Random Sentence >> Response: JSON = " + JSON);
+
         /** 关闭Response的body **/
-        response.body().close();
+        if (response != null) {
+            response.body().close();
+        }
+
         return result;
 
     }

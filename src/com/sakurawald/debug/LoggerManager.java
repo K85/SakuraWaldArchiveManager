@@ -1,8 +1,7 @@
 package com.sakurawald.debug;
 
-import com.sakurawald.file.ApplicaitonConfig_Data;
-
 import com.sakurawald.file.FileManager;
+import com.sakurawald.util.JavaFxUtil;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -56,31 +55,44 @@ public class LoggerManager {
     }
 
     /**
+     * 封装后的快速LogError方法.
+     */
+    public static void logError(Exception e) {
+        LoggerManager.getLogger().error(getExceptionInfo(e));
+    }
+
+    /**
      * 输出Exception到本地存储, 并且展示错误对话框.
      */
-    public static void logException(Exception e) {
+    public static void reportException(Exception e) {
 
         // 输出到<本地存储>
-        String data = getExceptionInfo(e);
-        LoggerManager.getLogger().error(data);
+        LoggerManager.getLogger().error(getExceptionInfo(e));
 
         // Show Dialog
         showErrorDialog(e);
-
     }
 
 
     public static String getExceptionInfo(Exception e) {
 
+        // 添加Exception基础信息
         StringBuilder result = new StringBuilder("错误类型: " + e.getClass());
         result.append("\n原因: ").append(e.getCause());
         result.append("\n消息: ").append(e.getMessage());
         result.append("\n栈追踪: ");
 
+        // 添加栈追踪记录
+        result.append("\n");
+        result.append(getExceptionStack(e));
+        return result.toString();
+    }
+
+    public static String getExceptionStack(Exception e) {
+        StringBuilder result = new StringBuilder();
         for (StackTraceElement s : e.getStackTrace()) {
             result.append("\tat ").append(s).append("\r\n");
         }
-
         return result.toString();
     }
 
@@ -89,9 +101,12 @@ public class LoggerManager {
             @Override
             public void run() {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
+
+
+                JavaFxUtil.DialogTools.setIcon(alert);
                 alert.setTitle("错误对话框");
-                alert.setHeaderText("哦不！一个错误发生了 " + SAD_FACIAL_EXPRESSION + "？！！");
-                alert.setContentText("错误原因：" + e.getCause() + "\n错误消息：" + e.getMessage());
+                alert.setHeaderText("哦不！一个错误发生了 " + SAD_FACIAL_EXPRESSION + "\n您可以在\"设置\"中找到那个愚蠢的作者的联系方式？！！");
+                alert.setContentText("错误类型：" + e.getClass() + "\n错误原因：" + e.getCause() + "\n错误消息：" + e.getMessage());
 
                 // Create expandable Exception.
                 StringWriter sw = new StringWriter();
@@ -102,6 +117,7 @@ public class LoggerManager {
                 TextArea textArea = new TextArea(exceptionText);
                 textArea.setEditable(false);
                 textArea.setWrapText(true);
+                textArea.setText(getExceptionStack(e));
 
                 textArea.setMaxWidth(Double.MAX_VALUE);
                 textArea.setMaxHeight(Double.MAX_VALUE);

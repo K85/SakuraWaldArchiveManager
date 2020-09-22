@@ -63,9 +63,14 @@ public class Poetry {
     }
 
     /**
-     * @return 格式化之后的文本, 可用于快速展示.
+     * @return 格式化之后的文本, 可用于快速展示. 本身为空则返回null.
      */
     public String getFormatedString() {
+
+        if (this.getKeySentence() == null && this.getTitle() == null) {
+            return null;
+        }
+
         return "『" + this.getKeySentence() + "』" + "-「" + this.getTitle() + "」";
     }
 

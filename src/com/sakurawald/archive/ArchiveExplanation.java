@@ -1,6 +1,5 @@
 package com.sakurawald.archive;
 
-import com.sakurawald.data.ArchiveFile;
 import com.sakurawald.debug.LoggerManager;
 
 import java.util.ArrayList;
@@ -8,10 +7,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ArchiveExplanation {
-
-    private String explanation = null;
-    private String sign = null;
-    private String fileName = null;
 
     /**
      * 判断是否启用regex的标志文本
@@ -21,19 +16,10 @@ public class ArchiveExplanation {
      * 空的ArchiveExplanation
      */
     private static final ArchiveExplanation NULL_ARCHIVE_EXPLANATION = new ArchiveExplanation("无", "NONE", "NONE");
-
+    private String explanation = null;
+    private String sign = null;
+    private String fileName = null;
     private transient Pattern regexPattern = null;
-
-    /**
-     * @return 获取代表null的ArchiveExplanation
-     */
-    public static ArchiveExplanation getNullArchiveExplanation() {
-        return NULL_ARCHIVE_EXPLANATION;
-    }
-
-    public String getSign() {
-        return sign;
-    }
 
     public ArchiveExplanation(String explanation, String sign, String fileName) {
         this.explanation = explanation;
@@ -41,48 +27,12 @@ public class ArchiveExplanation {
         this.fileName = fileName;
     }
 
-    public String getExplanation() {
-        return explanation;
-    }
-
-    public String getFileName() {
-        return fileName;
-    }
-
     /**
-     * 判断传入的ArchiveFile是否满足本ArchiveExplanation
+     * @return 获取代表null的ArchiveExplanation
      */
-    public boolean isMatch(ArchiveFile archiveFile) {
-
-        // 判断 "普通文本模式"
-        if (this.isUseRegex() == false) {
-            return archiveFile.getFile().getName().equalsIgnoreCase(this.getFileName());
-        }
-
-        // 判断 "正则表达式模式"
-        Matcher matcher = getPattern().matcher(archiveFile.getFile().getName());
-        return matcher.matches();
+    public static ArchiveExplanation getNullArchiveExplanation() {
+        return NULL_ARCHIVE_EXPLANATION;
     }
-
-    /**
-     * 带缓存的Pattern
-     */
-    public Pattern getPattern() {
-
-        if (this.regexPattern == null) {
-            this.regexPattern = Pattern.compile(translateRegex(fileName));
-        }
-
-        return this.regexPattern;
-    }
-
-    /**
-     * @return 该ArchiveExplanation的fileName是否用Regex来匹配.
-     */
-    public boolean isUseRegex() {
-        return fileName.contains(USE_REGEX_SIGN);
-    }
-
 
     /**
      * @return 由fileName转义后得到的Regex.
@@ -241,6 +191,52 @@ public class ArchiveExplanation {
             analyseArchiveExplanation(af);
         }
 
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    /**
+     * 判断传入的ArchiveFile是否满足本ArchiveExplanation
+     */
+    public boolean isMatch(ArchiveFile archiveFile) {
+
+        // 判断 "普通文本模式"
+        if (this.isUseRegex() == false) {
+            return archiveFile.getFile().getName().equalsIgnoreCase(this.getFileName());
+        }
+
+        // 判断 "正则表达式模式"
+        Matcher matcher = getPattern().matcher(archiveFile.getFile().getName());
+        return matcher.matches();
+    }
+
+    /**
+     * 带缓存的Pattern
+     */
+    public Pattern getPattern() {
+
+        if (this.regexPattern == null) {
+            this.regexPattern = Pattern.compile(translateRegex(fileName));
+        }
+
+        return this.regexPattern;
+    }
+
+    /**
+     * @return 该ArchiveExplanation的fileName是否用Regex来匹配.
+     */
+    public boolean isUseRegex() {
+        return fileName.contains(USE_REGEX_SIGN);
     }
 
 }

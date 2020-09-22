@@ -1,6 +1,5 @@
 package com.sakurawald.file;
 
-import com.sakurawald.Main;
 import com.sakurawald.ui.controller.MainController;
 import com.sakurawald.util.DateUtil;
 

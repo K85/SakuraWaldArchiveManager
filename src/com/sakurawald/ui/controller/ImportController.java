@@ -1,16 +1,18 @@
 package com.sakurawald.ui.controller;
 
-import com.sakurawald.Main;
 import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveSeries;
-import com.sakurawald.data.GameVersion;
+import com.sakurawald.archive.GameVersion;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import com.sakurawald.util.FileUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBoxTreeItem;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.CheckBoxTreeCell;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -61,7 +63,7 @@ public class ImportController {
                     try {
                         FileUtil.copyFolder(source, target);
                     } catch (IOException e) {
-                        LoggerManager.logException(e);
+                        LoggerManager.reportException(e);
                     }
 
                 }

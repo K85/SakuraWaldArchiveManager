@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.input.KeyCodeCombination?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sakurawald.ui.controller.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0"
+      prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sakurawald.ui.controller.MainController">
     <children>
         <TabPane prefHeight="413.0" prefWidth="522.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
@@ -31,16 +17,19 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <ImageView fx:id="imageview_welcome" fitHeight="325.0" fitWidth="499.0" layoutX="12.0" layoutY="49.0" onMouseClicked="#imageview_welcome_OnMouseClicked" pickOnBounds="true" preserveRatio="true" />
-                                <Label fx:id="label_welcome" alignment="CENTER" layoutX="12.0" prefHeight="49.0" prefWidth="499.0" text="Welcome." textAlignment="CENTER" wrapText="true">
+                                <ImageView fx:id="imageview_welcome" fitHeight="325.0" fitWidth="499.0" layoutX="12.0"
+                                           layoutY="49.0" onMouseClicked="#imageview_welcome_OnMouseClicked"
+                                           pickOnBounds="true" preserveRatio="true"/>
+                                <Label fx:id="label_welcome" alignment="CENTER" layoutX="12.0" prefHeight="49.0"
+                                       prefWidth="499.0" text="Welcome." textAlignment="CENTER" wrapText="true">
                                     <opaqueInsets>
-                                        <Insets />
+                                        <Insets/>
                                     </opaqueInsets>
                                     <effect>
-                                        <Glow level="0.5" />
+                                        <Glow level="0.5"/>
                                     </effect>
                                     <font>
-                                        <Font name="Microsoft YaHei Light" size="14.0" />
+                                        <Font name="Microsoft YaHei Light" size="14.0"/>
                                     </font>
                                 </Label>
                             </children>
@@ -53,72 +42,138 @@
                             <children>
                                 <Pane prefHeight="73.0" prefWidth="522.0">
                                     <children>
-                                        <Label layoutX="22.0" layoutY="13.0" prefHeight="15.0" prefWidth="73.0" text="游戏版本：" />
-                                        <Label layoutX="22.0" layoutY="44.0" prefHeight="15.0" prefWidth="73.0" text="存档系列：" />
-                                        <ComboBox fx:id="combobox_backup_game_version" layoutX="85.0" layoutY="9.0" onAction="#combobox_backup_game_version_OnAction" prefHeight="23.0" prefWidth="221.0" />
-                                        <ComboBox fx:id="combobox_backup_archive_series" layoutX="85.0" layoutY="40.0" onAction="#combobox_backup_archive_series_OnAction" prefHeight="23.0" prefWidth="221.0" />
-                                        <Button fx:id="button_backup" layoutX="311.0" layoutY="9.0" mnemonicParsing="false" onAction="#button_backup_OnAction" prefHeight="54.0" prefWidth="209.0" text="Backup">
+                                        <Label layoutX="22.0" layoutY="13.0" prefHeight="15.0" prefWidth="73.0"
+                                               text="游戏版本："/>
+                                        <Label layoutX="22.0" layoutY="44.0" prefHeight="15.0" prefWidth="73.0"
+                                               text="存档系列："/>
+                                        <ComboBox fx:id="combobox_backup_game_version" layoutX="85.0" layoutY="9.0"
+                                                  onAction="#combobox_backup_game_version_OnAction" prefHeight="23.0"
+                                                  prefWidth="221.0"/>
+                                        <ComboBox fx:id="combobox_backup_archive_series" layoutX="85.0" layoutY="40.0"
+                                                  onAction="#combobox_backup_archive_series_OnAction" prefHeight="23.0"
+                                                  prefWidth="221.0"/>
+                                        <Button fx:id="button_backup" layoutX="311.0" layoutY="9.0"
+                                                mnemonicParsing="false" onAction="#button_backup_OnAction"
+                                                prefHeight="54.0" prefWidth="209.0" text="Backup">
                                             <font>
-                                                <Font name="Microsoft YaHei" size="26.0" />
+                                                <Font name="Microsoft YaHei" size="26.0"/>
                                             </font>
                                         </Button>
                                     </children>
                                 </Pane>
-                                <TextArea fx:id="textarea_archive_bean_info" editable="false" layoutX="336.0" layoutY="67.0" prefHeight="317.0" prefWidth="185.0" wrapText="true" />
-                                <ListView fx:id="listview_archive_beans" layoutX="11.0" layoutY="67.0" onKeyPressed="#listview_archive_beans_OnKeyPressed" onMouseClicked="#listview_archive_beans_OnMouseClicked" onMouseReleased="#listview_archive_beans_OnMouseReleased" prefHeight="316.0" prefWidth="322.0">
+                                <TextArea fx:id="textarea_archive_bean_info" editable="false" layoutX="336.0"
+                                          layoutY="67.0" prefHeight="317.0" prefWidth="185.0" wrapText="true"/>
+                                <ListView fx:id="listview_archive_beans" layoutX="11.0" layoutY="67.0"
+                                          onKeyPressed="#listview_archive_beans_OnKeyPressed"
+                                          onMouseClicked="#listview_archive_beans_OnMouseClicked"
+                                          onMouseReleased="#listview_archive_beans_OnMouseReleased" prefHeight="316.0"
+                                          prefWidth="322.0">
                                     <contextMenu>
                                         <ContextMenu>
                                             <items>
                                                 <Menu mnemonicParsing="false" text="回档">
                                                     <items>
-                                                        <MenuItem fx:id="menuitem_rollback_all_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_all_archive_bean_OnAction" text="回档（全部）">
+                                                        <MenuItem fx:id="menuitem_rollback_all_archive_bean"
+                                                                  mnemonicParsing="false"
+                                                                  onAction="#menuitem_rollback_all_archive_bean_OnAction"
+                                                                  text="回档（全部）">
                                                             <accelerator>
-                                                                <KeyCodeCombination alt="DOWN" code="DIGIT1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                                <KeyCodeCombination alt="DOWN" code="DIGIT1"
+                                                                                    control="UP" meta="UP" shift="UP"
+                                                                                    shortcut="UP"/>
                                                             </accelerator>
                                                         </MenuItem>
-                                                        <MenuItem fx:id="menuitem_rollback_partly_archive_bean" mnemonicParsing="false" onAction="#menuitem_rollback_partly_archive_bean_OnAction" text="回档（局部）">
+                                                        <MenuItem fx:id="menuitem_rollback_partly_archive_bean"
+                                                                  mnemonicParsing="false"
+                                                                  onAction="#menuitem_rollback_partly_archive_bean_OnAction"
+                                                                  text="回档（局部）">
                                                             <accelerator>
-                                                                <KeyCodeCombination alt="DOWN" code="DIGIT2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                                <KeyCodeCombination alt="DOWN" code="DIGIT2"
+                                                                                    control="UP" meta="UP" shift="UP"
+                                                                                    shortcut="UP"/>
                                                             </accelerator>
                                                         </MenuItem>
                                                     </items>
                                                 </Menu>
-                                                <MenuItem fx:id="menuitem_rename_archivebean" mnemonicParsing="false" onAction="#menuitem_rename_archivebean_OnAction" text="重命名">
+                                                <MenuItem fx:id="menuitem_rename_archivebean" mnemonicParsing="false"
+                                                          onAction="#menuitem_rename_archivebean_OnAction" text="重命名">
                                                     <accelerator>
-                                                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                        <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP"
+                                                                            shift="UP" shortcut="UP"/>
                                                     </accelerator>
                                                 </MenuItem>
-                                                <MenuItem fx:id="menuitem_set_remark_archivebean" mnemonicParsing="false" onAction="#menuitem_set_remark_archivebean_OnAction" text="设置备注">
+                                                <MenuItem fx:id="menuitem_set_remark_archivebean"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_set_remark_archivebean_OnAction"
+                                                          text="设置备注">
                                                     <accelerator>
-                                                        <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                        <KeyCodeCombination alt="DOWN" code="M" control="UP" meta="UP"
+                                                                            shift="UP" shortcut="UP"/>
                                                     </accelerator>
                                                 </MenuItem>
-                                                <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false" onAction="#menuitem_view_archivebean_path_OnAction" text="查看当前目录">
+                                                <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false"
+                                                          onAction="#menuitem_view_archivebean_path_OnAction"
+                                                          text="查看当前目录">
                                                     <accelerator>
-                                                        <KeyCodeCombination alt="DOWN" code="V" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                        <KeyCodeCombination alt="DOWN" code="V" control="UP" meta="UP"
+                                                                            shift="UP" shortcut="UP"/>
                                                     </accelerator>
                                                 </MenuItem>
-                                                <MenuItem fx:id="menuitem_delete_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_archivebean_OnAction" text="删除">
+                                                <MenuItem fx:id="menuitem_delete_archivebean" mnemonicParsing="false"
+                                                          onAction="#menuitem_delete_archivebean_OnAction" text="删除">
                                                     <accelerator>
-                                                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                                                        <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP"
+                                                                            shift="UP" shortcut="UP"/>
                                                     </accelerator>
                                                 </MenuItem>
-                                                <SeparatorMenuItem mnemonicParsing="false" />
-                                                <MenuItem fx:id="menuitem_delete_all_archivebean_except" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_except_OnAction" text="删除除此所有ArchiveBean" />
-                                                <MenuItem fx:id="menuitem_delete_all_archivebean" mnemonicParsing="false" onAction="#menuitem_delete_all_archivebean_OnAction" text="删除当前所有ArchiveBean" />
-                                                <MenuItem fx:id="menuitem_view_archiveseries_path" mnemonicParsing="false" onAction="#menuitem_view_archiveseries_path_OnAction" text="查看当前ArchiveSeries目录" />
-                                                <MenuItem fx:id="menuitem_view_gameversion_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_path_OnAction" text="查看当前GameVersion目录" />
-                                                <MenuItem fx:id="menuitem_view_archivebeans_path" mnemonicParsing="false" onAction="#menuitem_view_archivebeans_path_OnAction" text="查看ArchiveBeans目录" />
-                                                <MenuItem fx:id="menuitem_view_gameversion_archive_path" mnemonicParsing="false" onAction="#menuitem_view_gameversion_archive_path_OnAction" text="查看当前GameVersion存档目录" />
-                                                <MenuItem fx:id="menuitem_view_application_config_path" mnemonicParsing="false" onAction="#menuitem_view_application_config_path_OnAction" text="查看程序配置目录" />
-                                                <MenuItem fx:id="menuitem_view_application_run_path" mnemonicParsing="false" onAction="#menuitem_view_application_run_path_OnAction" text="查看程序运行目录" />
-                                                <SeparatorMenuItem mnemonicParsing="false" />
-                                                <MenuItem fx:id="menuitem_update_data" mnemonicParsing="false" onAction="#menuitem_update_data_OnAction" text="重新载入数据" />
-                                                <SeparatorMenuItem mnemonicParsing="false" />
-                                                <MenuItem fx:id="menuitem_create_archiveseries" mnemonicParsing="false" onAction="#menuitem_create_archiveseries_OnAction" text="新建ArchiveSeries" />
-                                                <MenuItem fx:id="menuitem_rename_archiveseries" mnemonicParsing="false" onAction="#menuitem_rename_archiveseries_OnAction" text="重命名ArchiveSeries" />
-                                                <MenuItem fx:id="menuitem_import_archiveseries" mnemonicParsing="false" onAction="#menuitem_import_archiveseries_OnAction" text="导入ArchiveSeries" />
-                                                <MenuItem fx:id="menuitem_delete_archiveseries" mnemonicParsing="false" onAction="#menuitem_delete_archiveseries_OnAction" text="删除ArchiveSeries" />
+                                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                                <MenuItem fx:id="menuitem_delete_all_archivebean_except"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_delete_all_archivebean_except_OnAction"
+                                                          text="删除除此所有ArchiveBean"/>
+                                                <MenuItem fx:id="menuitem_delete_all_archivebean"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_delete_all_archivebean_OnAction"
+                                                          text="删除当前所有ArchiveBean"/>
+                                                <MenuItem fx:id="menuitem_view_archiveseries_path"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_view_archiveseries_path_OnAction"
+                                                          text="查看当前ArchiveSeries目录"/>
+                                                <MenuItem fx:id="menuitem_view_gameversion_path" mnemonicParsing="false"
+                                                          onAction="#menuitem_view_gameversion_path_OnAction"
+                                                          text="查看当前GameVersion目录"/>
+                                                <MenuItem fx:id="menuitem_view_archivebeans_path"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_view_archivebeans_path_OnAction"
+                                                          text="查看ArchiveBeans目录"/>
+                                                <MenuItem fx:id="menuitem_view_gameversion_archive_path"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_view_gameversion_archive_path_OnAction"
+                                                          text="查看当前GameVersion存档目录"/>
+                                                <MenuItem fx:id="menuitem_view_application_config_path"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_view_application_config_path_OnAction"
+                                                          text="查看程序配置目录"/>
+                                                <MenuItem fx:id="menuitem_view_application_run_path"
+                                                          mnemonicParsing="false"
+                                                          onAction="#menuitem_view_application_run_path_OnAction"
+                                                          text="查看程序运行目录"/>
+                                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                                <MenuItem fx:id="menuitem_update_data" mnemonicParsing="false"
+                                                          onAction="#menuitem_update_data_OnAction" text="重新载入数据"/>
+                                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                                <MenuItem fx:id="menuitem_create_archiveseries" mnemonicParsing="false"
+                                                          onAction="#menuitem_create_archiveseries_OnAction"
+                                                          text="新建ArchiveSeries"/>
+                                                <MenuItem fx:id="menuitem_rename_archiveseries" mnemonicParsing="false"
+                                                          onAction="#menuitem_rename_archiveseries_OnAction"
+                                                          text="重命名ArchiveSeries"/>
+                                                <MenuItem fx:id="menuitem_import_archiveseries" mnemonicParsing="false"
+                                                          onAction="#menuitem_import_archiveseries_OnAction"
+                                                          text="导入ArchiveSeries"/>
+                                                <MenuItem fx:id="menuitem_delete_archiveseries" mnemonicParsing="false"
+                                                          onAction="#menuitem_delete_archiveseries_OnAction"
+                                                          text="删除ArchiveSeries"/>
                                             </items>
                                         </ContextMenu>
                                     </contextMenu>
@@ -131,37 +186,70 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
-                                <TitledPane animated="false" collapsible="false" prefHeight="106.0" prefWidth="522.0" text="自动备份">
+                                <TitledPane animated="false" collapsible="false" prefHeight="106.0" prefWidth="522.0"
+                                            text="自动备份">
                                     <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="49.0" prefWidth="520.0">
                                             <children>
-                                                <CheckBox fx:id="checkbox_smartautobackup_enable" layoutX="22.0" layoutY="16.0" mnemonicParsing="false" onAction="#checkbox_smartautobackup_enable_OnAction" prefHeight="16.0" prefWidth="230.0" text="智能自动备份（SmartAutoBackup）" />
-                                                <CheckBox fx:id="checkbox_autobackup_timing" layoutX="22.0" layoutY="51.0" mnemonicParsing="false" onAction="#checkbox_autobackup_timing_OnAction" text="定时备份" />
-                                                <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0" layoutY="48.0" onKeyReleased="#textfield_autobackup_seconds_OnKeyReleased" prefHeight="23.0" prefWidth="61.0" />
-                                                <Label layoutX="164.0" layoutY="51.0" text="秒" />
-                                                <Button fx:id="button_smartautobackup_test" layoutX="252.0" layoutY="13.0" mnemonicParsing="false" onAction="#button_smartautobackup_test_OnAction" text="检验有效性" />
+                                                <CheckBox fx:id="checkbox_smartautobackup_enable" layoutX="22.0"
+                                                          layoutY="16.0" mnemonicParsing="false"
+                                                          onAction="#checkbox_smartautobackup_enable_OnAction"
+                                                          prefHeight="16.0" prefWidth="230.0"
+                                                          text="智能自动备份（SmartAutoBackup）"/>
+                                                <CheckBox fx:id="checkbox_autobackup_timing" layoutX="22.0"
+                                                          layoutY="51.0" mnemonicParsing="false"
+                                                          onAction="#checkbox_autobackup_timing_OnAction" text="定时备份"/>
+                                                <TextField fx:id="textfield_autobackup_seconds" layoutX="99.0"
+                                                           layoutY="48.0"
+                                                           onKeyReleased="#textfield_autobackup_seconds_OnKeyReleased"
+                                                           prefHeight="23.0" prefWidth="61.0"/>
+                                                <Label layoutX="164.0" layoutY="51.0" text="秒"/>
+                                                <Button fx:id="button_smartautobackup_test" layoutX="252.0"
+                                                        layoutY="13.0" mnemonicParsing="false"
+                                                        onAction="#button_smartautobackup_test_OnAction" text="检验有效性"/>
                                             </children>
                                         </AnchorPane>
                                     </content>
                                 </TitledPane>
-                                <TitledPane animated="false" collapsible="false" layoutY="106.0" prefHeight="88.0" prefWidth="522.0" text="存储设置">
+                                <TitledPane animated="false" collapsible="false" layoutY="106.0" prefHeight="88.0"
+                                            prefWidth="522.0" text="存储设置">
                                     <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="18.0" prefWidth="520.0">
                                             <children>
-                                                <CheckBox fx:id="checkbox_storagesettings_use_indepent_storage" layoutX="22.0" layoutY="16.0" mnemonicParsing="false" onAction="#checkbox_storagesettings_use_indepent_storage_OnAction" text="使用独立的备份存储路径" />
+                                                <CheckBox fx:id="checkbox_storagesettings_use_indepent_storage"
+                                                          layoutX="22.0" layoutY="16.0" mnemonicParsing="false"
+                                                          onAction="#checkbox_storagesettings_use_indepent_storage_OnAction"
+                                                          text="使用独立的备份存储路径"/>
                                             </children>
                                         </AnchorPane>
                                     </content>
                                 </TitledPane>
-                                <Hyperlink fx:id="hyperlink_about_2" layoutX="14.0" layoutY="223.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_4" layoutX="14.0" layoutY="265.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_7" layoutX="14.0" layoutY="334.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_8" accessibleText="http://lonelystar.org/download.htm" layoutX="14.0" layoutY="355.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_1" layoutX="14.0" layoutY="202.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" textFill="#6600ff" />
-                                <Hyperlink fx:id="hyperlink_about_5" layoutX="14.0" layoutY="286.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_3" layoutX="14.0" layoutY="244.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
-                                <Hyperlink fx:id="hyperlink_about_6" layoutX="14.0" layoutY="313.0" prefHeight="21.0" prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" textFill="#6600ff" />
-                                <Label fx:id="label_version" alignment="BOTTOM_RIGHT" layoutX="334.0" layoutY="327.0" prefHeight="49.0" prefWidth="183.0" text="XXXXXXXXXXXXXXXXXXXXXXX" textAlignment="CENTER" underline="true" wrapText="true" />
+                                <Hyperlink fx:id="hyperlink_about_2" layoutX="14.0" layoutY="223.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_4" layoutX="14.0" layoutY="265.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_7" layoutX="14.0" layoutY="334.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_8" accessibleText="http://lonelystar.org/download.htm"
+                                           layoutX="14.0" layoutY="355.0" prefHeight="21.0" prefWidth="320.0"
+                                           text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_1" layoutX="14.0" layoutY="202.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                                           textFill="#6600ff"/>
+                                <Hyperlink fx:id="hyperlink_about_5" layoutX="14.0" layoutY="286.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_3" layoutX="14.0" layoutY="244.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                                <Hyperlink fx:id="hyperlink_about_6" layoutX="14.0" layoutY="313.0" prefHeight="21.0"
+                                           prefWidth="320.0" text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                                           textFill="#6600ff"/>
+                                <Label fx:id="label_version" alignment="BOTTOM_RIGHT" layoutX="334.0" layoutY="327.0"
+                                       prefHeight="49.0" prefWidth="183.0" text="XXXXXXXXXXXXXXXXXXXXXXX"
+                                       textAlignment="CENTER" underline="true" wrapText="true">
+                                    <font>
+                                        <Font name="Microsoft JhengHei Light" size="12.0"/>
+                                    </font>
+                                </Label>
                             </children>
                         </AnchorPane>
                     </content>

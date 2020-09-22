@@ -40,16 +40,26 @@ public class CheatEngine {
         //获得窗口句柄
         WinDef.HWND hwnd = User32.INSTANCE.FindWindow(this.windowClassName, this.windowTitle);
         LoggerManager.logDebug("CheatEngine", "Get Window Handle >> " + hwnd);
+        if (hwnd != null) {
+            result.setGetWindowHandle(true);
+        }
+
 
         //获得窗口进程ID
         IntByReference lpdwProcessId = new IntByReference();
         int pid = User32.INSTANCE.GetWindowThreadProcessId(hwnd, lpdwProcessId);
-        WinNT.HANDLE processHandle = null;
         LoggerManager.logDebug("CheatEngine", "Get Window Process ID >> " + pid);
+        if (pid != 0) {
+            result.setGetWindowProcessID(true);
+        }
+
 
         //获得窗口进程句柄
-        processHandle = Kernel32.INSTANCE.OpenProcess(PROCESS_ALL_ACCESS, false, lpdwProcessId.getValue());
+        WinNT.HANDLE processHandle = Kernel32.INSTANCE.OpenProcess(PROCESS_ALL_ACCESS, false, lpdwProcessId.getValue());
         LoggerManager.logDebug("CheatEngine", "Get Window Process Handle >> " + processHandle);
+        if (processHandle != null) {
+            result.setGetWindowProcessHandle(true);
+        }
 
         /** 读取游戏内存 **/
         // 定义变量
@@ -64,11 +74,8 @@ public class CheatEngine {
         ret = Kernel32.INSTANCE.ReadProcessMemory(processHandle, nowPointer, nowMemory, this.readMemorySize, null);
         LoggerManager.logDebug("CheatEngine", "Read FirstAddress >> Response >> isSuccess = " + ret + ", readAddress = " + this.getFirstAddress + ", returnValue = " + nowMemory.getInt(0));
 
-        if (ret == false) {
-            result.addFailCount();
-        } else {
-            result.addSuccessCount();
-        }
+        // Count
+        result.addCount(ret);
 
         // 偏移读取
         int offset_count = 0;
@@ -84,11 +91,8 @@ public class CheatEngine {
             // Read
             ret = Kernel32.INSTANCE.ReadProcessMemory(processHandle, nowPointer, nowMemory, this.readMemorySize, null);
 
-            if (ret == false) {
-                result.addFailCount();
-            } else {
-                result.addSuccessCount();
-            }
+            // Count
+            result.addCount(ret);
 
             LoggerManager.logDebug("CheatEngine", "Read Level " + offset_count + " Memory >> Response >> isSuccess = " + ret + ", readAddress = " + offsetAddress + ", returnValue = " + nowMemory.getInt(0));
         }

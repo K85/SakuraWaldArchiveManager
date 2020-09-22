@@ -1,7 +1,7 @@
 package com.sakurawald.timer;
 
 import com.sakurawald.archive.ArchiveSeries;
-import com.sakurawald.data.GameVersion;
+import com.sakurawald.archive.GameVersion;
 import com.sakurawald.data.ResultBox;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
@@ -86,7 +86,7 @@ public class SmartAutoBackupTimer extends TimerTask {
         try {
             doTask();
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
     }

@@ -1,6 +1,5 @@
 package com.sakurawald.timer;
 
-import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveSeries;
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
@@ -51,7 +50,7 @@ public class AutoBackupTimer extends TimerTask {
                 passedTimeMs = 0;
             }
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
     }

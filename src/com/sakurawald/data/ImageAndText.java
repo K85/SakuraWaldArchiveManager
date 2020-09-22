@@ -40,6 +40,17 @@ public class ImageAndText {
         return text;
     }
 
+    /**
+     * @return 是否不存在图片和文字.
+     */
+    public boolean isNull() {
+        if (this.image == null && this.text == null) {
+            return true;
+        }
+        return false;
+    }
+
+
     public void setText(String text) {
         this.text = text;
     }

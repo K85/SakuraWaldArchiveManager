@@ -3,21 +3,26 @@ package com.sakurawald.api;
 import com.google.gson.*;
 import com.sakurawald.data.Poetry;
 import com.sakurawald.debug.LoggerManager;
-import com.sun.deploy.trace.LoggerTraceListener;
 import org.jsoup.Connection;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class JinRiShiCiAPI {
 
     /**
+     * @return nwe空数据的Poetry对象.
+     */
+    public static Poetry getNullPoetry() {
+        return new Poetry(null);
+    }
+
+    /**
      * 随机获取一首古诗
      *
-     * @return 返回Poerty对象, 失败返回没有数值的Poetry对象.
+     * @return 返回Poerty对象, 失败返回[空数据的Poetry对象].
      */
     public static Poetry getPoetry() {
 
@@ -38,8 +43,8 @@ public class JinRiShiCiAPI {
         try {
             response_JSON = conn.ignoreContentType(true).execute();
         } catch (IOException e) {
-            LoggerManager.logException(e);
-            return new Poetry(null);
+            LoggerManager.logError(e);
+            return getNullPoetry();
         }
 
         /** 进行JSON解析 **/
@@ -79,7 +84,7 @@ public class JinRiShiCiAPI {
                 warning = je.getAsString();
             }
         } catch (Exception e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         LoggerManager.logDebug("今日诗词", "Response >> keySentence = " + keySentence);

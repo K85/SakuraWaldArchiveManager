@@ -37,11 +37,24 @@ public class Sentence {
     }
 
     /**
-     * @return 格式化后的文本, 可用于快速展示.
+     * @return 格式化后的文本, 可用于快速展示. 本身为空则返回null.
      */
     public String getFormatedString() {
+
+        if (this.getContent() == null && this.getFrom() == null) {
+            return null;
+        }
+
         return "『" + this.getContent() + "』" + "-「" + this.getFrom() + "」";
     }
+
+    /**
+     * @return new空的Sentence对象.
+     */
+    public static Sentence getNullSentence() {
+        return new Sentence(0, null, null, null, null, null);
+    }
+
 
     public String getFrom() {
         return from;

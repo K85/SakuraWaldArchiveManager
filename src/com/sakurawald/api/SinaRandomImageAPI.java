@@ -1,16 +1,16 @@
 package com.sakurawald.api;
 
-import java.io.IOException;
-import java.net.SocketTimeoutException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-
 import com.sakurawald.debug.LoggerManager;
 import com.sakurawald.file.FileManager;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
+import java.io.IOException;
+import java.net.SocketTimeoutException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 
 /**
@@ -87,16 +87,18 @@ public class SinaRandomImageAPI extends RandomImageAPI {
             result = response.request().url().toString();
         } catch (SocketTimeoutException e) {
             // 如果是连接超时, 则静默处理.
-            LoggerManager.getLogger().error(e);
+            LoggerManager.logError(e);
         } catch (IOException e) {
-            LoggerManager.logException(e);
+            LoggerManager.logError(e);
         } finally {
             LoggerManager.logDebug("随机图片(新浪图库) - API",
                     "Get Random Image URL -> Response: Image_URL = " + result);
         }
 
         /** 关闭Response的body **/
-        response.body().close();
+        if (response != null) {
+            response.body().close();
+        }
 
         return result;
 

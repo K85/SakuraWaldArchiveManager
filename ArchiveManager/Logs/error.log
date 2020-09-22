@@ -1,175 +1,8 @@
-2020-09-21 12:06:29  [ JavaFX Application Thread:330 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0EnglishOriginalEdition
-2020-09-21 12:08:00  [ Thread-28:91904 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: Read timed out
-栈追踪: 	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
-	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:975)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:933)
-	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1587)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:347)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:453)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:795)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 12:09:03  [ JavaFX Application Thread:325 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0EnglishOriginalEdition
-2020-09-21 12:09:31  [ Thread-14:28982 ] - [ ERROR ]  错误类型: class java.net.SocketException
-原因: null
-消息: Unexpected end of file from server
-栈追踪: 	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:851)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:848)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1587)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:347)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:453)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:795)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 13:21:29  [ Thread-4:11877 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 13:22:04  [ Thread-4:4249 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 13:22:57  [ Thread-4:11126 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: Read timed out
-栈追踪: 	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465)
-	at sun.security.ssl.InputRecord.read(InputRecord.java:503)
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:975)
-	at sun.security.ssl.SSLSocketImpl.readDataRecord(SSLSocketImpl.java:933)
-	at sun.security.ssl.AppInputStream.read(AppInputStream.java:105)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1587)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:347)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:453)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 13:23:07  [ Thread-4:21154 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.Platform.connectSocket(Platform.java:126)
-	at okhttp3.internal.io.RealConnection.connectSocket(RealConnection.java:140)
-	at okhttp3.internal.io.RealConnection.connect(RealConnection.java:111)
-	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:188)
-	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
-	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
-	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
-	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
-	at okhttp3.RealCall.getResponse(RealCall.java:240)
-	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
-	at okhttp3.RealCall.execute(RealCall.java:57)
-	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:863)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 13:28:36  [ JavaFX Application Thread:34535 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
-2020-09-21 13:28:37  [ JavaFX Application Thread:35629 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:28:38  [ JavaFX Application Thread:36696 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
-2020-09-21 13:28:39  [ JavaFX Application Thread:37667 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:28:39  [ JavaFX Application Thread:38313 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
-2020-09-21 13:28:41  [ JavaFX Application Thread:39700 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:28:42  [ JavaFX Application Thread:40794 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = RelativeUserdata
-2020-09-21 13:29:44  [ Thread-4:13379 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+2020-09-22 07:44:18  [ Thread-6:1438 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
 原因: null
 消息: v2.jinrishici.com
-栈追踪: 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
 	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
 	at java.net.Socket.connect(Socket.java:589)
@@ -187,25 +20,25 @@
 	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
 	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
 	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
 	at java.lang.Thread.run(Thread.java:748)
 
-2020-09-21 13:29:54  [ Thread-4:23422 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
+2020-09-22 07:44:18  [ Thread-6:1474 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
 原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.Platform.connectSocket(Platform.java:126)
-	at okhttp3.internal.io.RealConnection.connectSocket(RealConnection.java:140)
-	at okhttp3.internal.io.RealConnection.connect(RealConnection.java:111)
-	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:188)
+消息: www.dmoe.cc
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
 	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
 	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
 	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
@@ -214,60 +47,15 @@
 	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
 	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
 	at okhttp3.RealCall.execute(RealCall.java:57)
-	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:72)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:863)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:84)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:740)
 	at java.lang.Thread.run(Thread.java:748)
 
-2020-09-21 13:32:39  [ JavaFX Application Thread:187913 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:32:39  [ JavaFX Application Thread:187913 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:32:39  [ JavaFX Application Thread:187913 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:32:39  [ JavaFX Application Thread:187914 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:32:39  [ JavaFX Application Thread:187914 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:32:39  [ JavaFX Application Thread:187914 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:32:43  [ JavaFX Application Thread:192371 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:32:43  [ JavaFX Application Thread:192372 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:32:43  [ JavaFX Application Thread:192372 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:32:43  [ JavaFX Application Thread:192372 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:32:43  [ JavaFX Application Thread:192372 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:32:43  [ JavaFX Application Thread:192373 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:33:34  [ JavaFX Application Thread:5432 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:33:34  [ JavaFX Application Thread:5433 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:33:34  [ JavaFX Application Thread:5433 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:33:34  [ JavaFX Application Thread:5433 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:33:34  [ JavaFX Application Thread:5433 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:33:34  [ JavaFX Application Thread:5434 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:33:54  [ JavaFX Application Thread:2892 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:33:54  [ JavaFX Application Thread:2892 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:33:54  [ JavaFX Application Thread:2893 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:33:54  [ JavaFX Application Thread:2893 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:33:54  [ JavaFX Application Thread:2894 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:33:54  [ JavaFX Application Thread:2894 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:33:59  [ JavaFX Application Thread:7694 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:33:59  [ JavaFX Application Thread:7695 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:33:59  [ JavaFX Application Thread:7695 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:33:59  [ JavaFX Application Thread:7695 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:33:59  [ JavaFX Application Thread:7695 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:33:59  [ JavaFX Application Thread:7696 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:34:20  [ JavaFX Application Thread:28056 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:34:20  [ JavaFX Application Thread:28056 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:34:20  [ JavaFX Application Thread:28057 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:34:20  [ JavaFX Application Thread:28057 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:34:20  [ JavaFX Application Thread:28057 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:34:20  [ JavaFX Application Thread:28057 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:34:26  [ JavaFX Application Thread:34919 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:34:26  [ JavaFX Application Thread:34920 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:34:26  [ JavaFX Application Thread:34920 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:34:26  [ JavaFX Application Thread:34920 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:34:26  [ JavaFX Application Thread:34920 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:34:26  [ JavaFX Application Thread:34920 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:36:37  [ Thread-4:4418 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
+2020-09-22 07:45:13  [ Thread-6:1382 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
 原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
 	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
 	at java.net.Socket.connect(Socket.java:589)
@@ -285,155 +73,25 @@
 	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
 	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
 	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
 	at java.lang.Thread.run(Thread.java:748)
 
-2020-09-21 13:40:19  [ JavaFX Application Thread:2813 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:40:19  [ JavaFX Application Thread:2813 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:40:19  [ JavaFX Application Thread:2814 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:40:19  [ JavaFX Application Thread:2814 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:40:19  [ JavaFX Application Thread:2814 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:40:19  [ JavaFX Application Thread:2814 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 13:55:31  [ JavaFX Application Thread:3514 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 13:55:31  [ JavaFX Application Thread:3515 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 13:55:31  [ JavaFX Application Thread:3515 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 13:55:31  [ JavaFX Application Thread:3515 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 13:55:31  [ JavaFX Application Thread:3516 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 13:55:31  [ JavaFX Application Thread:3516 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 14:12:26  [ Thread-4:4440 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
+2020-09-22 07:45:13  [ Thread-6:1418 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
 原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
-	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
-	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
-	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
-	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
-	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
-	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
-	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:32)
-	at com.sakurawald.ui.controller.MainController$3.run(MainController.java:855)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 14:23:23  [ JavaFX Application Thread:13231 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 14:23:23  [ JavaFX Application Thread:13232 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 14:23:23  [ JavaFX Application Thread:13232 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 14:23:23  [ JavaFX Application Thread:13232 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 14:23:23  [ JavaFX Application Thread:13232 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 14:23:23  [ JavaFX Application Thread:13233 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 14:23:34  [ JavaFX Application Thread:23899 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 14:23:34  [ JavaFX Application Thread:23899 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 14:23:34  [ JavaFX Application Thread:23899 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 14:23:34  [ JavaFX Application Thread:23899 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 14:23:34  [ JavaFX Application Thread:23900 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = BetaEdition
-2020-09-21 14:23:34  [ JavaFX Application Thread:23900 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 3.1FinalEdition
-2020-09-21 15:21:36  [ JavaFX Application Thread:4542 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 15:21:39  [ JavaFX Application Thread:7286 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 15:21:41  [ JavaFX Application Thread:8977 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 15:21:45  [ JavaFX Application Thread:13741 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 15:21:46  [ JavaFX Application Thread:14325 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 15:21:48  [ JavaFX Application Thread:16136 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 15:21:49  [ JavaFX Application Thread:16992 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 1.0ChineseGen2
-2020-09-21 15:21:51  [ JavaFX Application Thread:19311 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = EnglishAnnual
-2020-09-21 15:21:52  [ JavaFX Application Thread:20286 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = ChineseAnnual
-2020-09-21 15:21:53  [ JavaFX Application Thread:21761 ] - [ ERROR ]  获取当前游戏版本的所有存档系列失败: GameVersion = 95Edition
-2020-09-21 17:08:47  [ JavaFX Application Thread:54254 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 1.0ChineseGen2
-2020-09-21 17:08:47  [ JavaFX Application Thread:54255 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = EnglishAnnual
-2020-09-21 17:08:47  [ JavaFX Application Thread:54255 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = ChineseAnnual
-2020-09-21 17:08:47  [ JavaFX Application Thread:54255 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 95Edition
-2020-09-21 17:08:47  [ JavaFX Application Thread:54255 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = BetaEdition
-2020-09-21 17:08:47  [ JavaFX Application Thread:54255 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 3.1FinalEdition
-2020-09-21 17:14:23  [ JavaFX Application Thread:334 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
-原因: null
-消息: null
-栈追踪: 	at com.sakurawald.ui.controller.MainController.initialize(MainController.java:137)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
-	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
-	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
-	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
-	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
-	at com.sakurawald.Main.start(Main.java:48)
-	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$166(LauncherImpl.java:863)
-	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$179(PlatformImpl.java:326)
-	at com.sun.javafx.application.PlatformImpl.lambda$null$177(PlatformImpl.java:295)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at com.sun.javafx.application.PlatformImpl.lambda$runLater$178(PlatformImpl.java:294)
-	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 17:14:44  [ JavaFX Application Thread:307 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
-原因: null
-消息: null
-栈追踪: 	at com.sakurawald.ui.controller.MainController.initialize(MainController.java:137)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
-	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
-	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2566)
-	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2441)
-	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
-	at com.sakurawald.Main.start(Main.java:48)
-	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$166(LauncherImpl.java:863)
-	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$179(PlatformImpl.java:326)
-	at com.sun.javafx.application.PlatformImpl.lambda$null$177(PlatformImpl.java:295)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at com.sun.javafx.application.PlatformImpl.lambda$runLater$178(PlatformImpl.java:294)
-	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at com.sun.glass.ui.win.WinApplication.lambda$null$152(WinApplication.java:177)
-	at java.lang.Thread.run(Thread.java:748)
-
-2020-09-21 17:16:17  [ JavaFX Application Thread:28728 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 1.0ChineseGen2
-2020-09-21 17:16:18  [ JavaFX Application Thread:29705 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = EnglishAnnual
-2020-09-21 17:16:19  [ JavaFX Application Thread:30337 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 1.0ChineseGen2
-2020-09-21 17:16:19  [ JavaFX Application Thread:31009 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = ChineseAnnual
-2020-09-21 17:16:20  [ JavaFX Application Thread:31752 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 95Edition
-2020-09-21 17:16:21  [ JavaFX Application Thread:32447 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 3.1FinalEdition
-2020-09-21 17:16:33  [ JavaFX Application Thread:44933 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 1.0ChineseGen2
-2020-09-21 17:21:58  [ Thread-6:13372 ] - [ ERROR ]  错误类型: class java.net.SocketTimeoutException
-原因: null
-消息: connect timed out
-栈追踪: 	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at okhttp3.internal.Platform.connectSocket(Platform.java:126)
-	at okhttp3.internal.io.RealConnection.connectSocket(RealConnection.java:140)
-	at okhttp3.internal.io.RealConnection.connect(RealConnection.java:111)
-	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:188)
+消息: api.mtyqx.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
 	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
 	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
 	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
@@ -442,15 +100,2180 @@
 	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
 	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
 	at okhttp3.RealCall.execute(RealCall.java:57)
-	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:75)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:84)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:740)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:45:31  [ Thread-6:1447 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:45:31  [ Thread-6:1484 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: www.dmoe.cc
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.SinaRandomImageAPI.getRandomImageURL(SinaRandomImageAPI.java:84)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:740)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:46:06  [ Thread-6:1386 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:46:06  [ Thread-6:1425 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:105)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:46:06  [ Thread-6:1427 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:82)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:105)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:47:44  [ Thread-6:1393 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:47:44  [ Thread-6:1431 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:48:16  [ Thread-6:1418 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:48:16  [ Thread-6:1461 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:48:16  [ Thread-6:1463 ] - [ ERROR ]  错误类型: class java.net.MalformedURLException
+原因: java.lang.NullPointerException
+消息: null
+栈追踪: 
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sakurawald.util.HttpConnectionUtil.downloadImageFile(HttpConnectionUtil.java:99)
+	at com.sakurawald.api.RandomImageAPI.saveImage(RandomImageAPI.java:35)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:49:49  [ Thread-6:1398 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:49:49  [ Thread-6:1438 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:49:49  [ Thread-6:1440 ] - [ ERROR ]  错误类型: class java.net.MalformedURLException
+原因: java.lang.NullPointerException
+消息: null
+栈追踪: 
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sakurawald.util.HttpConnectionUtil.downloadImageFile(HttpConnectionUtil.java:99)
+	at com.sakurawald.api.RandomImageAPI.saveImage(RandomImageAPI.java:41)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:51:03  [ Thread-6:1402 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:51:03  [ Thread-6:1441 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:51:40  [ Thread-6:1431 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:51:40  [ Thread-6:1469 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:54:34  [ Thread-6:1384 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:54:34  [ Thread-6:1429 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:56:46  [ Thread-6:1350 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v2.jinrishici.com
+栈追踪: 
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:449)
+	at org.jsoup.helper.HttpConnection$Response.execute(HttpConnection.java:434)
+	at org.jsoup.helper.HttpConnection.execute(HttpConnection.java:181)
+	at com.sakurawald.api.JinRiShiCiAPI.getPoetry(JinRiShiCiAPI.java:37)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:732)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:56:46  [ Thread-6:1390 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:57:21  [ Thread-6:1435 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:57:21  [ Thread-6:1437 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:96)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:57:30  [ Thread-6:1453 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:57:30  [ Thread-6:1455 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:96)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:04  [ Thread-6:1375 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:04  [ Thread-6:1376 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:99)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:14  [ Thread-6:1396 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:14  [ Thread-6:1397 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:98)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:28  [ Thread-6:1436 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:28  [ Thread-6:1437 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:96)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:49  [ Thread-6:1426 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:49  [ Thread-6:1426 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:57  [ Thread-6:1520 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 07:58:57  [ Thread-6:1521 ] - [ ERROR ]  错误类型: class java.lang.NullPointerException
+原因: null
+消息: null
+栈追踪: 
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:03:03  [ Thread-6:1501 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:03:03  [ Thread-6:1508 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:04:03  [ Thread-6:1415 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:04:03  [ Thread-6:1422 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:05:34  [ Thread-6:1364 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:05:34  [ Thread-6:1371 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:08:10  [ Thread-6:1362 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:08:10  [ Thread-6:1369 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:10:35  [ Thread-6:1411 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:10:35  [ Thread-6:1418 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:11:11  [ Thread-6:1349 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:11:11  [ Thread-6:1357 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:12:21  [ Thread-6:1395 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:12:21  [ Thread-6:1402 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:12:37  [ Thread-6:1392 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:12:37  [ Thread-6:1400 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:13:12  [ Thread-6:1400 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:13:12  [ Thread-6:1407 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:13:49  [ Thread-6:1400 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:13:49  [ Thread-6:1408 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:15:38  [ Thread-6:1394 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:15:38  [ Thread-6:1402 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:15:43  [ Thread-6:1427 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:15:43  [ Thread-6:1437 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:18:54  [ Thread-6:1135 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:18:54  [ Thread-6:1143 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:19:36  [ Thread-6:1091 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:19:36  [ Thread-6:1099 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:19:52  [ Thread-6:1122 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:19:52  [ Thread-6:1130 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:20:35  [ Thread-6:1033 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:20:35  [ Thread-6:1041 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:23:28  [ Thread-6:1050 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:23:28  [ Thread-6:1058 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:23:56  [ Thread-6:1101 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:23:56  [ Thread-6:1109 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:26:42  [ Thread-6:1030 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:734)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:26:42  [ Thread-6:1038 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:742)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:29:38  [ Thread-6:1038 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:735)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:29:38  [ Thread-6:1046 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
 	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:743)
 	at java.lang.Thread.run(Thread.java:748)
 
-2020-09-21 17:21:58  [ Thread-6:13374 ] - [ ERROR ]  java.lang.NullPointerException
-2020-09-21 17:38:42  [ JavaFX Application Thread:33129 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 3.1FinalEdition
-2020-09-21 17:40:13  [ JavaFX Application Thread:19819 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 1.0ChineseGen2
-2020-09-21 17:41:41  [ JavaFX Application Thread:107639 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = EnglishAnnual
-2020-09-21 17:41:41  [ JavaFX Application Thread:107639 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = ChineseAnnual
-2020-09-21 17:41:41  [ JavaFX Application Thread:107639 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 95Edition
-2020-09-21 17:41:41  [ JavaFX Application Thread:107639 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = BetaEdition
-2020-09-21 17:41:41  [ JavaFX Application Thread:107640 ] - [ ERROR ]  Get All ArchiveSeries In This GameVersion >> Error >> GameVersion = 3.1FinalEdition
+2020-09-22 08:30:33  [ Thread-6:1033 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:735)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:30:33  [ Thread-6:1041 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:743)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:32:19  [ Thread-6:1081 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:735)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:32:19  [ Thread-6:1089 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:743)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:33:49  [ Thread-6:1072 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:736)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:33:49  [ Thread-6:1079 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:744)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:34:56  [ Thread-6:1080 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:736)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:34:56  [ Thread-6:1088 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:744)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:37:22  [ Thread-6:1028 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: v1.hitokoto.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence_JSON(HitoKotoAPI.java:82)
+	at com.sakurawald.api.HitoKotoAPI.getRandomSentence(HitoKotoAPI.java:38)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:736)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-09-22 08:37:22  [ Thread-6:1037 ] - [ ERROR ]  错误类型: class java.net.UnknownHostException
+原因: null
+消息: wallpaper.apc.360.cn
+栈追踪: 
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1277)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1193)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1127)
+	at okhttp3.Dns$1.lookup(Dns.java:39)
+	at okhttp3.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:173)
+	at okhttp3.internal.http.RouteSelector.nextProxy(RouteSelector.java:139)
+	at okhttp3.internal.http.RouteSelector.next(RouteSelector.java:81)
+	at okhttp3.internal.http.StreamAllocation.findConnection(StreamAllocation.java:174)
+	at okhttp3.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:127)
+	at okhttp3.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at okhttp3.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at okhttp3.internal.http.HttpEngine.sendRequest(HttpEngine.java:241)
+	at okhttp3.RealCall.getResponse(RealCall.java:240)
+	at okhttp3.RealCall$ApplicationInterceptorChain.proceed(RealCall.java:198)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:160)
+	at okhttp3.RealCall.execute(RealCall.java:57)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL_JSON(QihooRandomImageAPI.java:71)
+	at com.sakurawald.api.QihooRandomImageAPI.getRandomImageURL(QihooRandomImageAPI.java:106)
+	at com.sakurawald.ui.controller.MainController$2.run(MainController.java:744)
+	at java.lang.Thread.run(Thread.java:748)
+

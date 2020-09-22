@@ -21,7 +21,7 @@ public abstract class RandomImageAPI {
         try {
             url = new URL(image_URL);
         } catch (MalformedURLException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
         File file = new File(url.getFile());
@@ -32,6 +32,13 @@ public abstract class RandomImageAPI {
     public static void saveImage(String image_URL, String save_path) {
         LoggerManager.logDebug("随机图片", "Download Image >> image_URL = " + image_URL
                 + ", save_path = " + save_path, true);
+
+        // Prevent NPE.
+        if (image_URL == null) {
+            LoggerManager.logDebug("随机图片", "Download Image >> image_URL is null. >> Cancel");
+            return;
+        }
+
         HttpConnectionUtil.downloadImageFile(image_URL, save_path);
     }
 

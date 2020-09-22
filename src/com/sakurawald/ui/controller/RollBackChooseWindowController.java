@@ -1,18 +1,17 @@
 package com.sakurawald.ui.controller;
 
-import com.sakurawald.Main;
 import com.sakurawald.archive.ArchiveBean;
 import com.sakurawald.archive.ArchiveExplanation;
-import com.sakurawald.data.ArchiveFile;
-import javafx.application.Platform;
+import com.sakurawald.archive.ArchiveFile;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;

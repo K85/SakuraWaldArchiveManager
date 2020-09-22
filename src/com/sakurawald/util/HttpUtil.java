@@ -16,7 +16,7 @@ public class HttpUtil {
         try {
             Desktop.getDesktop().browse(new URI(URL));
         } catch (IOException | URISyntaxException e) {
-            LoggerManager.logException(e);
+            LoggerManager.reportException(e);
         }
 
     }

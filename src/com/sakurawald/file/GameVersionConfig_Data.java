@@ -1,7 +1,7 @@
 package com.sakurawald.file;
 
+import com.sakurawald.archive.GameVersion;
 import com.sakurawald.data.CheatEngine;
-import com.sakurawald.data.GameVersion;
 
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class GameVersionConfig_Data {
                             add(160L);
                         }
                     })));
-            add(new GameVersion("EnglishAnnual", "英文年度版", new CheatEngine("MainWindow", "植物大战僵尸中文版", 7509616, 4,
+            add(new GameVersion("EnglishAnnual", "英文年度版", new CheatEngine("MainWindow", "Plants vs. Zombies", 7509616, 4,
                     new ArrayList<Long>() {
                         {
                             add(2152L);
@@ -34,7 +34,7 @@ public class GameVersionConfig_Data {
                         }
                     })
             ));
-            add(new GameVersion("ChineseAnnual", "中文年度版", new CheatEngine("MainWindow", "植物大战僵尸中文版", 7836920, 4,
+            add(new GameVersion("ChineseAnnual", "中文年度版", new CheatEngine("MainWindow", "Plants vs. Zombies", 7836920, 4,
                     new ArrayList<Long>() {
                         {
                             add(2152L);
