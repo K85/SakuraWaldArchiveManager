@@ -49,6 +49,7 @@ public class AutoBackupTimer extends TimerTask {
 
                 passedTimeMs = 0;
             }
+
         } catch (Exception e) {
             LoggerManager.reportException(e);
         }
