@@ -52,16 +52,16 @@ public class CheatEngine {
         /**
          * 只有成打开进程局部时, 才能触发.
          */
-        public boolean mustOpenProcessContion = true;
+        public boolean mustOpenProcessCondition = true;
 
         /**
          * 只有当 CheatEngine的ResultBox的SuccessCount大于等于该值时, 才能触发.
          */
         public int successCountCondition = 0;
 
-        public TriggerWhenValueChangeTo(int value, boolean mustOpenProcessContion, int successCountCondition) {
+        public TriggerWhenValueChangeTo(int value, boolean mustOpenProcessCondition, int successCountCondition) {
             this.value = value;
-            this.mustOpenProcessContion = mustOpenProcessContion;
+            this.mustOpenProcessCondition = mustOpenProcessCondition;
             this.successCountCondition = successCountCondition;
         }
     }

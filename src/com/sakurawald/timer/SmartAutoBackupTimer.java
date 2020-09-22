@@ -99,7 +99,7 @@ public class SmartAutoBackupTimer extends TimerTask {
             if (nowZombiesCount_ResultBox.getValue().equals(lastZombiesCount.getValue()) == false) {
 
                 // 判断 >> 触发条件 >> 成功打开进程
-                if ((triggerValueTo.mustOpenProcessContion == true && nowZombiesCount_ResultBox.isOpenProcessSuccess() == true) || (triggerValueTo.mustOpenProcessContion == false)) {
+                if ((triggerValueTo.mustOpenProcessCondition == true && nowZombiesCount_ResultBox.isOpenProcessSuccess() == true) || (triggerValueTo.mustOpenProcessCondition == false)) {
 
                     if (nowZombiesCount_ResultBox.getValue() == triggerValueTo.value) {
 
