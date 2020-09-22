@@ -73,36 +73,46 @@ public class SmartAutoBackupTimer extends TimerTask {
         // Flag: 表明是否已符合某个"智能自动备份"条件
         boolean flag = false;
 
-        // 判断 >> 是否符合CheatEngine的直接读取
+        // 判断 >> State >> 是否符合CheatEngine的直接读取
         if (flag == false && nowZombiesCount_ResultBox.getFailCount() > 0) {
 
             if (lastZombiesCount.getFailCount() == 0) {
-                // Start Backup
-                LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> State >> Backup >> Start");
-                ArchiveSeries.backup_FromUI();
 
-                // Update Data
-                flag = true;
+                // 若nowZombiesCount_ResultBox的FailCount是因为[直接退出游戏]产生的, 则忽略.
+                if (nowZombiesCount_ResultBox.isOpenProcessSuccess() == true) {
+                    // Start Backup
+                    LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> State >> Backup >> Start");
+                    ArchiveSeries.backup_FromUI();
+
+                    // Update Data
+                    flag = true;
+                }
+
             }
         }
 
-        // 判断 >> 是否符合CheatEngine的TriggerWhenValueChangeTo触发器
+        // 判断 >> Trigger >> 是否符合CheatEngine的TriggerWhenValueChangeTo触发器
         com.sakurawald.data.CheatEngine.TriggerWhenValueChangeTo triggerValueTo = gv.getCheatEngine().getTriggerWhenValueChangeTo();
         if (flag == false && triggerValueTo != null) {
 
             // 防止持续触发
             if (nowZombiesCount_ResultBox.getValue().equals(lastZombiesCount.getValue()) == false) {
-                if (nowZombiesCount_ResultBox.getValue() == triggerValueTo.value) {
 
-                    // 判断触发条件
-                    if (nowZombiesCount_ResultBox.getSuccessCount() >= triggerValueTo.successCountCondition) {
-                        LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> Trigger >> Backup >> Start");
-                        ArchiveSeries.backup_FromUI();
+                // 判断 >> 触发条件 >> 成功打开进程
+                if ((triggerValueTo.mustOpenProcessContion == true && nowZombiesCount_ResultBox.isOpenProcessSuccess() == true) || (triggerValueTo.mustOpenProcessContion == false)) {
 
-                        // Update Data
-                        flag = true;
+                    if (nowZombiesCount_ResultBox.getValue() == triggerValueTo.value) {
+
+                        // 判断 >> 触发条件 >> 变为指定值
+                        if (nowZombiesCount_ResultBox.getSuccessCount() >= triggerValueTo.successCountCondition) {
+                            LoggerManager.logDebug("SmartAutoBackup", "Match Conditions >> Trigger >> Backup >> Start");
+                            ArchiveSeries.backup_FromUI();
+
+                            // Update Data
+                            flag = true;
+                        }
+
                     }
-
                 }
 
             }

@@ -16,6 +16,18 @@ public class ResultBox<E> {
         return getWindowHandle;
     }
 
+    /**
+     * @return 进程是否成功打开.
+     */
+    public boolean isOpenProcessSuccess() {
+
+        if (this.getWindowHandle == true && this.getWindowProcessID == true && this.getWindowProcessHandle == true) {
+            return true;
+        }
+
+        return false;
+    }
+
     public void setGetWindowHandle(boolean getWindowHandle) {
         this.getWindowHandle = getWindowHandle;
     }

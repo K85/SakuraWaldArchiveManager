@@ -32,7 +32,7 @@ public class GameVersionConfig_Data {
                         {
                             // 无偏移
                         }
-                    }, new CheatEngine.TriggerWhenValueChangeTo(0, 0))));
+                    }, new CheatEngine.TriggerWhenValueChangeTo(0, true, 1))));
 
             add(new GameVersion("EnglishAnnualEdition", "英文年度版", new CheatEngine("MainWindow", "Plants vs. Zombies", 7509616, 4,
                     new ArrayList<Long>() {
@@ -55,7 +55,7 @@ public class GameVersionConfig_Data {
                         {
                             // 无偏移
                         }
-                    }, new CheatEngine.TriggerWhenValueChangeTo(1, 0))
+                    }, new CheatEngine.TriggerWhenValueChangeTo(1, true, 1))
             ));
 
             add(new GameVersion("95Edition", "95版", new CheatEngine("MainWindow", "植物大战僵尸中文版", 6978780, 4,
@@ -63,7 +63,7 @@ public class GameVersionConfig_Data {
                         {
                             // 无偏移
                         }
-                    }, new CheatEngine.TriggerWhenValueChangeTo(0, 0))));
+                    }, new CheatEngine.TriggerWhenValueChangeTo(0, true, 1))));
             add(new GameVersion("BetaEdition", "Beta版"));
             add(new GameVersion("ZooJapaneseEdition", "Zoo日文版", "C:\\ProgramData\\Zoo\\Plants vs Zombies\\userdata\\"));
             add(new GameVersion("SteamEdition", "Steam版"));
