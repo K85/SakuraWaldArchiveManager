@@ -1,0 +1,202 @@
+2020-09-22 12:16:17  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 12:16:17  [ main:3 ] - [ DEBUG ]  Init >> Start
+2020-09-22 12:16:17  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 12:16:17  [ main:5 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 12:16:17  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 12:16:17  [ main:6 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 12:16:17  [ main:49 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 12:16:17  [ main:69 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 12:16:17  [ main:71 ] - [ DEBUG ]  Init >> End
+2020-09-22 12:16:28  [ JavaFX Application Thread:11015 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:16:28  [ JavaFX Application Thread:11019 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:17:29  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 12:17:29  [ main:1 ] - [ DEBUG ]  Init >> Start
+2020-09-22 12:17:29  [ main:3 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 12:17:29  [ main:3 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 12:17:29  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 12:17:29  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 12:17:29  [ main:49 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 12:17:29  [ main:70 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 12:17:29  [ main:73 ] - [ DEBUG ]  Init >> End
+2020-09-22 12:17:31  [ JavaFX Application Thread:2490 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:17:31  [ JavaFX Application Thread:2494 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:17:31  [ JavaFX Application Thread:2494 ] - [ DEBUG ]  End Application...
+2020-09-22 12:18:22  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 12:18:22  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 12:18:22  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 12:18:22  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 12:18:22  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 12:18:22  [ main:6 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 12:18:22  [ main:48 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 12:18:22  [ main:49 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 12:18:22  [ main:67 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 12:18:22  [ main:69 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 12:18:22  [ main:70 ] - [ DEBUG ]  Init >> End
+2020-09-22 12:18:25  [ JavaFX Application Thread:2578 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:18:25  [ JavaFX Application Thread:2582 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:18:25  [ JavaFX Application Thread:2583 ] - [ DEBUG ]  End Application...
+2020-09-22 12:19:27  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 12:19:27  [ main:1 ] - [ DEBUG ]  Init >> Start
+2020-09-22 12:19:27  [ main:3 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 12:19:27  [ main:3 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 12:19:27  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 12:19:27  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 12:19:27  [ main:50 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 12:19:27  [ main:51 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 12:19:27  [ main:72 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 12:19:27  [ main:73 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 12:19:27  [ main:74 ] - [ DEBUG ]  Init >> End
+2020-09-22 12:23:01  [ JavaFX Application Thread:213253 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:23:01  [ JavaFX Application Thread:213254 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 12:23:01  [ JavaFX Application Thread:213254 ] - [ DEBUG ]  End Application...
+2020-09-22 13:24:17  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:24:17  [ main:1 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:24:17  [ main:3 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:24:17  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:24:17  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:24:17  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:24:17  [ main:52 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:24:17  [ main:53 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:24:17  [ main:74 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:24:17  [ main:75 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:24:17  [ main:76 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:24:28  [ JavaFX Application Thread:11317 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:29  [ JavaFX Application Thread:12128 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:49  [ JavaFX Application Thread:31427 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:51  [ JavaFX Application Thread:33838 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:53  [ JavaFX Application Thread:35429 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:55  [ JavaFX Application Thread:37424 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:24:59  [ JavaFX Application Thread:41532 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:24:59  [ JavaFX Application Thread:41533 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:24:59  [ JavaFX Application Thread:41534 ] - [ DEBUG ]  End Application...
+2020-09-22 13:25:04  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:25:04  [ main:1 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:25:04  [ main:3 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:25:04  [ main:3 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:25:04  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:25:04  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:25:04  [ main:47 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:25:04  [ main:48 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:25:04  [ main:67 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:25:04  [ main:68 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:25:04  [ main:69 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:25:18  [ JavaFX Application Thread:14163 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:25:18  [ JavaFX Application Thread:14167 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:25:18  [ JavaFX Application Thread:14167 ] - [ DEBUG ]  End Application...
+2020-09-22 13:25:20  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:25:20  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:25:20  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:25:20  [ main:5 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:25:20  [ main:6 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:25:20  [ main:6 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:25:20  [ main:56 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:25:20  [ main:85 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:25:20  [ main:98 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:25:20  [ main:100 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:25:20  [ main:102 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:25:23  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:25:23  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:25:23  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:25:23  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:25:23  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:25:23  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:25:23  [ main:51 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:25:23  [ main:51 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:25:23  [ main:69 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:25:23  [ main:70 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:25:23  [ main:72 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:26:08  [ JavaFX Application Thread:45633 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:23  [ JavaFX Application Thread:60373 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:24  [ JavaFX Application Thread:61025 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:38  [ JavaFX Application Thread:75634 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:39  [ JavaFX Application Thread:76447 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:48  [ JavaFX Application Thread:85465 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:49  [ JavaFX Application Thread:85930 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:26:51  [ JavaFX Application Thread:88188 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:27:54  [ JavaFX Application Thread:151661 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:27:55  [ JavaFX Application Thread:152033 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:27:57  [ JavaFX Application Thread:154655 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:28:25  [ JavaFX Application Thread:182671 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:28:28  [ JavaFX Application Thread:185667 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:28:32  [ JavaFX Application Thread:189679 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:28:45  [ JavaFX Application Thread:202676 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:05  [ JavaFX Application Thread:282723 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:06  [ JavaFX Application Thread:283293 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:23  [ JavaFX Application Thread:300727 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:27  [ JavaFX Application Thread:303931 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:30  [ JavaFX Application Thread:307653 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:30  [ JavaFX Application Thread:307725 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:31  [ JavaFX Application Thread:308482 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:32  [ JavaFX Application Thread:309407 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:32  [ JavaFX Application Thread:309677 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:33  [ JavaFX Application Thread:309917 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:33  [ JavaFX Application Thread:310150 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:33  [ JavaFX Application Thread:310369 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:33  [ JavaFX Application Thread:310581 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:34  [ JavaFX Application Thread:310936 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:34  [ JavaFX Application Thread:311338 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:35  [ JavaFX Application Thread:312451 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:41  [ JavaFX Application Thread:318832 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:42  [ JavaFX Application Thread:319697 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:43  [ JavaFX Application Thread:320173 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:30:43  [ JavaFX Application Thread:320409 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:31:47  [ JavaFX Application Thread:384768 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:04  [ JavaFX Application Thread:401780 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:05  [ JavaFX Application Thread:402772 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:31  [ JavaFX Application Thread:428407 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:31  [ JavaFX Application Thread:428601 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:32  [ JavaFX Application Thread:429384 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:32  [ JavaFX Application Thread:429601 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:33  [ JavaFX Application Thread:429994 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:33  [ JavaFX Application Thread:430571 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:34  [ JavaFX Application Thread:431094 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:34  [ JavaFX Application Thread:431584 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:35  [ JavaFX Application Thread:431952 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:32:35  [ JavaFX Application Thread:432208 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:33:09  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:33:09  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:33:09  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:33:09  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:33:09  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:33:09  [ main:6 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:33:09  [ main:53 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:33:09  [ main:54 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:33:09  [ main:72 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:33:09  [ main:73 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:33:09  [ main:74 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:34:29  [ JavaFX Application Thread:80603 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:34:36  [ JavaFX Application Thread:87599 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:34:53  [ JavaFX Application Thread:104609 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:34:55  [ JavaFX Application Thread:106627 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:37:35  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 13:37:35  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 13:37:35  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 13:37:35  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 13:37:35  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 13:37:35  [ main:5 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 13:37:35  [ main:51 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 13:37:35  [ main:51 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 13:37:35  [ main:71 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 13:37:35  [ main:72 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 13:37:35  [ main:73 ] - [ DEBUG ]  Init >> End
+2020-09-22 13:38:14  [ JavaFX Application Thread:38521 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:38:17  [ JavaFX Application Thread:41523 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:38:21  [ JavaFX Application Thread:45526 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:38:28  [ JavaFX Application Thread:52440 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ArchiveBeanConfig.json
+2020-09-22 13:38:32  [ JavaFX Application Thread:56295 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:38:32  [ JavaFX Application Thread:56298 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 13:38:32  [ JavaFX Application Thread:56298 ] - [ DEBUG ]  End Application...
+2020-09-22 14:30:42  [ main:0 ] - [ DEBUG ]  Start Application...
+2020-09-22 14:30:42  [ main:2 ] - [ DEBUG ]  Init >> Start
+2020-09-22 14:30:42  [ main:4 ] - [ DEBUG ]  [配置文件系统] Init All Configs...
+2020-09-22 14:30:42  [ main:4 ] - [ DEBUG ]  [配置文件系统] Create ArchiveBeans Folder
+2020-09-22 14:30:42  [ main:5 ] - [ DEBUG ]  [配置文件系统] Init >> Application.json
+2020-09-22 14:30:42  [ main:6 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> ApplicationConfig.json
+2020-09-22 14:30:42  [ main:52 ] - [ DEBUG ]  [配置文件系统] Init >> GameVersionConfig.json
+2020-09-22 14:30:42  [ main:53 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> GameVersionConfig.json
+2020-09-22 14:30:42  [ main:72 ] - [ DEBUG ]  [配置文件系统] Init >> TempConfig.json
+2020-09-22 14:30:42  [ main:73 ] - [ DEBUG ]  [配置文件系统] Load Local File to Memory >> TempConfig.json
+2020-09-22 14:30:42  [ main:74 ] - [ DEBUG ]  Init >> End
+2020-09-22 14:30:47  [ JavaFX Application Thread:5381 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 14:30:47  [ JavaFX Application Thread:5386 ] - [ DEBUG ]  Shutdown >> End
+2020-09-22 14:30:47  [ JavaFX Application Thread:5386 ] - [ DEBUG ]  End Application...

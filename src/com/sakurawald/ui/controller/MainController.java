@@ -126,10 +126,10 @@ public class MainController implements UIStorage {
         update_combobox_backup_archive_series();
 
         // Start Timer
-        LoggerManager.logDebug("计时系统", "Init All Timers");
-        LoggerManager.logDebug("计时系统", "Init >> AutoBackupTimer");
+        LoggerManager.logDebug("TimingSystem", "Init All Timers");
+        LoggerManager.logDebug("TimingSystem", "Init >> AutoBackupTimer");
         AutoBackupTimer.getInstance().schedule();
-        LoggerManager.logDebug("计时系统", "Init >> SmartAutoBackupTimer");
+        LoggerManager.logDebug("TimingSystem", "Init >> SmartAutoBackupTimer");
         SmartAutoBackupTimer.getInstance().schedule();
 
         // Load About

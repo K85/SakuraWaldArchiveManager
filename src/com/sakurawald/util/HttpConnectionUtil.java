@@ -46,7 +46,7 @@ public class HttpConnectionUtil {
             int fileLength = httpURLConnection.getContentLength();
 
             // 文件名
-            LoggerManager.logDebug("下载系统", "Download File >> URL_path = " + urlPath
+            LoggerManager.logDebug("DownloadSystem", "Download File >> URL_path = " + urlPath
                     + ", fileLength = " + fileLength);
 
 

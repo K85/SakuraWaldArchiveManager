@@ -65,7 +65,7 @@ public class ConfigFile {
     @SuppressWarnings("unchecked")
     public void createConfigDataClassInstance() {
 
-        LoggerManager.logDebug("配置文件系统",
+        LoggerManager.logDebug("FileSystem",
                 "Use Reflect to Create the instance of Data Class >> " + configDataClass.getSimpleName());
         try {
             this.configDataClassInstance = this.configDataClass.newInstance();
@@ -139,7 +139,7 @@ public class ConfigFile {
             writeNormalFile();
         }
 
-        LoggerManager.logDebug("配置文件系统",
+        LoggerManager.logDebug("FileSystem",
                 "Load Local File to Memory >> " + this.getFileName(), true);
 
         // 从本地存储加载相应的配置文件
@@ -187,7 +187,7 @@ public class ConfigFile {
      * 重新从<本地存储>加载<数据>到<内存>. 该方法会<覆盖><内存>中<已有的数据>.
      */
     public void reloadFile() {
-        LoggerManager.logDebug("配置文件系统", "开始<重载>配置文件: " + this.getFileName());
+        LoggerManager.logDebug("FileSystem", "开始<重载>配置文件: " + this.getFileName());
         try {
             loadFile();
         } catch (IllegalArgumentException | IllegalAccessException e) {
@@ -200,7 +200,7 @@ public class ConfigFile {
      */
     public void saveFile() {
 
-        LoggerManager.logDebug("配置文件系统",
+        LoggerManager.logDebug("FileSystem",
                 "Save Memory Data to Local File >> " + this.getFileName());
 
         // 定义要写出的本地配置文件
@@ -227,7 +227,7 @@ public class ConfigFile {
     public void writeNormalFile() throws IllegalArgumentException,
             IllegalAccessException, IOException {
 
-        LoggerManager.logDebug("配置文件系统", "Start Write Default ConfigFile Data >> " + this.getFileName());
+        LoggerManager.logDebug("FileSystem", "Start Write Default ConfigFile Data >> " + this.getFileName());
 
         // 定义要写出的本地配置文件
         File file = new File(filePath + fileName);

@@ -1,12 +1,15 @@
 package com.sakurawald.util;
 
 import com.sakurawald.Main;
+import com.sun.jna.Pointer;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+
+import java.lang.reflect.Method;
 
 public class JavaFxUtil {
 

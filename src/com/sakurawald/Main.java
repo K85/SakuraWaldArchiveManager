@@ -30,7 +30,7 @@ public class Main extends Application {
     /**
      * Decompilation Easter
      */
-    public static final String Decompilation_Easter = "Hi！当你看到这些文字时，可能你已经尝试反编译该软件了。\n" +
+    public static final String DECOMPILATION_EASTER_EGG = "Hi！当你看到这些文字时，可能你已经尝试反编译该软件了。\n" +
             "奈何本人技术较差，代码写的粗糙，请Dalao们轻喷！\n" +
             "哦，对了。该项目没有进行混淆处理，若有疑问可以自行查看源码。" + LoggerManager.SAD_FACIAL_EXPRESSION;
 
@@ -57,6 +57,7 @@ public class Main extends Application {
 
         // Show
         primaryStage.show();
+
 
         // Add Events
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {

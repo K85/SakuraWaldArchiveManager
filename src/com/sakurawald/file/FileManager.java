@@ -40,26 +40,26 @@ public class FileManager {
     public void init() throws IllegalArgumentException,
             IllegalAccessException, IOException {
 
-        LoggerManager.logDebug("配置文件系统", "Init All Configs...", true);
+        LoggerManager.logDebug("FileSystem", "Init All Configs...", true);
 
         // Create Folder
-        LoggerManager.logDebug("配置文件系统", "Create ArchiveBeans Folder", true);
+        LoggerManager.logDebug("FileSystem", "Create ArchiveBeans Folder", true);
         new File(ConfigFile.getApplicationConfigPath() + "\\ArchiveBeans").mkdirs();
 
         // ApplicationConfig.json
-        LoggerManager.logDebug("配置文件系统", "Init >> Application.json", true);
+        LoggerManager.logDebug("FileSystem", "Init >> Application.json", true);
         applicationConfig_File = new ApplicationConfig_File(ConfigFile.getApplicationConfigPath(),
                 "ApplicationConfig.json", ApplicaitonConfig_Data.class);
         applicationConfig_File.init();
 
         // GameVersionConfig.json
-        LoggerManager.logDebug("配置文件系统", "Init >> GameVersionConfig.json", true);
+        LoggerManager.logDebug("FileSystem", "Init >> GameVersionConfig.json", true);
         gameVersionConfig_File = new GameVersionConfig_File(ConfigFile.getApplicationConfigPath(),
                 "GameVersionConfig.json", GameVersionConfig_Data.class);
         gameVersionConfig_File.init();
 
         // TempConfig.json
-        LoggerManager.logDebug("配置文件系统", "Init >> TempConfig.json", true);
+        LoggerManager.logDebug("FileSystem", "Init >> TempConfig.json", true);
         tempConfig_File = new TempConfig_File(ConfigFile.getApplicationConfigPath(),
                 "TempConfig.json", TempConfig_Data.class);
         tempConfig_File.init();

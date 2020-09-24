@@ -14,11 +14,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.logging.Logger;
 
 public class FileUtil {
 
     /**
-     * 可能的输出结果: D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager\out\production\SakuraWaldArchiveManager\
+     * 可能的输出结果:
+     * D:\LocalWorkSpace\Java\workspace\SakuraWaldArchiveManager
      *
      * @return 应用程序的运行路径.
      */
@@ -38,6 +40,7 @@ public class FileUtil {
 
         // 相对路径 转 绝对路径
         result = result.replace("/", "\\");
+
 
         return result;
     }
@@ -207,6 +210,8 @@ public class FileUtil {
     public static void viewFolder(String path) {
         try {
             File file = new File(path);
+
+            LoggerManager.logDebug("View Folder >> " + file.getAbsolutePath());
 
             // Prevent NPE.
             file.mkdirs();
