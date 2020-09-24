@@ -151,7 +151,7 @@ public class MainController implements UIStorage {
      * 加载与关于界面有关的UI.
      */
     public void loadAbout() {
-        hyperlink_about_1.setText("关于作者： ");
+        hyperlink_about_1.setText("关于作者：");
         hyperlink_about_2.setText("Author: SakuraWald / K85");
         hyperlink_about_3.setText("Bilibili: SakuraWald （UID：5336084）");
         hyperlink_about_3.setOnAction(event -> {
