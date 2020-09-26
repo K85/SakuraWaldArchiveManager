@@ -69,6 +69,14 @@ public class ArchiveBean {
     }
 
     /**
+     * 展示该ArchiveBean的Info.
+     */
+    public void showInfo() {
+        MainController mc = MainController.getInstance();
+        mc.textarea_archive_bean_info.setText(this.getInfo());
+    }
+
+    /**
      * 获取[一个具体的ArchiveBean]的[文件夹路径]
      */
     public static String generateSpecificArchiveBean_Path(ArchiveSeries archiveSeries) {
@@ -274,6 +282,9 @@ public class ArchiveBean {
 
         // Switch Star.
         ab.setStar(!ab.isStar());
+
+        // Update
+        ab.showInfo();
     }
 
     public static void setRemarkArchiveBean_FromUI() {

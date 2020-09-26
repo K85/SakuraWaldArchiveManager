@@ -83,7 +83,7 @@ public class MainController implements UIStorage {
     @FXML
     private MenuItem menuitem_delete_archiveseries;
     @FXML
-    private TextArea textarea_archive_bean_info;
+    public TextArea textarea_archive_bean_info;
 
     @FXML
     private CheckBox checkbox_smartautobackup_enable;
@@ -499,7 +499,7 @@ public class MainController implements UIStorage {
 
         // Prevent NPE.
         if (ab != null) {
-            textarea_archive_bean_info.setText(ab.getInfo());
+            ab.showInfo();
         }
 
     }
@@ -888,6 +888,5 @@ public class MainController implements UIStorage {
 
         // Update
         update_combobox_backup_archive_series();
-        update_textarea_archive_bean_info();
     }
 }
