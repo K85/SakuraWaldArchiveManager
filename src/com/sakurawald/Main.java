@@ -71,7 +71,7 @@ public class Main extends Application {
                 if (result.get() == ButtonType.OK) {
 
                     // Call
-                    LoggerManager.logDebug("Shutdown >> End", true);
+                    LoggerManager.logDebug("Shutdown >> Start", true);
                     beforeExit();
                     LoggerManager.logDebug("Shutdown >> End", true);
 

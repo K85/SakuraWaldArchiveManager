@@ -46,6 +46,10 @@ public class ConfigFile {
         return hasInit;
     }
 
+    public void setHasInit(boolean hasInit) {
+        this.hasInit = hasInit;
+    }
+
     /**
      * 存储<Data类的实例对象>
      */
