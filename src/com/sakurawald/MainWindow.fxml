@@ -111,6 +111,14 @@
                                                                             shift="UP" shortcut="UP"/>
                                                     </accelerator>
                                                 </MenuItem>
+                                                <MenuItem fx:id="menuitem_switch_star" mnemonicParsing="false"
+                                                          onAction="#menuitem_switch_star_OnAction"
+                                                          text="设为星标">
+                                                    <accelerator>
+                                                        <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP"
+                                                                            shift="UP" shortcut="UP"/>
+                                                    </accelerator>
+                                                </MenuItem>
                                                 <MenuItem fx:id="menuitem_view_archivebean_path" mnemonicParsing="false"
                                                           onAction="#menuitem_view_archivebean_path_OnAction"
                                                           text="查看当前目录">

@@ -31,9 +31,13 @@ public class ArchiveBeanConfig_Data {
         }
 
         /**
-         * 该ArchiveBean的备注信息
+         * 该ArchiveBean的备注信息.
          */
         public String remark = null;
+        /**
+         * 该ArchiveBean是否有星标.
+         */
+        public boolean star = false;
     }
 
 }

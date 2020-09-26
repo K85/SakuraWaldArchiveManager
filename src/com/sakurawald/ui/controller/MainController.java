@@ -101,6 +101,22 @@ public class MainController implements UIStorage {
         return Main.loader.getController();
     }
 
+    /**
+     * @return 切换星标的菜单项, 失败返回null.
+     */
+    public MenuItem getSwitchStarMenuItem() {
+
+        for (MenuItem mi : this.listview_archive_beans.getContextMenu().getItems()) {
+
+            // Prevent NPE.
+            if (mi.getId() != null && mi.getId().equals("menuitem_switch_star")) {
+                return mi;
+            }
+        }
+
+        return null;
+    }
+
     public ArchiveBean getSelectedArchiveBean() {
         return this.listview_archive_beans.getSelectionModel().getSelectedItem();
     }
@@ -380,7 +396,6 @@ public class MainController implements UIStorage {
             }
         });
 
-
     }
 
 
@@ -430,7 +445,26 @@ public class MainController implements UIStorage {
 
         /** 左键单击: 显示选中ArchiveBean的Info **/
         if (event.getButton() == MouseButton.SECONDARY) {
-            listview_archive_beans.getContextMenu().show(listview_archive_beans, Side.BOTTOM, 0, 0);
+            ContextMenu cm = listview_archive_beans.getContextMenu();
+
+            /**
+             * 判断星标.
+             */
+            ArchiveBean ab = getSelectedArchiveBean();
+            // Prevent NPE.
+            if (ab != null) {
+                MenuItem switchStar_MenuItem = getSwitchStarMenuItem();
+
+                // Set Text.
+                if (ab.isStar() == true) {
+                    switchStar_MenuItem.setText("移除星标");
+                } else {
+                    switchStar_MenuItem.setText("设为星标");
+                }
+
+            }
+
+            cm.show(listview_archive_beans, Side.BOTTOM, 0, 0);
         }
 
 
@@ -439,8 +473,8 @@ public class MainController implements UIStorage {
     @FXML
     void listview_archive_beans_OnMouseClicked(MouseEvent event) {
 
-        /** 左键单击: 刷新ArchiveBean的Info **/
-        if (event.getButton() == MouseButton.PRIMARY &&
+        /** 左键单击 or 右键单击: 刷新ArchiveBean的Info **/
+        if ((event.getButton() == MouseButton.PRIMARY || event.getButton() == MouseButton.SECONDARY) &&
                 event.getClickCount() == 1) {
             update_textarea_archive_bean_info();
         }
@@ -529,6 +563,12 @@ public class MainController implements UIStorage {
         ArchiveBean ab = getSelectedArchiveBean();
         if (ab == null) {
             JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
+            return;
+        }
+
+        // If >> Star ArchiveBean
+        if (ab.isStar() == true) {
+            JavaFxUtil.DialogTools.alert(Alert.AlertType.WARNING, "无法删除设为星标的ArchiveBean！", ButtonType.OK).show();
             return;
         }
 
@@ -628,6 +668,13 @@ public class MainController implements UIStorage {
 
             ArchiveSeries as = getSelectedArchiveSeries();
             for (ArchiveBean ab : as.getAllArchiveBeans()) {
+
+                // Skip Star ArchiveBean
+                if (ab.isStar() == true) {
+                    LoggerManager.logDebug("Skip >> Delete Star ArchiveBean >> ArchiveBean = " + ab.getArchiveBean_Name());
+                    continue;
+                }
+
                 // ArchiveBean >> Delete
                 ab.delete();
             }
@@ -810,6 +857,12 @@ public class MainController implements UIStorage {
 
             for (ArchiveBean ab : as.getAllArchiveBeans()) {
 
+                // Skip Star ArchiveBean
+                if (ab.isStar() == true) {
+                    LoggerManager.logDebug("Skip >> Delete Star ArchiveBean >> ArchiveBean = " + ab.getArchiveBean_Name());
+                    continue;
+                }
+
                 // 删除除了选中ArchiveBean的所有ArchiveBean
                 if (selectedArchiveBean.getArchiveBean_Name().equals(ab.getArchiveBean_Name()) == false) {
                     // ArchiveBean >> Delete
@@ -824,5 +877,15 @@ public class MainController implements UIStorage {
         // Update
         update_combobox_backup_archive_series();
 
+    }
+
+
+    public void menuitem_switch_star_OnAction(ActionEvent actionEvent) {
+        // Switch Star.
+        ArchiveBean.setStarArchiveBean_FromUI();
+
+        // Update
+        update_combobox_backup_archive_series();
+        update_textarea_archive_bean_info();
     }
 }

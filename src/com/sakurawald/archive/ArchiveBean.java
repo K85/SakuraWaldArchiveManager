@@ -115,6 +115,21 @@ public class ArchiveBean {
     }
 
     /**
+     * 设置该ArchiveBean的星标状态.
+     */
+    public void setStar(boolean isStar) {
+        // Load
+        ArchiveBeanConfig_File abcf = getArchiveBeanConfig();
+
+        // Modify
+        ArchiveBeanConfig_Data abcd = abcf.getSpecificDataInstance();
+        abcd.Information.star = isStar;
+
+        // Save
+        abcf.saveFile();
+    }
+
+    /**
      * 从本地直接获取该ArchiveBean的配置数据
      */
     public ArchiveBeanConfig_File getArchiveBeanConfig() {
@@ -131,6 +146,16 @@ public class ArchiveBean {
         }
 
         return null;
+    }
+
+    /**
+     * 判断该ArchiveBean是否有星标.
+     *
+     * @return
+     */
+    public boolean isStar() {
+        ArchiveBeanConfig_Data abcd = getArchiveBeanConfig().getSpecificDataInstance();
+        return abcd.Information.star;
     }
 
     /**
@@ -153,6 +178,13 @@ public class ArchiveBean {
         sb.append("★用户目录：" + abcd.Information.user_home + "\n");
 
         sb.append("\n");
+
+        // 星标信息.
+        if (abcd.Information.star == true) {
+            sb.append("★已设为星标");
+            sb.append("\n");
+        }
+
         sb.append("★备注：" + abcd.Information.remark);
 
         return sb.toString();
@@ -230,6 +262,20 @@ public class ArchiveBean {
         ab.rollbackPartly();
     }
 
+    public static void setStarArchiveBean_FromUI() {
+
+        // Select ArchiveBean.
+        MainController mc = MainController.getInstance();
+        ArchiveBean ab = mc.getSelectedArchiveBean();
+        if (ab == null) {
+            JavaFxUtil.DialogTools.mustChooseArchiveBean_Dialog();
+            return;
+        }
+
+        // Switch Star.
+        ab.setStar(!ab.isStar());
+    }
+
     public static void setRemarkArchiveBean_FromUI() {
 
         MainController mc = MainController.getInstance();
@@ -274,6 +320,12 @@ public class ArchiveBean {
     }
 
     public String toString() {
+
+        // If >> Star ArchiveBean
+        if (this.isStar() == true) {
+            return "★ " + this.archiveBean_Name;
+        }
+
         return this.archiveBean_Name;
     }
 
