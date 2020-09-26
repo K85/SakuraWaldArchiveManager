@@ -451,9 +451,9 @@ public class MainController implements UIStorage {
              * 判断星标.
              */
             ArchiveBean ab = getSelectedArchiveBean();
+            MenuItem switchStar_MenuItem = getSwitchStarMenuItem();
             // Prevent NPE.
             if (ab != null) {
-                MenuItem switchStar_MenuItem = getSwitchStarMenuItem();
 
                 // Set Text.
                 if (ab.isStar() == true) {
@@ -462,6 +462,8 @@ public class MainController implements UIStorage {
                     switchStar_MenuItem.setText("设为星标");
                 }
 
+            } else {
+                switchStar_MenuItem.setText("设为星标");
             }
 
             cm.show(listview_archive_beans, Side.BOTTOM, 0, 0);
