@@ -5,14 +5,14 @@
 
 #### 运行环境
 
->> Windows10
->> Windows8.1
->> Windows8
->> Windows7
->> WindowsVista
->> WindowsXP
->> WindowsServer
->> Windows2000
+1. Windows10
+2. Windows8.1
+3. Windows8
+4. Windows7
+5. WindowsVista
+6. WindowsXP
+7. WindowsServer
+8. Windows2000
 不支持MacOS。同时，也并不打算支持Linux（大概是因为作者不觉得你会在Linux平台上玩PVZ）。
 
 #### 支持游戏版本
