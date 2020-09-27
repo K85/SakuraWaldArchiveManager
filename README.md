@@ -5,8 +5,8 @@
 
 #### 运行环境
 
-1. Windows10
-2. Windows8.1
+- Windows10
+- Windows8.1
 3. Windows8
 4. Windows7
 5. WindowsVista
