@@ -7,7 +7,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -46,7 +45,7 @@ public class SinaRandomImageAPI extends RandomImageAPI {
         Random random = new Random();
         int n = random.nextInt(random_Image_Website_URLs.size());
 
-        LoggerManager.logDebug("随机图片(新浪图库) - API", "Use Random Website URL >> "
+        LoggerManager.logDebug("RandomImage (Sina)", "Use Random Website URL >> "
                 + random_Image_Website_URLs.get(n));
 
         return random_Image_Website_URLs.get(n);
@@ -68,7 +67,7 @@ public class SinaRandomImageAPI extends RandomImageAPI {
     @Override
     public String getRandomImageURL() {
 
-        LoggerManager.logDebug("随机图片(新浪图库) - API", "Get Random Image URL -> Run");
+        LoggerManager.logDebug("RandomImage (Sina)", "Get Random Image URL -> Run");
 
         String result = null;
 
@@ -85,13 +84,11 @@ public class SinaRandomImageAPI extends RandomImageAPI {
 
             /** 此处获取该Random Page返回的随机图片URL **/
             result = response.request().url().toString();
-        } catch (SocketTimeoutException e) {
+        } catch (IOException e) {
             // 如果是连接超时, 则静默处理.
             LoggerManager.logError(e);
-        } catch (IOException e) {
-            LoggerManager.logError(e);
         } finally {
-            LoggerManager.logDebug("随机图片(新浪图库) - API",
+            LoggerManager.logDebug("RandomImage (Sina)",
                     "Get Random Image URL -> Response: Image_URL = " + result);
         }
 

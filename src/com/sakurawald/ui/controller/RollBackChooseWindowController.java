@@ -48,7 +48,7 @@ public class RollBackChooseWindowController {
 
         /** Init TableView **/
 
-        //Bind Data
+        // Bind Data.
         tableview_choose_checkbox.setCellValueFactory(cellData -> cellData.getValue().getMyCheckBox().getCheckBox());
         tableview_choose_filename.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getFile().getName()));
         tableview_choose_archive_explanation.setCellValueFactory(celldata -> new SimpleStringProperty(celldata.getValue().getArchiveExplanation().getExplanation()));
@@ -62,11 +62,11 @@ public class RollBackChooseWindowController {
      */
     public void update_treetableview_choose() {
 
-        // Get Selected Archive Bean
+        // Get Selected Archive Bean.
         MainController mc = MainController.getInstance();
         ArchiveBean ab = mc.getSelectedArchiveBean();
 
-        // 获取ArchiveBean的存档文件
+        // 获取ArchiveBean的存档文件.
         ArrayList<ArchiveFile> afs = new ArrayList<ArchiveFile>();
         for (File f : Objects.requireNonNull(new File(ab.getArchiveBeanPath()).listFiles())) {
 
@@ -78,10 +78,10 @@ public class RollBackChooseWindowController {
             }
         }
 
-        // Analyse All ArchiveExplanation
+        // Analyse All ArchiveExplanation.
         ArchiveExplanation.analyseArchiveExplanation(afs);
 
-        // Add To UI
+        // Add To UI.
         ObservableList<ArchiveFile> data = FXCollections.observableArrayList(afs);
         tableview_choose.setItems(data);
     }

@@ -78,15 +78,15 @@ public class LoggerManager {
     public static String getExceptionInfo(Exception e) {
 
         // 添加Exception基础信息
-        StringBuilder result = new StringBuilder("错误类型: " + e.getClass());
-        result.append("\n原因: ").append(e.getCause());
-        result.append("\n消息: ").append(e.getMessage());
-        result.append("\n栈追踪: ");
 
-        // 添加栈追踪记录
-        result.append("\n");
-        result.append(getExceptionStack(e));
-        return result.toString();
+        String result = "错误类型: " + e.getClass() + "\n原因: " + e.getCause() +
+                "\n消息: " + e.getMessage() +
+                "\n栈追踪: " +
+
+                // 添加栈追踪记录
+                "\n" +
+                getExceptionStack(e);
+        return result;
     }
 
     public static String getExceptionStack(Exception e) {

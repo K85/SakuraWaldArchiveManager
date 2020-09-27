@@ -13,13 +13,6 @@ import java.util.ArrayList;
 public class JinRiShiCiAPI {
 
     /**
-     * @return nwe空数据的Poetry对象.
-     */
-    public static Poetry getNullPoetry() {
-        return new Poetry(null);
-    }
-
-    /**
      * 随机获取一首古诗
      *
      * @return 返回Poerty对象, 失败返回[空数据的Poetry对象].
@@ -44,7 +37,7 @@ public class JinRiShiCiAPI {
             response_JSON = conn.ignoreContentType(true).execute();
         } catch (IOException e) {
             LoggerManager.logError(e);
-            return getNullPoetry();
+            return Poetry.getNullPoetry();
         }
 
         /** 进行JSON解析 **/
@@ -57,21 +50,18 @@ public class JinRiShiCiAPI {
         try {
 
             String result_JSON = response_JSON.body();
-            LoggerManager.logDebug("今日诗词", "Get JSON >> " + result_JSON);
+            LoggerManager.logDebug("JinRiShiCi", "Get JSON >> " + result_JSON);
             JsonParser jParser = new JsonParser();
             JsonObject json = (JsonObject) jParser.parse(result_JSON);// 构造JsonObject对象
-
             JsonObject data = json.get("data").getAsJsonObject();
-
             keySentence = data.get("content")
                     .getAsString();
-
             JsonObject origin = data.get("origin").getAsJsonObject();
-
             poetry_Title = origin.get("title").getAsString();
             poetry_Dynasty = origin.get("dynasty").getAsString();
             poetry_Author = origin.get("author").getAsString();
 
+            // Analyse Content.
             ArrayList<String> arr = getContent(origin.get("content").getAsJsonArray());
             poetry_Content = getContent(arr);
 
@@ -87,8 +77,8 @@ public class JinRiShiCiAPI {
             LoggerManager.reportException(e);
         }
 
-        LoggerManager.logDebug("今日诗词", "Response >> keySentence = " + keySentence);
-        LoggerManager.logDebug("今日诗词", "Response >> warning = "
+        LoggerManager.logDebug("JinRiShiCi", "Response >> keySentence = " + keySentence);
+        LoggerManager.logDebug("JinRiShiCi", "Response >> warning = "
                 + warning);
 
         return new Poetry(keySentence, poetry_Title, poetry_Dynasty, poetry_Author, poetry_Content, null);

@@ -46,7 +46,7 @@ public class ApplicaitonConfig_Data {
         public class RandomSentence {
 
             /**
-             * 标注是否使用"古诗"或"一言"
+             * 标注是否使用"古诗"或"一言".
              */
             public boolean goToAncientTimes = true;
 

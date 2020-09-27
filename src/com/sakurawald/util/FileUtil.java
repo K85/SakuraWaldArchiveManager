@@ -221,6 +221,24 @@ public class FileUtil {
         }
     }
 
+    /**
+     * 对传入的File进行读写属性检测, 并尝试修改为合适的读写属性.
+     */
+    public static void checkFileAttributes(File file) {
+
+        // Check Read
+        if (file.canRead() == false) {
+            LoggerManager.logDebug("Set Readable to True >> File = " + file.getAbsolutePath());
+            file.setReadable(true);
+        }
+
+        // Check Write
+        if (file.canWrite() == false) {
+            LoggerManager.logDebug("Set Writable to True >> File = " + file.getAbsolutePath());
+            file.setWritable(true);
+        }
+    }
+
     public static class Images implements Transferable {
         private final Image image; //得到图片或者图片流
 

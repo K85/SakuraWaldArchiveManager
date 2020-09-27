@@ -267,22 +267,22 @@ public class GameVersion {
 
         if (result.isPresent() == true) {
 
-            String archiveSeriesName = result.get();
+            String createArchiveSeriesName = result.get();
 
             // FileName Filter
-            archiveSeriesName = FileUtil.fileNameFilter(archiveSeriesName);
+            createArchiveSeriesName = FileUtil.fileNameFilter(createArchiveSeriesName);
 
-            if (archiveSeriesName.trim().equalsIgnoreCase("") == true) {
+            if (createArchiveSeriesName.trim().equalsIgnoreCase("") == true) {
                 return;
             }
 
             // Ceeate ArchiveSeries
-            if (createArchiveSeries(archiveSeriesName) == true) {
+            if (createArchiveSeries(createArchiveSeriesName) == true) {
                 /**
                  *   自动选中刚创建的系列
                  *   注意: JavaFx的Combobox是根据 对象.toString() 文本是否相同 来判断 两个对象是否 equals.
                  */
-                MainController.getInstance().combobox_backup_archive_series.getSelectionModel().select(new ArchiveSeries(this, archiveSeriesName));
+                MainController.getInstance().combobox_backup_archive_series.getSelectionModel().select(ArchiveSeries.generateArchiveSeries(this, createArchiveSeriesName));
             } else {
                 JavaFxUtil.DialogTools.alert(Alert.AlertType.ERROR, "新建失败！", ButtonType.OK).show();
             }

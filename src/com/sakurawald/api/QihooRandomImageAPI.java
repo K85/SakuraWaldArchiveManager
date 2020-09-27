@@ -12,7 +12,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.net.SocketTimeoutException;
 
 
 /**
@@ -42,7 +41,7 @@ public class QihooRandomImageAPI extends RandomImageAPI {
                 + cid + "&start=" + start + "&count=1";
 
         LoggerManager
-                .logDebug("随机图片(360壁纸) - API", "Request URL >> " + result);
+                .logDebug("RandomImage (Qihoo)", "Request URL >> " + result);
 
         return result;
     }
@@ -53,7 +52,7 @@ public class QihooRandomImageAPI extends RandomImageAPI {
 
     private static String getRandomImageURL_JSON() {
 
-        LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Run");
+        LoggerManager.logDebug("RandomImage (Qihoo)", "Get Random Image -> Run");
 
         String result = null;
 
@@ -71,14 +70,12 @@ public class QihooRandomImageAPI extends RandomImageAPI {
             JSON = response.body().string();
             result = JSON;
 
-        } catch (SocketTimeoutException e) {
-            // 如果是连接超时, 则静默处理.
-            LoggerManager.logError(e);
         } catch (IOException e) {
+            // 如果是连接超时, 则静默处理.
             LoggerManager.logError(e);
         }
 
-        LoggerManager.logDebug("随机图片(360壁纸) - API", "Get Random Image -> Response: JSON = " + JSON);
+        LoggerManager.logDebug("RandomImage (Qihoo)", "Get Random Image -> Response: JSON = " + JSON);
 
         if (response != null) {
             /** 关闭Response的body **/
@@ -96,7 +93,7 @@ public class QihooRandomImageAPI extends RandomImageAPI {
     @Override
     public String getRandomImageURL() {
 
-        LoggerManager.logDebug("随机图片(360壁纸) - API",
+        LoggerManager.logDebug("RandomImage (Qihoo)",
                 "Get Random Image URL -> run");
 
         String result = null;
@@ -119,7 +116,7 @@ public class QihooRandomImageAPI extends RandomImageAPI {
             break;
         }
 
-        LoggerManager.logDebug("随机图片(360壁纸) - API",
+        LoggerManager.logDebug("RandomImage (Qihoo)",
                 "Get Random Image URL -> Response: Image_URL = " + result);
 
         return result;

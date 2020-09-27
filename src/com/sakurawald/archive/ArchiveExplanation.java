@@ -9,11 +9,11 @@ import java.util.regex.Pattern;
 public class ArchiveExplanation {
 
     /**
-     * 判断是否启用regex的标志文本
+     * 判断是否启用regex的标志文本.
      */
     private static final String USE_REGEX_SIGN = "$REGEX";
     /**
-     * 空的ArchiveExplanation
+     * 空的ArchiveExplanation.
      */
     private static final ArchiveExplanation NULL_ARCHIVE_EXPLANATION = new ArchiveExplanation("无", "NONE", "NONE");
     private String explanation = null;
@@ -208,7 +208,7 @@ public class ArchiveExplanation {
     }
 
     /**
-     * 判断传入的ArchiveFile是否满足本ArchiveExplanation
+     * 判断传入的ArchiveFile是否满足本ArchiveExplanation.
      */
     public boolean isMatch(ArchiveFile archiveFile) {
 
@@ -223,7 +223,7 @@ public class ArchiveExplanation {
     }
 
     /**
-     * 带缓存的Pattern
+     * 带缓存的Pattern.
      */
     public Pattern getPattern() {
 

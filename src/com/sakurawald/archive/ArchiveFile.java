@@ -61,6 +61,10 @@ public class ArchiveFile {
         String from = this.getFile().getAbsolutePath();
         String to = this.getOwner_ArchiveBean().getOwner_ArchiveSeries().getOwner_GameVersion().smartlyGetGameArchive_Path() + this.getFile().getName();
 
+        // Check File Attributes
+        FileUtil.checkFileAttributes(new File(from));
+        FileUtil.checkFileAttributes(new File(to));
+
         LoggerManager.logDebug("ArchiveFile Rollback >> copyFile >> fileName = " + this.getFile().getName() + ", from = " + from + ", to = " + to);
         try {
             FileUtil.copyFile(from, to);

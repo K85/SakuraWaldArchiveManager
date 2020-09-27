@@ -20,7 +20,7 @@ public class HitoKotoAPI {
     /**
      * 获取一言Get请求的地址
      **/
-    private static String getGetURL() {
+    private static String getRequestURL() {
         return "https://v1.hitokoto.cn"
                 + FileManager.applicationConfig_File.getSpecificDataInstance().Welcome.RandomSentence.RandomHitoKoto.get_URL_Params;
     }
@@ -55,22 +55,22 @@ public class HitoKotoAPI {
         Sentence result = new Sentence(id, content, type, from, creator,
                 created_at);
 
-        LoggerManager.logDebug("一言 - API", "Get Sentence >> " + result);
+        LoggerManager.logDebug("HitoKoto", "Get Sentence >> " + result);
 
         return result;
     }
 
     private static String getRandomSentence_JSON() {
 
-        LoggerManager.logDebug("一言 - API", "Get Random Sentence -> Run");
+        LoggerManager.logDebug("HitoKoto", "Get Random Sentence -> Run");
 
         String result = null;
 
         OkHttpClient client = new OkHttpClient();
 
         Request request = null;
-        String URL = getGetURL();
-        LoggerManager.logDebug("一言 - API", "Request URL >> " + URL);
+        String URL = getRequestURL();
+        LoggerManager.logDebug("HitoKoto", "Request URL >> " + URL);
         request = new Request.Builder().url(URL).get().build();
 
         Response response = null;
@@ -78,7 +78,7 @@ public class HitoKotoAPI {
         String JSON = null;
         try {
             response = client.newCall(request).execute();
-            LoggerManager.logDebug("一言 - API", "Request Response >> " + response);
+            LoggerManager.logDebug("HitoKoto", "Request Response >> " + response);
 
             JSON = response.body().string();
             result = JSON;
@@ -87,7 +87,7 @@ public class HitoKotoAPI {
             LoggerManager.logError(e);
         }
 
-        LoggerManager.logDebug("一言 - API",
+        LoggerManager.logDebug("HitoKoto",
                 "Get Random Sentence >> Response: JSON = " + JSON);
 
         /** 关闭Response的body **/

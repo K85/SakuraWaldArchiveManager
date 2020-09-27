@@ -11,6 +11,13 @@ public class Poetry {
     private String author = null;
     private String content = null;
 
+    /**
+     * @return nwe空数据的Poetry对象.
+     */
+    public static Poetry getNullPoetry() {
+        return new Poetry(null);
+    }
+
     public Poetry(String keySentence) {
         this.keySentence = keySentence;
     }

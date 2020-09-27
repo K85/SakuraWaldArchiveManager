@@ -30,8 +30,13 @@ public class ArchiveSeries {
         this.archiveSeries_Name = archiveSeries_Name;
     }
 
+    public static ArchiveSeries generateArchiveSeries(GameVersion gameVersion, String archiveSeriesName) {
+        return new ArchiveSeries(gameVersion, archiveSeriesName);
+    }
+
     /**
      * 备份.
+     * 为了方便代码编写, 该方法被抽取为static方法, 不打算封装到ArchiveSeries对象中.
      */
     public static void backup_FromUI() {
         // Create Thread
@@ -63,6 +68,7 @@ public class ArchiveSeries {
                 }
 
                 // Backup
+                // 此处不新建线程, 因为Backup任务量极小, 没有调度线程的必要.
                 archiveSeries.backup();
 
                 // Update
@@ -149,18 +155,18 @@ public class ArchiveSeries {
 
         if (result.isPresent() == true) {
 
-            String input = result.get();
+            String newName_ArchiveSeries = result.get();
 
-            if (input.trim().equalsIgnoreCase("") == true) {
+            if (newName_ArchiveSeries.trim().equalsIgnoreCase("") == true) {
                 return;
             }
 
-            if (renameArchiveSeries(input) == true) {
+            if (renameArchiveSeries(newName_ArchiveSeries) == true) {
                 /**
                  *  自动选中重命名后的ArchiveSeries.
                  *  注意: JavaFx的Combobox中, 判断自定义对象是否equals是根据toString()来判断的.
                  */
-                ArchiveSeries newNameArchiveSeries = new ArchiveSeries(this.getOwner_GameVersion(), input);
+                ArchiveSeries newNameArchiveSeries = ArchiveSeries.generateArchiveSeries(this.getOwner_GameVersion(), newName_ArchiveSeries);
                 MainController.getInstance().combobox_backup_archive_series.getSelectionModel().select(newNameArchiveSeries);
 
             } else {
@@ -177,6 +183,12 @@ public class ArchiveSeries {
 
         // 获取[该ArchiveSeries所属的GameVersion]的[存档路径]
         File file = new File(this.getOwner_GameVersion().smartlyGetGameArchive_Path());
+
+        /** Check File Attributes.
+         * 注意: 实际上这行代码的意义不大, 因为Java无法检测出文件夹的Writable属性,
+         * 即使文件夹为只读属性, Writable返回总是true.
+         */
+        FileUtil.checkFileAttributes(file);
 
         // Copy GameArchive
         String from = file.getAbsolutePath();

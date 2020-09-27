@@ -30,12 +30,12 @@ public abstract class RandomImageAPI {
     }
 
     public static void saveImage(String image_URL, String save_path) {
-        LoggerManager.logDebug("随机图片", "Download Image >> image_URL = " + image_URL
+        LoggerManager.logDebug("RandomImage", "Download Image >> image_URL = " + image_URL
                 + ", save_path = " + save_path);
 
         // Prevent NPE.
         if (image_URL == null) {
-            LoggerManager.logDebug("随机图片", "Download Image >> image_URL is null. >> Cancel");
+            LoggerManager.logDebug("RandomImage", "Download Image >> image_URL is null. >> Cancel");
             return;
         }
 

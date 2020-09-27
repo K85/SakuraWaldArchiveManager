@@ -727,6 +727,7 @@ public class MainController implements UIStorage {
         ab.renameArchiveBean();
     }
 
+    @FXML
     public void menuitem_view_archivebeans_path_OnAction(ActionEvent actionEvent) {
         FileUtil.viewFolder(ArchiveBean.getArchiveBeansPath());
     }
@@ -830,6 +831,7 @@ public class MainController implements UIStorage {
         update_combobox_backup_archive_series();
     }
 
+    @FXML
     public void menuitem_delete_all_archivebean_except_OnAction(ActionEvent actionEvent) {
 
         // Delete
@@ -881,10 +883,10 @@ public class MainController implements UIStorage {
 
     }
 
-
+    @FXML
     public void menuitem_switch_star_OnAction(ActionEvent actionEvent) {
         // Switch Star.
-        ArchiveBean.setStarArchiveBean_FromUI();
+        ArchiveBean.switchStarArchiveBean_FromUI();
 
         // Update
         update_combobox_backup_archive_series();

@@ -43,7 +43,7 @@ public class AutoBackupTimer extends TimerTask {
             // If
             if (passedTimeMs >= FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.time_second * 1000) {
 
-                if (FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable == true) {
+                if (FileManager.applicationConfig_File.getSpecificDataInstance().Base.AutoBackup.AutoBackupOnTime.enable) {
                     doTask();
                 }
 

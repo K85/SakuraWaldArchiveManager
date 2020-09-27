@@ -77,14 +77,14 @@ public class ArchiveBean {
     }
 
     /**
-     * 获取[一个具体的ArchiveBean]的[文件夹路径]
+     * 生成[一个具体的ArchiveBean]的[文件夹路径].
      */
     public static String generateSpecificArchiveBean_Path(ArchiveSeries archiveSeries) {
         return archiveSeries.getArchiveSeries_Path() + ArchiveBean.generateArchiveBean_FolderName() + "\\";
     }
 
     /**
-     * 从本次存储删除这个ArchiveBean
+     * 从本地存储删除这个ArchiveBean.
      */
     public void delete() {
         File f = new File(this.getArchiveBeanPath());
@@ -107,7 +107,7 @@ public class ArchiveBean {
 
 
     /**
-     * 修改该ArchiveBean的备注信息, 并存储到本地
+     * 修改该ArchiveBean的备注信息, 并存储到本地.
      */
     public void setRemark(String newRemark) {
 
@@ -157,9 +157,7 @@ public class ArchiveBean {
     }
 
     /**
-     * 判断该ArchiveBean是否有星标.
-     *
-     * @return
+     * @return 该ArchiveBean是否有星标.
      */
     public boolean isStar() {
         ArchiveBeanConfig_Data abcd = getArchiveBeanConfig().getSpecificDataInstance();
@@ -167,7 +165,7 @@ public class ArchiveBean {
     }
 
     /**
-     * 获取该ArchiveBean的Info信息
+     * 获取该ArchiveBean的Info信息.
      */
     public String getInfo() {
 
@@ -270,7 +268,7 @@ public class ArchiveBean {
         ab.rollbackPartly();
     }
 
-    public static void setStarArchiveBean_FromUI() {
+    public static void switchStarArchiveBean_FromUI() {
 
         // Select ArchiveBean.
         MainController mc = MainController.getInstance();
@@ -340,6 +338,9 @@ public class ArchiveBean {
         return this.archiveBean_Name;
     }
 
+    /**
+     * @return 重命名是否成功.
+     */
     public boolean renameArchiveBean(String newName) {
 
         boolean ret = false;
@@ -366,7 +367,6 @@ public class ArchiveBean {
 
         // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
-
 
         if (result.isPresent() == true) {
 
@@ -416,7 +416,7 @@ public class ArchiveBean {
     }
 
     /**
-     * @return 将该ArchiveBean所拥有的的所有文件都封装为ArchievFile, 并自动过滤一些无效的ArchiveFile
+     * @return 将该ArchiveBean所拥有的的所有文件都封装为ArchievFile, 并自动过滤一些无效的ArchiveFile.
      */
     public ArrayList<ArchiveFile> getAllArchiveFile() {
 
@@ -436,7 +436,7 @@ public class ArchiveBean {
     }
 
     /**
-     * 调用本方式进行局部回档
+     * 调用本方式进行局部回档.
      */
     public void rollbackPartly() {
         // Load FXML

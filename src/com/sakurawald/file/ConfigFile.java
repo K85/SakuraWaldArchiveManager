@@ -66,7 +66,6 @@ public class ConfigFile {
     /**
      * 创建<该Data类的实例对象>
      */
-    @SuppressWarnings("unchecked")
     public void createConfigDataClassInstance() {
 
         LoggerManager.logDebug("FileSystem",
@@ -231,7 +230,7 @@ public class ConfigFile {
     public void writeNormalFile() throws IllegalArgumentException,
             IllegalAccessException, IOException {
 
-        LoggerManager.logDebug("FileSystem", "Start Write Default ConfigFile Data >> " + this.getFileName());
+        LoggerManager.logDebug("FileSystem", "Start to Write Default ConfigFile Data >> " + this.getFileName());
 
         // 定义要写出的本地配置文件
         File file = new File(filePath + fileName);
