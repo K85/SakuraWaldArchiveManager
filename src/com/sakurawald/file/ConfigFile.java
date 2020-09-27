@@ -190,7 +190,7 @@ public class ConfigFile {
      * 重新从<本地存储>加载<数据>到<内存>. 该方法会<覆盖><内存>中<已有的数据>.
      */
     public void reloadFile() {
-        LoggerManager.logDebug("FileSystem", "开始<重载>配置文件: " + this.getFileName());
+        LoggerManager.logDebug("FileSystem", "Start to Reload Config: " + this.getFileName());
         try {
             loadFile();
         } catch (IllegalArgumentException | IllegalAccessException e) {

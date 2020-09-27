@@ -164,7 +164,7 @@ public class ArchiveExplanation {
      */
     public static void analyseArchiveExplanation(ArchiveFile archiveFile) {
 
-        LoggerManager.logDebug("Rollback", "Start Analyse ArchiveExplanation >> archiveFile = " + archiveFile.getFile().getName());
+        LoggerManager.logDebug("Rollback", "Start to Analyse ArchiveExplanation >> archiveFile = " + archiveFile.getFile().getName());
 
         ArchiveBean ab = archiveFile.getOwner_ArchiveBean();
 
